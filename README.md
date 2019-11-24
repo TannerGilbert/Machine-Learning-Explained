@@ -25,6 +25,10 @@ python <filename>
 * [Pandas](https://pandas.pydata.org/)
 * Other libraries depending on the script
 
+### Machine Learning Algorithms
+* [Linear Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Linear%20Regression)
+* [Logistic Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Logistic%20Regression)
+
 ## Authors
 
  **Gilbert Tanner**
