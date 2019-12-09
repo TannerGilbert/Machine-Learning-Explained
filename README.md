@@ -28,6 +28,7 @@ python <filename>
 ### Machine Learning Algorithms
 * [Linear Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Linear%20Regression)
 * [Logistic Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Logistic%20Regression)
+* [K Nearest Neighbors](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/K%20Nearest%20Neighbors)
 
 ## Authors
 
