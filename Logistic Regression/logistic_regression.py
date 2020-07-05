@@ -51,7 +51,7 @@ class LogisticRegression:
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('heart.csv')
+    df = pd.read_csv('data/heart.csv')
     df = df.sample(frac=1).reset_index(drop=True)
     X, y = [np.array(df.drop('target', axis=1)), np.array(df['target'])]
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
