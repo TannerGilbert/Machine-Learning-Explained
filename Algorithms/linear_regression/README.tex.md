@@ -9,13 +9,13 @@ In statistics, linear regression is a linear approach to modelling the relations
 
 Linear Regression is called simple if you are only working with one independent variable.
 
-Formula: f(x)=mx+b
+Formula: $f(x)=mx+b$
 
 ### Cost Function
 
 We can measure the accuracy of our linear regression algorithm using the **mean squared error** (mse) cost function. MSE measures the average squared distance between the predicted output and the actual output (label).
 
-![Mean Squared Error](doc/math/mean_squared_error.PNG)
+$$Error(m, b)=\frac{1}{N}\sum_{i=1}^{N}(actual\:output - predicted\:output)^{2}$$
 
 ### Optimiztation
 
@@ -25,17 +25,17 @@ To find the way towards the minimum we take the derivative of the error function
 
 General Gradient Descent Formula:
 
-![Gradient Descent Formula](doc/math/gradient_descent_formula.PNG)
+$$\theta_j:=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1)$$
 
 Gradient Descent Formulas for simple linear regression:
 
-![Gradient Descent Formula for Linear Regression](doc/math/gradient_descent_for_simple_linear_regression.PNG)
+$$\frac{\partial}{\partial m}=\frac{2}{N} \sum_{i=1}^{N}-x_i(y_i-(mx_i+b))$$$$\frac{\partial}{\partial b}=\frac{2}{N} \sum_{i=1}^{N}-(y_i-(mx_i+b))$$
 
 ## Multivariate Linear Regression
 
 Linear Regression is called multivariate if you are working with at least two independent variables. Each of the independent variables also called features gets multiplied with a weight which is learned by our linear regression algorithm.
 
-![Multivariate Linear Regression Formula](doc/math/multivariate_linear_regression.PNG)
+$$Formula: f(x)=b+w_1x_1+w_2x_2+...+w_nx_n=b+\sum_{i=1}^{n}w_ix_i$$
 
 Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (w_1 to w_i) instead of only for m and b.
 
@@ -55,11 +55,11 @@ You can add regularization to Linear Regression by adding regularization term to
 
 L1 regularization:
 
-![L1 Regularization](doc/math/L1_regularization.PNG)
+$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^2+\lambda\sum_{j=1}^{n}\left|\theta_j\right|\right]$$
 
 L2 regularization:
 
-![L2 Regularization](doc/math/L2_regularization.PNG)
+$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^2+\lambda\sum_{j=1}^{n}\theta_j^2\right]$$
 
 ## Code
 
