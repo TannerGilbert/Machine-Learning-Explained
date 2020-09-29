@@ -12,13 +12,13 @@ Growing a tree involves continuously splitting the data into subsets to minimize
 
 The cost of a split determines how good it is to split at that specific feature value. For regression cost functions like the sum of squared errors or the standard deviation are used.
 
-![Sum Squared Errors](doc/math/sum_squared_errors.PNG)
+$$SSE=\sum_{i=1}^N\left(y_i-\overline{y_i}\right)^2$$
 
-![Standard Deviation](doc/math/standard_deviation.PNG)
+$$\sigma=\sqrt{\frac{1}{N}*\sum_{i=1}^N\left(y_i-\overline{y_i}\right)^2}$$
 
 For classification the Gini Index is used:
 
-![Gini Index](doc/math/gini_index.PNG)
+$$I_G\left(p\right)=1-\sum_{i=1}^J p_i^2$$
 
 Where J is the set of all classes, and pi is the fraction of items belonging to class i. A split should ideally have an error value of zero, which means that the resulting groups contain only one class. The worst gini purity is 0.5, which occurs when the classes in a group are split 50-50.
 

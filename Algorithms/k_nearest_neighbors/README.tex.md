@@ -40,13 +40,13 @@ Euclidean Distance is probably the one you're most familiar with. It describes w
 
 Above you can see the formula for two points in two dimensional space. Generally, the mathematical formula looks as follows:
 
-![Euclidean Distance Formula](doc/math/euclidean_distance.PNG)
+$$d\left(p, q\right)=d\left(q, p\right)=\sqrt{(q_1-p_1)^2+(q_2-p_2)^2+...+(q_n-p_n)^2}=\sqrt{\sum_{i=1}^n\left(q_i-p_i\right)^2}$$
 
 ### Cosine Similarity
 
 Another common metric is Cosine similarity. Rather than calculating a magnitude, Cosine similiarity calculates the cosine of the angle between the two featurevectors. If two vectors have a small angle between them the output will be close to 1 (very similar). On the other hand if the angles are far apart (near 180°) the similarity score will approach 0.
 
-![Cosine Similarity Formula](doc/math/cosine_similarity.PNG)
+$$similarity=cos\left(\theta\right)=\frac{A*B}{\left|\left|A\right|\right| \left|\left|B\right|\right|}=\frac{\sum\limits_{i=1}^n A_iB_i}{\sqrt{\sum\limits_{i=1}^nA_i^2}\sqrt{\sum\limits_{i=1}^nB_i^2}}$$
 
 This metric is often used for data-sets where the similarity between the directions of two data-points is more important than the magnitude.
 
