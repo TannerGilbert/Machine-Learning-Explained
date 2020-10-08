@@ -49,8 +49,89 @@ One of the simplest forms of pruning is reduced error pruning. Starting at the l
 Cost complexity pruning, also known as weakest link pruning, is a more sophisticated pruning method. It creates a series of trees T0 to Tn where T0 is the initial tree, and Tn is the root alone. The tree at step **i** is created by removing a subtree from tree **i-1** and replacing it with a leaf node. 
 
 For more information, check out:
+* [How to Prune Regression Trees, Clearly Explained!!!](https://youtu.be/D0efHEJsfHo)
 
-[![How to Prune Regression Trees, Clearly Explained!!!](https://img.youtube.com/vi/D0efHEJsfHo/maxresdefault.jpg)](https://youtu.be/D0efHEJsfHo)
+## [Scikit-Learn Code Example](https://scikit-learn.org/stable/modules/tree.html)
+
+Decision trees for both classification and regression are super easy to use in Scikit-Learn. 
+
+To load in the Iris data-set, create a decision tree object, and train it on the Iris data, the following code can be used:
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+
+X, y = load_iris(return_X_y=True)
+clf = DecisionTreeClassifier()
+clf = clf.fit(X, y)
+``` 
+
+Once trained, you can plot the tree with the [**plot_tree**](https://scikit-learn.org/stable/modules/generated/sklearn.tree.plot_tree.html#sklearn.tree.plot_tree) function:
+
+```python
+tree.plot_tree(clf)
+```
+
+![Plot Tree Output](doc/plot_tree.png)
+
+The tree can also be exported in [Graphviz](https://www.graphviz.org/) format using the [export_graphviz](https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_graphviz.html#sklearn.tree.export_graphviz) method. The graphviz python wrapper can be installed using conda or pip.
+
+```bash
+pip install graphviz
+or
+conda install python-graphviz
+``` 
+
+Below is an example graphviz export of the above tree.
+
+```python
+import graphviz 
+dot_data = tree.export_graphviz(clf, out_file=None, 
+                     feature_names=iris.feature_names,  
+                     class_names=iris.target_names,  
+                     filled=True, rounded=True,  
+                     special_characters=True)
+graph = graphviz.Source(dot_data) 
+graph.render("iris") 
+```
+
+![Iris Decision Tree](doc/iris_decision_tree.png)
+
+![Iris Decision Surface](doc/iris_decision_surface.png)
+
+Alternatively, the tree can also be exported in textual format with the [export_text](https://scikit-learn.org/stable/modules/generated/sklearn.tree.export_text.html#sklearn.tree.export_text) method.
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import export_text
+iris = load_iris()
+decision_tree = DecisionTreeClassifier(random_state=0, max_depth=2)
+decision_tree = decision_tree.fit(iris.data, iris.target)
+r = export_text(decision_tree, feature_names=iris['feature_names'])
+print(r)
+```
+
+```bash
+|--- petal width (cm) <= 0.80
+|   |--- class: 0
+|--- petal width (cm) >  0.80
+|   |--- petal width (cm) <= 1.75
+|   |   |--- class: 1
+|   |--- petal width (cm) >  1.75
+|   |   |--- class: 2
+```
+
+For regression, use a [DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor) instead of the [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier).
+
+```python
+from sklearn.datasets import load_diabetes
+from sklearn.tree import DecisionTreeRegressor
+
+X, y = load_diabetes(return_X_y=True)
+regressor = DecisionTreeRegressor(random_state=0)
+regressor = regressor.fit(X, y)
+```
 
 ## Code
 
