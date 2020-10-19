@@ -3,7 +3,9 @@
 
 ## What is Linear Regression?
 
-In statistics, linear regression is a linear approach to modelling the relationship between a dependent variable(y) and one or more independent variables(X). In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated  from the data. Linear Regression is one of the most popular algorithms in Machine Learning. That’s due to its relative simplicity and well known properties.
+In statistics, linear regression is a linear approach to modelling the relationship between a dependent variable(y) and one or more independent variables(X). In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated from the data. Linear Regression is one of the most popular algorithms in Machine Learning. That’s due to its relative simplicity and well known properties.
+
+The best fit line can be calculated in multiple different ways including Least Squares Regression and Gradient Descent. In this guide we'll focus on using gradient descent since this is the most commonly used technique in Machine Learning.
 
 ## Simple Linear Regression
 
@@ -37,7 +39,7 @@ Linear Regression is called multivariate if you are working with at least two in
 
 $$Formula: f(x)=b+w_1x_1+w_2x_2+...+w_nx_n=b+\sum_{i=1}^{n}w_ix_i$$
 
-Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (w_1 to w_i) instead of only for m and b.
+Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (*w_1* to *w_i*) instead of only for m and b.
 
 ## Regularization
 

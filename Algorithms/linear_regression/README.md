@@ -3,19 +3,21 @@
 
 ## What is Linear Regression?
 
-In statistics, linear regression is a linear approach to modelling the relationship between a dependent variable(y) and one or more independent variables(X). In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated  from the data. Linear Regression is one of the most popular algorithms in Machine Learning. That’s due to its relative simplicity and well known properties.
+In statistics, linear regression is a linear approach to modelling the relationship between a dependent variable(y) and one or more independent variables(X). In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated from the data. Linear Regression is one of the most popular algorithms in Machine Learning. That’s due to its relative simplicity and well known properties.
+
+The best fit line can be calculated in multiple different ways including Least Squares Regression and Gradient Descent. In this guide we'll focus on using gradient descent since this is the most commonly used technique in Machine Learning.
 
 ## Simple Linear Regression
 
 Linear Regression is called simple if you are only working with one independent variable.
 
-Formula: <img src="/Algorithms/linear_regression/tex/18813fabfad59d1ba84fc901ede9101f.svg?invert_in_darkmode&sanitize=true" align=middle width=104.88954134999999pt height=24.65753399999998pt/>
+Formula: <img src="tex/18813fabfad59d1ba84fc901ede9101f.svg?invert_in_darkmode" align=middle width=104.88954134999999pt height=24.65753399999998pt/>
 
 ### Cost Function
 
 We can measure the accuracy of our linear regression algorithm using the **mean squared error** (mse) cost function. MSE measures the average squared distance between the predicted output and the actual output (label).
 
-<p align="center"><img src="/Algorithms/linear_regression/tex/660ef60b693132606dcc3aae53b147ca.svg?invert_in_darkmode&sanitize=true" align=middle width=406.53640665pt height=47.806078649999996pt/></p>
+<p align="center"><img src="tex/660ef60b693132606dcc3aae53b147ca.svg?invert_in_darkmode" align=middle width=406.53640665pt height=47.806078649999996pt/></p>
 
 ### Optimiztation
 
@@ -25,19 +27,19 @@ To find the way towards the minimum we take the derivative of the error function
 
 General Gradient Descent Formula:
 
-<p align="center"><img src="/Algorithms/linear_regression/tex/e37355cc0b5b07561247c00842519c04.svg?invert_in_darkmode&sanitize=true" align=middle width=175.63739985pt height=38.5152603pt/></p>
+<p align="center"><img src="tex/e37355cc0b5b07561247c00842519c04.svg?invert_in_darkmode" align=middle width=175.63739985pt height=38.5152603pt/></p>
 
 Gradient Descent Formulas for simple linear regression:
 
-<p align="center"><img src="/Algorithms/linear_regression/tex/0822727d1cb885ac043eb8c23c6a8c06.svg?invert_in_darkmode&sanitize=true" align=middle width=239.42691134999995pt height=47.806078649999996pt/></p><p align="center"><img src="/Algorithms/linear_regression/tex/f28aee7ec74570ba081a608f7b5d88bb.svg?invert_in_darkmode&sanitize=true" align=middle width=217.1808045pt height=47.806078649999996pt/></p>
+<p align="center"><img src="tex/0822727d1cb885ac043eb8c23c6a8c06.svg?invert_in_darkmode" align=middle width=239.42691134999995pt height=47.806078649999996pt/></p><p align="center"><img src="tex/f28aee7ec74570ba081a608f7b5d88bb.svg?invert_in_darkmode" align=middle width=217.1808045pt height=47.806078649999996pt/></p>
 
 ## Multivariate Linear Regression
 
 Linear Regression is called multivariate if you are working with at least two independent variables. Each of the independent variables also called features gets multiplied with a weight which is learned by our linear regression algorithm.
 
-<p align="center"><img src="/Algorithms/linear_regression/tex/695de53e837a94510d8695f780f764d1.svg?invert_in_darkmode&sanitize=true" align=middle width=452.9069325pt height=44.89738935pt/></p>
+<p align="center"><img src="tex/695de53e837a94510d8695f780f764d1.svg?invert_in_darkmode" align=middle width=452.9069325pt height=44.89738935pt/></p>
 
-Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (w_1 to w_i) instead of only for m and b.
+Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (*w_1* to *w_i*) instead of only for m and b.
 
 ## Regularization
 
@@ -55,11 +57,11 @@ You can add regularization to Linear Regression by adding regularization term to
 
 L1 regularization:
 
-<p align="center"><img src="/Algorithms/linear_regression/tex/ef27eeeeeadc48f3a48118fbf65ff125.svg?invert_in_darkmode&sanitize=true" align=middle width=340.32351374999996pt height=59.1786591pt/></p>
+<p align="center"><img src="tex/ef27eeeeeadc48f3a48118fbf65ff125.svg?invert_in_darkmode" align=middle width=340.32351374999996pt height=59.1786591pt/></p>
 
 L2 regularization:
 
-<p align="center"><img src="/Algorithms/linear_regression/tex/ac342f337b60a671151324a7a222d777.svg?invert_in_darkmode&sanitize=true" align=middle width=332.09575739999997pt height=59.1786591pt/></p>
+<p align="center"><img src="tex/ac342f337b60a671151324a7a222d777.svg?invert_in_darkmode" align=middle width=332.09575739999997pt height=59.1786591pt/></p>
 
 ## Code
 
