@@ -7,6 +7,7 @@ This repository contains explainations and implementations of machine learning a
 * [Logistic Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/logistic_regression)
 * [K Nearest Neighbors](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/k_nearest_neighbors)
 * [Decision Tree](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/decision_tree)
+* [KMeans](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/kmeans)
 
 ## License
 

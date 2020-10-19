@@ -39,8 +39,11 @@ The Silhouette Analysis can be used to study the separation distance between the
 
 The Silhouette Analysis is computed as follows:
 * Compute the average distance between all data points in one cluster $C_i$
+
 $$a\left(i\right)=\frac{1}{|C_i|-1}\sum_{j\in C_i,i\neq j}d\left(i,j\right)$$
+
 * For all data points $i$ in cluster $C_i$ compute the average distance to all points in another cluster $C_k$ (where $C_k\neq C_i$) 
+
 $$b\left(i\right)=\min\limits_{k\neq i}\frac{1}{|C_k|}\sum_{j\in C_k}d\left(i,j\right)$$
 
 >The $min$ is used, because we want to know the average distance to the closed cluster $i$ is not a member of.

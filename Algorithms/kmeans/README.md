@@ -39,8 +39,11 @@ The Silhouette Analysis can be used to study the separation distance between the
 
 The Silhouette Analysis is computed as follows:
 * Compute the average distance between all data points in one cluster <img src="tex/db0e77b2ab4f495dea1f5c5c08588288.svg?invert_in_darkmode" align=middle width=16.39974929999999pt height=22.465723500000017pt/>
+
 <p align="center"><img src="tex/065cfac694daeb1fff1264475e035c67.svg?invert_in_darkmode" align=middle width=214.9944654pt height=43.7234787pt/></p>
+
 * For all data points <img src="tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode" align=middle width=5.663225699999989pt height=21.68300969999999pt/> in cluster <img src="tex/db0e77b2ab4f495dea1f5c5c08588288.svg?invert_in_darkmode" align=middle width=16.39974929999999pt height=22.465723500000017pt/> compute the average distance to all points in another cluster <img src="tex/1a567506286617473a9c0d9b2172f951.svg?invert_in_darkmode" align=middle width=19.014878849999988pt height=22.465723500000017pt/> (where <img src="tex/f0c3f612efc905c5a416138c62517a36.svg?invert_in_darkmode" align=middle width=58.15417244999999pt height=22.831056599999986pt/>) 
+
 <p align="center"><img src="tex/b776953fbf2b14971aa17331a8640386.svg?invert_in_darkmode" align=middle width=195.02974589999997pt height=43.5956565pt/></p>
 
 >The <img src="tex/b3520dc7da5f9731724eb6e1768a45a7.svg?invert_in_darkmode" align=middle width=29.96320304999999pt height=21.68300969999999pt/> is used, because we want to know the average distance to the closed cluster <img src="tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode" align=middle width=5.663225699999989pt height=21.68300969999999pt/> is not a member of.
