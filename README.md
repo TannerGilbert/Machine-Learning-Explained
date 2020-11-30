@@ -2,12 +2,13 @@
 
 This repository contains explainations and implementations of machine learning algorithms. The explainations are also available as articles on [my website](https://gilberttanner.com/categories/machine-learning-explained).
 
-### Machine Learning Algorithms
-* [Linear Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/linear_regression)
-* [Logistic Regression](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/logistic_regression)
-* [K Nearest Neighbors](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/k_nearest_neighbors)
-* [Decision Tree](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/decision_tree)
-* [KMeans](https://github.com/TannerGilbert/Machine-Learning-Explained/tree/master/Algorithms/kmeans)
+## Machine Learning Algorithms
+* [Linear Regression](Algorithms/linear_regression)
+* [Logistic Regression](Algorithms/logistic_regression)
+* [K Nearest Neighbors](Algorithms/k_nearest_neighbors)
+* [Decision Tree](Algorithms/decision_tree)
+* [KMeans](Algorithms/kmeans)
+* [Mean Shift](Algorithms/mean_shift)
 
 ## License
 
