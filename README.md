@@ -1,6 +1,6 @@
 # Machine-Learning-Explained
 
-This repository contains explainations and implementations of machine learning algorithms. The explainations are also available as articles on [my website](https://gilberttanner.com/categories/machine-learning-explained).
+This repository contains explainations and implementations of machine learning algorithms and concepts. The explainations are also available as articles on [my website](https://ml-explained.com/).
 
 ## Machine Learning Algorithms
 * [Linear Regression](Algorithms/linear_regression)
@@ -9,6 +9,7 @@ This repository contains explainations and implementations of machine learning a
 * [Decision Tree](Algorithms/decision_tree)
 * [KMeans](Algorithms/kmeans)
 * [Mean Shift](Algorithms/mean_shift)
+* [DBSCAN](Algorithms/dbscan)
 
 ## License
 
