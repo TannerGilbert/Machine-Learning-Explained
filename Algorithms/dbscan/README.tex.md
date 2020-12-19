@@ -1,6 +1,6 @@
-# Density-Based Spatial Cluster of Applications with Noise (DBSCAN)
+# Density-Based Spatial Clustering of Applications with Noise (DBSCAN)
 
-DBSCAN (Density-Based Spatial Cluster of Applications with Noise) views clusters as areas of high density separated by areas of low density ([Density-Based Clustering](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-30164-8_211#:~:text=Density%2DBased%20Clustering%20refers%20to,regions%20of%20low%20point%20density.)). Due to this rather generic view, DBSCAN can find clusters of any shape, as opposed to an algorithm like [K-Means](https://ml-explained.com/blog/kmeans-explained), that minimizes the within-cluster sum-of-squares, which works best for convex shapes. Furthermore, DBSCAN figures out the number of clusters automatically.
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) views clusters as areas of high density separated by areas of low density ([Density-Based Clustering](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-30164-8_211#:~:text=Density%2DBased%20Clustering%20refers%20to,regions%20of%20low%20point%20density.)). Due to this rather generic view, DBSCAN can find clusters of any shape, as opposed to an algorithm like [K-Means](https://ml-explained.com/blog/kmeans-explained), that minimizes the within-cluster sum-of-squares, which works best for convex shapes. Furthermore, DBSCAN figures out the number of clusters automatically.
 
 ## DBSCAN Theory
 
