@@ -2,7 +2,7 @@ import numpy as np
 
 
 class SimpleLinearRegression:
-    
+
     def __init__(self, learning_rate):
         self.m = 0
         self.b = 0
@@ -21,7 +21,8 @@ class SimpleLinearRegression:
             m_gradient = 0
             for i in range(0, len(x)):
                 b_gradient += -(2/N) * (y[i] - ((self.m * x[i]) + self.b))
-                m_gradient += -(2/N) * x[i] * (y[i] - ((self.m * x[i]) + self.b))
+                m_gradient += -(2/N) * x[i] * \
+                    (y[i] - ((self.m * x[i]) + self.b))
             self.b -= (self.learning_rate * b_gradient)
             self.m -= (self.learning_rate * m_gradient)
             if j % 50 == 0:

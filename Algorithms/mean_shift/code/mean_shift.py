@@ -1,10 +1,5 @@
 # from https://pythonprogramming.net/weighted-bandwidth-mean-shift-machine-learning-tutorial/
-
-import matplotlib.pyplot as plt
-from matplotlib import style
 import numpy as np
-from sklearn.datasets.samples_generator import make_blobs
-style.use('ggplot')
 
 
 class MeanShift:
@@ -83,13 +78,19 @@ class MeanShift:
     def predict(self, data):
         classifications = []
         for row in data:
-            distances = [np.linalg.norm(row - self.centroids[centroid]) for centroid in self.centroids]
+            distances = [np.linalg.norm(row - self.centroids[centroid])
+                         for centroid in self.centroids]
             classification = (distances.index(min(distances)))
             classifications.append(classification)
         return classifications
 
 
 if __name__ == '__main__':
+    import matplotlib.pyplot as plt
+    from matplotlib import style
+    from sklearn.datasets.samples_generator import make_blobs
+    style.use('ggplot')
+
     X, y = make_blobs(n_samples=30, centers=3, n_features=2)
 
     model = MeanShift()
@@ -101,9 +102,11 @@ if __name__ == '__main__':
 
     for classification, featureset in zip(model.predict(X), X):
         color = colors[classification]
-        plt.scatter(featureset[0], featureset[1], marker="x", color=color, s=150, linewidths=5, zorder=10)
+        plt.scatter(featureset[0], featureset[1], marker="x",
+                    color=color, s=150, linewidths=5, zorder=10)
 
     for c in centroids:
-        plt.scatter(centroids[c][0], centroids[c][1], color='k', marker="*", s=150, linewidths=5)
+        plt.scatter(centroids[c][0], centroids[c][1],
+                    color='k', marker="*", s=150, linewidths=5)
 
     plt.show()

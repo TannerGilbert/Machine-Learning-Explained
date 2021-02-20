@@ -1,5 +1,4 @@
 import numpy as np
-import pandas as pd
 from collections import Counter
 
 
@@ -35,8 +34,10 @@ class DecisionTree:
         self.find_varsplit()
 
     def find_varsplit(self):
-        for i in self.f_idxs: self.find_better_split(i)
-        if self.is_leaf: return
+        for i in self.f_idxs:
+            self.find_better_split(i)
+        if self.is_leaf:
+            return
         x = self.split_col
         lhs = np.nonzero(x <= self.split)[0]
         rhs = np.nonzero(x > self.split)[0]
@@ -77,15 +78,7 @@ class DecisionTree:
         return np.array([self.predict_row(xi) for xi in x])
 
     def predict_row(self, xi):
-        if self.is_leaf: return self.val
+        if self.is_leaf:
+            return self.val
         t = self.lhs if xi[self.var_idx] <= self.split else self.rhs
         return t.predict_row(xi)
-
-
-if __name__ == '__main__':
-    df = pd.read_csv('D:/Datasets/Heart Disease UCI/heart.csv')
-    df = df.sample(frac=1).reset_index(drop=True)
-    X, y = [df.drop('target', axis=1), np.array(df['target'])]
-    model = DecisionTree(X, y, X.shape[1], np.array([i for i in range(X.shape[1])]), np.array([i for i in range(X.shape[0])]), [0, 1])
-    print(model.predict(np.array(X)[:5]))
-    print(y[:5])

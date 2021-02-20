@@ -1,6 +1,4 @@
 import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
 
 
 class LogisticRegression:
@@ -49,14 +47,3 @@ class LogisticRegression:
         predictions = self.sigmoid(np.dot(self.w, X.T) + self.b)[0]
         return predictions
 
-
-if __name__ == '__main__':
-    df = pd.read_csv('data/heart.csv')
-    df = df.sample(frac=1).reset_index(drop=True)
-    X, y = [np.array(df.drop('target', axis=1)), np.array(df['target'])]
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    for penalty in ('l2', 'l1', None):
-        model = LogisticRegression(0.0001, X.shape[1], penalty=penalty)
-        model.fit(X_train, y_train, 500000)
-        predictions = model.predict(X_test)
-        print('Accuracy:', penalty, (predictions == y_test).sum()/len(predictions)*100)

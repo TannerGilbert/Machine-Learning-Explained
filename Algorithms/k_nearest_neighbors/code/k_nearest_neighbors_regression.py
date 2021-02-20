@@ -1,6 +1,4 @@
 import numpy as np
-import pandas as pd
-from sklearn.preprocessing import LabelEncoder
 
 
 class KNearestNeighbours:
@@ -27,6 +25,8 @@ class KNearestNeighbours:
 
 
 if __name__ == '__main__':
+    import pandas as pd
+    from sklearn.preprocessing import LabelEncoder
     iris = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data',
                        names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'label'])
     iris = iris.sample(frac=1).reset_index(drop=True)

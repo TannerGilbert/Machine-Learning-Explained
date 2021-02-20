@@ -1,9 +1,5 @@
 import numpy as np
-import pandas as pd
 from collections import Counter
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-import time
 
 
 class KNearestNeighbours:
@@ -30,12 +26,16 @@ class KNearestNeighbours:
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('C:/Users/Gilbert/Desktop/Programming/Datasets/Iris/iris.csv')
-    X, y =(np.array(df.drop('species', axis=1)), LabelEncoder().fit_transform(np.array(df['species'])))
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    import pandas as pd
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import LabelEncoder
+    df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data',
+                     names=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'label'])
+    X, y = (np.array(df.drop('label', axis=1)),
+            LabelEncoder().fit_transform(np.array(df['label'])))
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42)
     model = KNearestNeighbours(4)
-    start = time.clock()
     model.fit(X_train, y_train)
-    print(time.clock() - start)
     predictions = model.predict(X_test)
     print('Accuracy:', (predictions == y_test).sum()/len(predictions)*100)

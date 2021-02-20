@@ -55,7 +55,7 @@ if __name__ == '__main__':
     import matplotlib.pyplot as plt
     from sklearn.datasets.samples_generator import make_blobs
     from sklearn.preprocessing import MinMaxScaler
-    
+
     X, y = make_blobs(n_samples=30, centers=3, n_features=2)
     X = MinMaxScaler(feature_range=(0, 1)).fit_transform(X)
     model = DBSCAN()
