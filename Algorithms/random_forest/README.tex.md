@@ -1,5 +1,7 @@
 # Random Forest
 
+![Decision Tree](doc/decision_tree.png)
+
 Random forests are an ensemble learning method for classification and regression that use Decision trees as base models. <a href="#reference1">[1]</a>
 
 Ensemble learning methods combine multiple base models to get a more accurate one. There are many ways models can be combined, ranging from simple methods like averaging or max voting to more complex ones like boosting or stacking.
