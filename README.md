@@ -11,6 +11,7 @@ This repository contains explanations and implementations of machine learning al
 * [Mean Shift](Algorithms/mean_shift)
 * [DBSCAN](Algorithms/dbscan)
 * [Random Forest](Algorithms/random_forest)
+* [Adaboost](Algorithms/adaboost)
 
 ## Contributing
 
