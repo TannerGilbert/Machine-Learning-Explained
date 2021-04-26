@@ -1,6 +1,5 @@
 # based on https://geoffruddock.com/adaboost-from-scratch-in-python/
 
-from typing import Optional
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 

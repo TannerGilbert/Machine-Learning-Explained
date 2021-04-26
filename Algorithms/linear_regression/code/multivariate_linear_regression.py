@@ -1,17 +1,28 @@
+from __future__ import annotations
+from typing import Tuple
 import numpy as np
 
 
 class MultivariateLinearRegression:
-
-    def __init__(self, learning_rate, penalty='l2', C=1):
+    """Simple Linear Regression
+    Parameters:
+    -----------
+    learning_rate: float
+        The step length used when following the negative gradient during training.
+    penalty: str, default='l2'
+        The type of penalty used.
+    C: float, default=1
+       Regularization strength  
+    """
+    def __init__(self, learning_rate: float, penalty: str = 'l2', C: float = 1) -> None:
         self.learning_rate = learning_rate
         self.penalty = penalty
         self.C = C
         self.w = ""
-        assert penalty in ['l2', 'l1', None]
+        assert self.penalty in ['l2', 'l1', None]
 
-    def cost_function(self, x, y):
-        dif = np.dot(x, self.w)-y
+    def cost_function(self, x: np.ndarray, y: np.ndarray) -> Tuple[np.ndarray, float]:
+        dif = np.dot(x, self.w) - y
         if self.penalty == 'l1':
             cost = (np.sum(dif**2) + self.C *
                     np.sum(np.absolute(self.w))) / (2*np.shape(x)[0])
@@ -22,7 +33,7 @@ class MultivariateLinearRegression:
             cost = np.sum(dif**2) / (2*np.shape(x)[0])
         return dif, cost
 
-    def fit(self, x, y, num_iterations=10000):
+    def fit(self, x: np.ndarray, y: np.ndarray, num_iterations: int = 10000) -> MultivariateLinearRegression:
         if self.w == "":
             _, num_features = np.shape(x)
             self.w = np.random.uniform(-1, 1, num_features)
@@ -30,10 +41,9 @@ class MultivariateLinearRegression:
             dif, cost = self.cost_function(x, y)
             gradient = np.dot(x.transpose(), dif) / np.shape(x)[0]
             self.w = self.w - self.learning_rate * gradient
-            if i % 500 == 0:
-                print('error:', cost)
+        return self
 
-    def predict(self, x):
+    def predict(self, x: np.ndarray) -> np.ndarray:
         return np.dot(x, self.w)
 
 

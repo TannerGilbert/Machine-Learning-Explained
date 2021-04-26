@@ -1,9 +1,25 @@
+from __future__ import annotations
 import numpy as np
 
 
-class LogisticRegression:
+def sigmoid(x: np.ndarray) -> np.ndarray:
+    return 1/(1+np.exp(-x))
 
-    def __init__(self, learning_rate, num_features, penalty='l2', C=0.1):
+
+class LogisticRegression:
+    """Logistic Regression
+    Parameters:
+    -----------
+    learning_rate: float
+        The step length used when following the negative gradient during training.
+    num_features: int
+        The number of feature in the data
+    penalty: str, default='l2'
+        The type of penalty used.
+    C: float, default=1
+       Regularization strength
+    """
+    def __init__(self, learning_rate: float, num_features: int, penalty: str = 'l2', C: float = 0.1) -> None:
         self.learning_rate = learning_rate
         self.penalty = penalty
         self.C = C
@@ -11,10 +27,7 @@ class LogisticRegression:
         self.w = np.zeros((1, num_features))
         assert penalty in ['l2', 'l1', None]
 
-    def sigmoid(self, x):
-        return 1/(1+np.exp(-x))
-
-    def cost_function(self, y, y_pred):
+    def cost_function(self, y: np.ndarray, y_pred: np.ndarray) -> float:
         y_T = y.T
         if self.penalty == 'l1':
             return (-1/y.shape[0]) * (np.sum((y_T*np.log(y_pred)) + ((1-y_T) * np.log(1-y_pred))) + self.C * np.sum(np.absolute(self.w)))
@@ -23,9 +36,9 @@ class LogisticRegression:
         else:
             return (-1/y.shape[0]) * (np.sum((y_T*np.log(y_pred)) + ((1-y_T) * np.log(1-y_pred))))
 
-    def fit(self, X, y, num_iterations):
+    def fit(self, X: np.ndarray, y: np.ndarray, num_iterations) -> LogisticRegression:
         for i in range(num_iterations):
-            pred = self.sigmoid(np.dot(self.w, X.T) + self.b)
+            pred = sigmoid(np.dot(self.w, X.T) + self.b)
             cost = self.cost_function(y, pred)
 
             # Calculate Gradients/Derivatives
@@ -34,16 +47,12 @@ class LogisticRegression:
 
             self.w = self.w - (self.learning_rate * dw.T)
             self.b = self.b - (self.learning_rate * db)
-
-            #if i % 100 == 0:
-                #print('Error:', cost)
         return self
 
-    def predict(self, X):
-        predictions = self.sigmoid(np.dot(self.w, X.T) + self.b)[0]
+    def predict(self, X: np.ndarray) -> list:
+        predictions = sigmoid(np.dot(self.w, X.T) + self.b)[0]
         return [1 if pred >= 0.5 else 0 for pred in predictions]
 
-    def predict_proba(self, X):
-        predictions = self.sigmoid(np.dot(self.w, X.T) + self.b)[0]
-        return predictions
+    def predict_proba(self, X: np.ndarray) -> np.ndarray:
+        return sigmoid(np.dot(self.w, X.T) + self.b)[0]
 
