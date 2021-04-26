@@ -1,9 +1,26 @@
+from __future__ import annotations
+from typing import Union, Optional
 import numpy as np
 from sklearn.tree import DecisionTreeRegressor
 
 
 class RandomForest:
-    def __init__(self, n_estimators=10, n_features='sqrt', sample_size=0.8, max_depth=10, min_leaf=5):
+    """Random Forest Regressor
+        Parameters:
+        -----------
+        n_estimators: int = 10
+            The number of trees in the forest.
+        n_features: Optional[Union[str, int]] = 'sqrt'
+            The number of features to consider when looking for the best split
+        sample_size: float = 0.8
+            Amount of data used (0-1)
+        max_depth: Optional[int] = 10
+            The maximum depth of the tree.
+        min_leaf: Union[int, float] = 5
+            The minimum number of samples required to be at a leaf node.
+        """
+    def __init__(self, n_estimators: int = 10, n_features: Optional[Union[str, int]] = 'sqrt', sample_size: float = 0.8,
+                 max_depth: Optional[int] = 10, min_leaf: Union[int, float] = 5) -> None:
         self.n_estimators = n_estimators
         self.n_features = n_features
         self.sample_size = sample_size
@@ -11,7 +28,7 @@ class RandomForest:
         self.min_leaf = min_leaf
         self.trees = []
 
-    def fit(self, X, y):
+    def fit(self, X: Union[list, np.ndarray], y: Union[list, np.ndarray]) -> RandomForest:
         for _ in range(self.n_estimators):
             idxs = np.random.permutation(len(X))[:int(self.sample_size*len(X))]
 
@@ -19,6 +36,6 @@ class RandomForest:
                 max_depth=self.max_depth, min_samples_leaf=self.min_leaf, max_features=self.n_features).fit(X[idxs], y[idxs]))
         return self
 
-    def predict(self, X):
+    def predict(self, X: Union[list, np.ndarray]) -> np.ndarray:
         return np.mean([t.predict(X) for t in self.trees], axis=0)
  

@@ -5,7 +5,7 @@ from collections import Counter
 
 
 class KNearestNeighbors:
-    """ K Nearest Neighbors classifier.
+    """K Nearest Neighbors classifier.
     Parameters:
     -----------
     k: int
@@ -16,7 +16,7 @@ class KNearestNeighbors:
         self.y = None
         self.k = k
 
-    def fit(self, X: Union[list, np.ndarray], y: Union[list, np.ndarray]) -> KNearestNeighbours:
+    def fit(self, X: Union[list, np.ndarray], y: Union[list, np.ndarray]) -> KNearestNeighbors:
         self.X = X
         self.y = y
         return self

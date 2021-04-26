@@ -1,13 +1,23 @@
 # from https://pythonprogramming.net/weighted-bandwidth-mean-shift-machine-learning-tutorial/
+from __future__ import annotations
+from typing import Union, Optional
 import numpy as np
 
 
 class MeanShift:
-    def __init__(self, radius=None, radius_norm_step=100):
+    """MeanShift
+    Parameters:
+    -----------
+    radius: float, optional = None
+        Radius
+    radius_norm_step: int = 100
+        Number of radius steps
+    """
+    def __init__(self, radius: Optional[float] = None, radius_norm_step: int = 100) -> None:
         self.radius = radius
         self.radius_norm_step = radius_norm_step
 
-    def fit(self, data):
+    def fit(self, data: Union[list, np.ndarray]) -> MeanShift:
 
         if self.radius is None:
             all_data_centroid = np.average(data, axis=0)
@@ -74,8 +84,9 @@ class MeanShift:
                 break
 
         self.centroids = centroids
+        return self
 
-    def predict(self, data):
+    def predict(self, data: Union[list, np.ndarray]) -> list:
         classifications = []
         for row in data:
             distances = [np.linalg.norm(row - self.centroids[centroid])
@@ -88,10 +99,10 @@ class MeanShift:
 if __name__ == '__main__':
     import matplotlib.pyplot as plt
     from matplotlib import style
-    from sklearn.datasets.samples_generator import make_blobs
+    from sklearn.datasets import make_blobs
     style.use('ggplot')
 
-    X, y = make_blobs(n_samples=30, centers=3, n_features=2)
+    X, y = make_blobs(n_samples=100, centers=3, n_features=2)
 
     model = MeanShift()
     model.fit(X)

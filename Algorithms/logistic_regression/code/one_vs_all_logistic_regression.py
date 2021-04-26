@@ -4,8 +4,7 @@ from logistic_regression import LogisticRegression
 
 
 class LogisticRegressionOneVsAll:
-    """
-    One vs. All Logistic Regression
+    """One vs. All Logistic Regression
     Parameters:
     -----------
     learning_rate: float

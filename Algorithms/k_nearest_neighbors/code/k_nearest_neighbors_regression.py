@@ -4,13 +4,18 @@ import numpy as np
 
 
 class KNearestNeighbors:
-
+    """K Nearest Neighbors regressor.
+    Parameters:
+    -----------
+    k: int
+        The number of closest neighbors
+    """
     def __init__(self, k: int) -> None:
         self.X = None
         self.y = None
         self.k = k
 
-    def fit(self, X: Union[list, np.ndarray], y: Union[list, np.ndarray]) -> KNearestNeighbours:
+    def fit(self, X: Union[list, np.ndarray], y: Union[list, np.ndarray]) -> KNearestNeighbors:
         self.X = X
         self.y = y
         return self

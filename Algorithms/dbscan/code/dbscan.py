@@ -1,14 +1,23 @@
+from typing import Union
 import numpy as np
 
 
 class DBSCAN:
-    def __init__(self, eps=0.3, min_points=5):
+    """DBSCAN
+    Parameters:
+    -----------
+    eps: float = 0.3
+        The maximum distance between two samples for one to be considered as in the neighborhood of the other.
+    min_points: int = 5
+        The number of samples (or total weight) in a neighborhood for a point to be considered as a core point.
+    """
+    def __init__(self, eps: float = 0.3, min_points: int = 5) -> None:
         self.eps = eps
         self.min_points = min_points
         self.labels = []
-        self.c = 1  # cluster number
+        self.c = 1  # number of clusters
 
-    def fit_predict(self, data):
+    def fit_predict(self, data: Union[list, np.ndarray]) -> list:
         self.labels = [0] * len(data)
         for i in range(len(data)):
             if not (self.labels[i] == 0):
@@ -24,7 +33,7 @@ class DBSCAN:
                 self.c += 1
         return self.labels
 
-    def find_neighbours(self, data, index):
+    def find_neighbours(self, data: Union[list, np.ndarray], index: int) -> list:
         neighbors = []
 
         for p in range(len(data)):
@@ -32,12 +41,11 @@ class DBSCAN:
                 neighbors.append(p)
         return neighbors
 
-    def grow_cluster(self, data, index, neighbours):
+    def grow_cluster(self, data: Union[list, np.ndarray], index: int, neighbours: list) -> None:
         # Assign seed point to cluster
         self.labels[index] = self.c
 
         i = 0
-
         while i < len(neighbours):
             p = neighbours[i]
             if self.labels[p] == -1:
@@ -53,7 +61,7 @@ class DBSCAN:
 
 if __name__ == '__main__':
     import matplotlib.pyplot as plt
-    from sklearn.datasets.samples_generator import make_blobs
+    from sklearn.datasets import make_blobs
     from sklearn.preprocessing import MinMaxScaler
 
     X, y = make_blobs(n_samples=30, centers=3, n_features=2)

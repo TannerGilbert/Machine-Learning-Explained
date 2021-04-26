@@ -1,17 +1,25 @@
 # based on https://geoffruddock.com/adaboost-from-scratch-in-python/
 
+from __future__ import annotations
+from typing import Union
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 
 
 class AdaBoost:
-    def __init__(self, n_estimators: int):
+    """AdaBoost
+    Parameters:
+    -----------
+    n_estimators: int
+        Number of weak learners
+    """
+    def __init__(self, n_estimators: int) -> None:
         self.n_estimators = n_estimators
         self.stumps = np.zeros(shape=n_estimators, dtype=object)
         self.stump_weights = np.zeros(shape=n_estimators)
         self.sample_weights = None
 
-    def fit(self, X: np.ndarray, y: np.ndarray):
+    def fit(self, X: np.ndarray, y: np.ndarray) -> AdaBoost:
         n = X.shape[0]
         self.sample_weights = np.zeros(shape=(self.n_estimators, n))
 
@@ -45,6 +53,6 @@ class AdaBoost:
         
         return self
 
-    def predict(self, X):
+    def predict(self, X: Union[list, np.ndarray]) -> np.ndarray:
         stump_preds = np.array([stump.predict(X) for stump in self.stumps])
         return np.sign(np.dot(self.stump_weights, stump_preds))
