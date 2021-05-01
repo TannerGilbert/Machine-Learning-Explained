@@ -1,8 +1,11 @@
+from __future__ import annotations
+from typing import Union, Optional
 import numpy as np
+import pandas as pd
 from collections import Counter
 
 
-def gini_index(groups_x, groups_y, classes):
+def gini_index(groups_x: Union[list, np.ndarray], groups_y: Union[list, np.ndarray], classes: Union[list, np.ndarray]) -> float:
     # count all samples at split point
     n_instances = float(sum([len(group) for group in groups_x]))
     # sum weighted Gini index for each group
@@ -23,7 +26,26 @@ def gini_index(groups_x, groups_y, classes):
 
 
 class DecisionTree:
-    def __init__(self, x, y, n_features, f_idxs, idxs, classes, depth=10, min_leaf=5):
+    """Decision Tree Classifier
+    Parameters:
+    -----------
+    x: Union[pd.DataFrame, pd.Series]
+        The input data
+    y: Union[pd.DataFrame, pd.Series]
+        The output
+    n_features: int
+        The number of features to consider when looking for the best split
+    f_idxs: Union[list, np.ndarray]
+        The indexes of the selected features
+    idxs: Union[list, np.ndarray]
+        The indexes of the data-points inside the data-set to use for the tree
+    classes: Union[list, np.ndarray]
+    depth: Optional[int] = 10
+        The maximum depth of the tree.
+    min_leaf: Union[int, float] = 5
+        The minimum number of samples required to be at a leaf node.
+    """
+    def __init__(self, x: Union[pd.DataFrame, pd.Series], y: Union[pd.DataFrame, pd.Series], n_features: int, f_idxs: Union[list, np.ndarray], idxs: Union[list, np.ndarray], classes: Union[list, np.ndarray], depth: Optional[int] = 10, min_leaf: Optional[int] = 5) -> None:
         self.x, self.y, self.idxs, self.min_leaf, self.f_idxs = x, y, idxs, min_leaf, f_idxs
         self.depth = depth
         self.n_features = n_features
@@ -33,7 +55,7 @@ class DecisionTree:
         self.val = Counter(y[idxs]).most_common()[0][0]
         self.find_varsplit()
 
-    def find_varsplit(self):
+    def find_varsplit(self) -> None:
         for i in self.f_idxs:
             self.find_better_split(i)
         if self.is_leaf:
@@ -48,7 +70,7 @@ class DecisionTree:
         self.rhs = DecisionTree(self.x, self.y, self.n_features, rf_idxs, self.idxs[rhs], self.classes, depth=self.depth - 1,
                                 min_leaf=self.min_leaf)
 
-    def find_better_split(self, var_idx):
+    def find_better_split(self, var_idx: int) -> None:
         x, y = self.x.values[self.idxs, var_idx], self.y[self.idxs]
         sort_idx = np.argsort(x)
         sort_y, sort_x = y[sort_idx], x[sort_idx]
@@ -63,21 +85,17 @@ class DecisionTree:
                 self.var_idx, self.score, self.split = var_idx, curr_score, sort_x[i]
 
     @property
-    def split_name(self):
-        return self.x.columns[self.var_idx]
-
-    @property
-    def split_col(self):
+    def split_col(self) -> list:
         return self.x.values[self.idxs, self.var_idx]
 
     @property
-    def is_leaf(self):
+    def is_leaf(self) -> bool:
         return self.score == float('inf') or self.depth <= 0
 
-    def predict(self, x):
+    def predict(self, x: Union[list, np.ndarray]) -> np.ndarray:
         return np.array([self.predict_row(xi) for xi in x])
 
-    def predict_row(self, xi):
+    def predict_row(self, xi: Union[list, np.ndarray]) -> int:
         if self.is_leaf:
             return self.val
         t = self.lhs if xi[self.var_idx] <= self.split else self.rhs
