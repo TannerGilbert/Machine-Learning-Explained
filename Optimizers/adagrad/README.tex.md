@@ -1,5 +1,7 @@
 # Adagrad 
 
+![Adagrad example gif](doc/adagrad_example.gif)
+
 Adagrad [1] is a gradient-based optimization algorithm that adaptively scales the learning rate to the parameters, performing smaller updates for parameters associated with frequently occurring features and larger updates for parameters associated with infrequent features eliminating the need to tune the learning rate manually. The above-mentioned behavior makes Adagrad well-suited for dealing with sparse data, and Dean et al. [2] have found out that Adagrad is much more robust than SGD.
 
 Reminder: The SDG update for each parameter $\theta_i$ look as follows:
