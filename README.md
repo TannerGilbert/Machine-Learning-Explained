@@ -3,6 +3,7 @@
 This repository contains explanations and implementations of machine learning algorithms and concepts. The explanations are also available as articles on [my website](https://ml-explained.com/).
 
 ## Machine Learning Algorithms
+
 * [Linear Regression](Algorithms/linear_regression)
 * [Logistic Regression](Algorithms/logistic_regression)
 * [K Nearest Neighbors](Algorithms/k_nearest_neighbors)
@@ -12,6 +13,37 @@ This repository contains explanations and implementations of machine learning al
 * [DBSCAN](Algorithms/dbscan)
 * [Random Forest](Algorithms/random_forest)
 * [Adaboost](Algorithms/adaboost)
+* [Gradient Boosting](Algorithms/gradient_boosting)
+
+## Optimizers
+
+* [Gradient Descent](Optimizers/gradient_descent)
+* [Adagrad](Optimizers/adagrad)
+* [Adadelta](Optimizers/adadelta)
+* [RMSprop](Optimizers/rmsprop)
+* [Adam](Optimizers/adam)
+* [AdaMax](Optimizers/adamax)
+* [Nadam](Optimizers/nadam)
+* [AMSGrad](Optimizers/amsgrad)
+
+## Activation Functions
+
+* [ELU](Activation_Functions/elu)
+* [Leaky RELU](Activation_Functions/leaky_relu)
+* [RELU](Activation_Functions/relu)
+* [SELU](Activation_Functions/selu)
+* [Sigmoid](Activation_Functions/sigmoid)
+* [SILU](Activation_Functions/silu)
+* [Softmax](Activation_Functions/softmax)
+* [Softplus](Activation_Functions/softplus)
+* [Tanh](Activation_Functions/tanh)
+
+## Loss Functions
+
+* [Cross Entropy](Loss_Functions/cross_entropy)
+* [Hinge Loss](Loss_Functions/hinge_loss)
+* [Mean absolute error](Loss_Functions/mean_absolute_error)
+* [Mean squared error](Loss_Functions/mean_squared_error)
 
 ## Contributing
 
