@@ -28,12 +28,8 @@ $$RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}$$
 
 Since $RMS[\Delta \theta]_{t}$  is unknown, it's approximated with the RMS of the parameter updates until the previous time step $RMS[\Delta \theta]_{t-1}$.
 
-$$\begin{align} 
-\begin{split} 
-\Delta \theta_t &= - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t} \\ 
-\theta_{t+1} &= \theta_t + \Delta \theta_t 
-\end{split} 
-\end{align}$$
+$$\Delta \theta_t = - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t}$$
+$$\theta_{t+1} = \theta_t + \Delta \theta_t$$
 
 For more information on how to derive this formula, take a look at '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html#adadelta)' by [Sebastian Ruder](https://twitter.com/seb_ruder) and the [original Adadelta paper](https://arxiv.org/abs/1212.5701) by [Matthew D. Zeiler](https://arxiv.org/search/cs?searchtype=author&query=Zeiler%2C+M+D).
 

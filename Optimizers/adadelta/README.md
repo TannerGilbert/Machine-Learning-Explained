@@ -28,7 +28,8 @@ The authors that the units in the weight update don't match, i.e., the update sh
 
 Since <img src="tex/b999b985f5ccf08b3fce39e97a1c63b8.svg?invert_in_darkmode" align=middle width=77.34600719999999pt height=24.65753399999998pt/>  is unknown, it's approximated with the RMS of the parameter updates until the previous time step <img src="tex/e7d2063bdcfb3dfdb3f44724950543d1.svg?invert_in_darkmode" align=middle width=94.17257519999998pt height=24.65753399999998pt/>.
 
-<p align="center"><img src="tex/15431539b7b73e500cc0fd3d7e0af147.svg?invert_in_darkmode" align=middle width=176.5975398pt height=63.05404875pt/></p>
+<p align="center"><img src="tex/a9c79740e927ca20df42f2ac49811782.svg?invert_in_darkmode" align=middle width=173.65230135pt height=38.83491479999999pt/></p>
+<p align="center"><img src="tex/ae81fc362ffffea791fb10239e17378e.svg?invert_in_darkmode" align=middle width=112.04324835pt height=15.251136449999997pt/></p>
 
 For more information on how to derive this formula, take a look at '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html#adadelta)' by [Sebastian Ruder](https://twitter.com/seb_ruder) and the [original Adadelta paper](https://arxiv.org/abs/1212.5701) by [Matthew D. Zeiler](https://arxiv.org/search/cs?searchtype=author&query=Zeiler%2C+M+D).
 
