@@ -16,7 +16,24 @@ $$\theta_{t+1}  = \theta_{t} + \Delta\theta_{t}$$
 
 AdaDelta takes the form:
 
-$$ \Delta\theta_{t} = -\frac{\eta}{\sqrt{E\left[g^{2}\right]_{t} + \epsilon}}g_{t} $$
+$$RMS[g]_{t}=\sqrt{E\left[g^{2}\right]_{t} + \epsilon}$$
+
+$$ \Delta\theta_{t} = -\frac{\eta}{RMS[g]_{t}}g_{t} $$
+
+The authors that the units in the weight update don't match, i.e., the update should have the same hypothetical units as the parameters/weights. To realize this, they use the root mean squared error of parameter updates.
+
+$$E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \theta^2_t$$
+
+$$RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}$$
+
+Since $RMS[\Delta \theta]_{t}$  is unknown, it's approximated with the RMS of the parameter updates until the previous time step $RMS[\Delta \theta]_{t-1}$.
+
+$$\begin{align} 
+\begin{split} 
+\Delta \theta_t &= - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t} \\ 
+\theta_{t+1} &= \theta_t + \Delta \theta_t 
+\end{split} 
+\end{align}$$
 
 For more information on how to derive this formula, take a look at '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html#adadelta)' by [Sebastian Ruder](https://twitter.com/seb_ruder) and the [original Adadelta paper](https://arxiv.org/abs/1212.5701) by [Matthew D. Zeiler](https://arxiv.org/search/cs?searchtype=author&query=Zeiler%2C+M+D).
 

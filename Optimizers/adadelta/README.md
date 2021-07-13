@@ -16,7 +16,19 @@ Instead of inefficiently storing <img src="tex/ae4fb5973f393577570881fc24fc2054.
 
 AdaDelta takes the form:
 
-<p align="center"><img src="tex/2de22b33302abdf5e16b99d95e6bf125.svg?invert_in_darkmode" align=middle width=168.40660485pt height=36.773649pt/></p>
+<p align="center"><img src="tex/407764bb35619057e9230a563546d02a.svg?invert_in_darkmode" align=middle width=176.39243985pt height=29.58934275pt/></p>
+
+<p align="center"><img src="tex/20aafbd370a6b88bfacab3c7c49d8aa8.svg?invert_in_darkmode" align=middle width=143.38391265pt height=33.58376834999999pt/></p>
+
+The authors that the units in the weight update don't match, i.e., the update should have the same hypothetical units as the parameters/weights. To realize this, they use the root mean squared error of parameter updates.
+
+<p align="center"><img src="tex/8618e3e0464e1c4ae3ba41984874fa33.svg?invert_in_darkmode" align=middle width=261.70160775pt height=18.312383099999998pt/></p>
+
+<p align="center"><img src="tex/4764741b6721dc727ba86e4c3ea5d106.svg?invert_in_darkmode" align=middle width=200.5364691pt height=19.726228499999998pt/></p>
+
+Since <img src="tex/b999b985f5ccf08b3fce39e97a1c63b8.svg?invert_in_darkmode" align=middle width=77.34600719999999pt height=24.65753399999998pt/>  is unknown, it's approximated with the RMS of the parameter updates until the previous time step <img src="tex/e7d2063bdcfb3dfdb3f44724950543d1.svg?invert_in_darkmode" align=middle width=94.17257519999998pt height=24.65753399999998pt/>.
+
+<p align="center"><img src="tex/15431539b7b73e500cc0fd3d7e0af147.svg?invert_in_darkmode" align=middle width=176.5975398pt height=63.05404875pt/></p>
 
 For more information on how to derive this formula, take a look at '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html#adadelta)' by [Sebastian Ruder](https://twitter.com/seb_ruder) and the [original Adadelta paper](https://arxiv.org/abs/1212.5701) by [Matthew D. Zeiler](https://arxiv.org/search/cs?searchtype=author&query=Zeiler%2C+M+D).
 
