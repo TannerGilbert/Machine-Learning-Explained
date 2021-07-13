@@ -25,3 +25,7 @@ Adadelta's main advantages over Adagrad are that it doesn't need a default learn
 <p id="citation1">[1] Sebastian Ruder (2016). An overview of gradient descent optimization algorithms. arXiv preprint arXiv:1609.04747.</p>
 
 <p id="citation2">[2] <a href="https://paperswithcode.com/method/adadelta">https://paperswithcode.com/method/adadelta</a></p>
+
+## Code
+
+* [Adadelta Numpy Implementation](code/adadelta.py)
