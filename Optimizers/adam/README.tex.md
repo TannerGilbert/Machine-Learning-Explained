@@ -1,5 +1,7 @@
 # Adaptive Moment Estimation (Adam)
 
+![Adam Example](doc/adam_example.PNG)
+
 Adaptive Moment Estimation better known as Adam is another adaptive learning rate method first published in 2014 by Kingma et. al. <a href="#citation1">[1]</a> In addition to storing an exponentially decaying average of past squared gradients $v_t$ like Adadelta or RMSprop, Adam also keeps an exponentially decaying average of past gradients $m_t$, similar to SGD with momentum. <a href="#citation2">[2]</a>
 
 $$m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t$$
