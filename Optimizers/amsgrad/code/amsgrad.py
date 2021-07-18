@@ -10,7 +10,7 @@ class AMSGrad:
     learning_rate: float = 0.001
         The step length used when following the negative gradient.
     beta_1: float = 0.9
-        The exponential decay rate for the 2nd moment estimates.
+        The exponential decay rate for the 1st moment estimates.
     beta_2: float = 0.999
         The exponential decay rate for the 2nd moment estimates.
     epsilon: float = 1e-07
