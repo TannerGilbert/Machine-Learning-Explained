@@ -17,7 +17,7 @@ To run KNN the following steps are needed:
 
 ## Choosing the right value for K
 
-When working with KNN there are two important hyperparameters– The **k-value** and the **distance metric**.
+When working with KNN there are two important hyperparameters – The **k-value** and the **distance metric**.
 
 The optimal K-value will vary depending on your data-set. It should be big enough that noise won't affect the prediction but it should also be low enough that one class won't dominate another only because it's sheer amount of data-points.
 

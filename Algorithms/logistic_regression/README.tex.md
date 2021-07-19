@@ -145,7 +145,7 @@ L2 Regularization for Logistic Regression:
 
 $$J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \; \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)}))\right] + \frac{\lambda}{2m}\sum_{j=1}^n\theta_j^2$$
 
-As you can see above you not only can change from L1 to L2 Regularization but you can also increase or decrease the effect of regularization using lambda.
+As you can see above you not only can change from L1 to L2 Regularization but you can also increase or decrease the effect of regularization using $\lambda$.
 
 ## Code
 

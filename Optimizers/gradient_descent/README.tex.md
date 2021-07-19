@@ -59,8 +59,9 @@ All three of the above-mentioned types of Gradient descent have a few challenges
 
 Momentum is a method that helps accelerate SGD in the relevant direction and dampens oscillations by adding a fraction $\gamma$ of the last update vector $v_{t-1}$ to the current update vector.
 
-$$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta) \\
-\theta := \theta - v_t $$
+$$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta)$$
+
+$$\theta = \theta - v_t $$
 
 The momentum term increases for dimensions where gradients continuously point in the same directions and reduces the updates for dimensions whose gradients change directions from one time step to another. As a result, convergence is faster, and oscillation is reduced. 
 
@@ -71,8 +72,9 @@ The momentum term increases for dimensions where gradients continuously point in
 
 Nesterov accelerated gradient (NAG), also called Nesterov Momentum is a variation of momentum that approximates the next values of the parameters by computing $\theta - \gamma v_{t-1}$ and then takes the gradient of the objective funtion not w.r.t the current parameters $\theta$ but w.r.t the approximate future parameters $\theta - \gamma v_{t-1}$. 
 
-$$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta - \gamma v_{t-1} ) \\ 
-\theta := \theta - v_t$$
+$$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta - \gamma v_{t-1} )$$ 
+
+$$\theta = \theta - v_t$$
 
 Momentum first computes the current gradient (small blue vector) and then takes a big jump in the direction of the updated accumulated gradient (big blue vector). NAG, on the other hand, first makes a big jump in the direction of the previous accumulated gradient (brown vector), measures the gradient, and then makes a correction (red vector), which results in the green vector. The anticipation prevents the update from overshooting and results in increased responsiveness. 
 

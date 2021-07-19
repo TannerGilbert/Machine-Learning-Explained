@@ -31,7 +31,9 @@ $$\theta_j:=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta_0, \theta_1
 
 Gradient Descent Formulas for simple linear regression:
 
-$$\frac{\partial}{\partial m}=\frac{2}{N} \sum_{i=1}^{N}-x_i(y_i-(mx_i+b))$$$$\frac{\partial}{\partial b}=\frac{2}{N} \sum_{i=1}^{N}-(y_i-(mx_i+b))$$
+$$\frac{\partial}{\partial m}=\frac{2}{N} \sum_{i=1}^{N}-x_i(y_i-(mx_i+b))$$
+
+$$\frac{\partial}{\partial b}=\frac{2}{N} \sum_{i=1}^{N}-(y_i-(mx_i+b))$$
 
 ## Multivariate Linear Regression
 
@@ -39,7 +41,7 @@ Linear Regression is called multivariate if you are working with at least two in
 
 $$Formula: f(x)=b+w_1x_1+w_2x_2+...+w_nx_n=b+\sum_{i=1}^{n}w_ix_i$$
 
-Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (*w_1* to *w_i*) instead of only for m and b.
+Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight ($w_1$ to $w_i$) instead of only for m and b.
 
 ## Regularization
 

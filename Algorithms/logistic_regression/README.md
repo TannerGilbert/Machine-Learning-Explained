@@ -18,9 +18,9 @@ Logistic Regression is a statistical method that was designed to solve binary cl
 
 Mathematically this looks like:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/782c35b03d81084d082d0684a07ff03d.svg?invert_in_darkmode&sanitize=true" align=middle width=264.922119pt height=16.438356pt/></p>
+<p align="center"><img src="tex/782c35b03d81084d082d0684a07ff03d.svg?invert_in_darkmode" align=middle width=264.922119pt height=16.438356pt/></p>
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/5fb3811ee1edea3bc2a48d40d4db41aa.svg?invert_in_darkmode&sanitize=true" align=middle width=62.239006499999995pt height=14.6502939pt/></p>
+<p align="center"><img src="tex/5fb3811ee1edea3bc2a48d40d4db41aa.svg?invert_in_darkmode" align=middle width=62.239006499999995pt height=14.6502939pt/></p>
 
 ### Sigmoid Function
 
@@ -32,7 +32,7 @@ That's fine when working on a regression task but for binary classification, the
 
 Mathematically the sigmoid function looks like:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/4f5fc085fbff8d9f0739164d34742fe9.svg?invert_in_darkmode&sanitize=true" align=middle width=164.31532919999998pt height=34.3600389pt/></p>
+<p align="center"><img src="tex/4f5fc085fbff8d9f0739164d34742fe9.svg?invert_in_darkmode" align=middle width=164.31532919999998pt height=34.3600389pt/></p>
 
 ### Decision Boundary
 
@@ -40,9 +40,9 @@ To get a discrete class value (either 0 or 1) a decision boundary must be chosen
 
 Generally, the decision boundary is 0.5 so that if the output is >=0.5 we get class 1, else class 0.
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/5bf04b3414ef400138e14332d52bd2a2.svg?invert_in_darkmode&sanitize=true" align=middle width=146.36762249999998pt height=16.438356pt/></p>
+<p align="center"><img src="tex/5bf04b3414ef400138e14332d52bd2a2.svg?invert_in_darkmode" align=middle width=146.36762249999998pt height=16.438356pt/></p>
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/f6e98405de2edfa03d384e436eb4a6e6.svg?invert_in_darkmode&sanitize=true" align=middle width=146.36762249999998pt height=16.438356pt/></p>
+<p align="center"><img src="tex/f6e98405de2edfa03d384e436eb4a6e6.svg?invert_in_darkmode" align=middle width=146.36762249999998pt height=16.438356pt/></p>
 
 ### Loss Function
 
@@ -52,7 +52,7 @@ For Logistic Regression we can't use the same loss function as for Linear Regres
 
 Instead, we will use the following loss function for logistic regression:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/b348a8293e0acf9556a5a0a7e5fe9441.svg?invert_in_darkmode&sanitize=true" align=middle width=316.36969815pt height=95.691849pt/></p>
+<p align="center"><img src="tex/b348a8293e0acf9556a5a0a7e5fe9441.svg?invert_in_darkmode" align=middle width=316.36969815pt height=95.691849pt/></p>
 
 At first glance, the functions look complex but when visualized they are quite easy to grasp.
 
@@ -68,7 +68,7 @@ If the correct answer is 1, then the cost function will be 0 if the prediction i
 
 To make it easier to work with the loss function we can compress the two conditional cases into one equation:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/f65d6c31a76358fd63c7ad13b74c5b2c.svg?invert_in_darkmode&sanitize=true" align=middle width=455.52811425pt height=44.89738935pt/></p>
+<p align="center"><img src="tex/f65d6c31a76358fd63c7ad13b74c5b2c.svg?invert_in_darkmode" align=middle width=455.52811425pt height=44.89738935pt/></p>
 
 Notice that when y is equal to 1 the second term will be zero and therefore will not affect the loss. 
 
@@ -76,7 +76,7 @@ One the other hand if y is equal to 0 the first term will be zero and therefore 
 
 Vectorized this looks like:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/949323d1374941432d95b3af55636269.svg?invert_in_darkmode&sanitize=true" align=middle width=331.64248755pt height=32.990165999999995pt/></p>
+<p align="center"><img src="tex/949323d1374941432d95b3af55636269.svg?invert_in_darkmode" align=middle width=331.64248755pt height=32.990165999999995pt/></p>
 
 ### Gradient Descent
 
@@ -84,13 +84,13 @@ To find the coefficients (weights) that minimize the loss function we will use G
 
 Remember the general form of gradient descent looks like:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/07eebf05477a153a80ab3a1706b61874.svg?invert_in_darkmode&sanitize=true" align=middle width=150.88843769999997pt height=87.83032499999999pt/></p>
+<p align="center"><img src="tex/07eebf05477a153a80ab3a1706b61874.svg?invert_in_darkmode" align=middle width=150.88843769999997pt height=87.83032499999999pt/></p>
 
 We can get the gradient descent formula for Logistic Regression by taking the derivative of the loss function. This is quite involved therefore I will show you the result first and you can skip the process of getting to the result if you like.
 
 Result:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/608251b1bb31fecdd0617348db9b9a4c.svg?invert_in_darkmode&sanitize=true" align=middle width=261.71812259999996pt height=97.50012525pt/></p>
+<p align="center"><img src="tex/608251b1bb31fecdd0617348db9b9a4c.svg?invert_in_darkmode" align=middle width=261.71812259999996pt height=97.50012525pt/></p>
 
 Notice that the result is identical to the one of Linear Regression.
 
@@ -98,11 +98,11 @@ Notice that the result is identical to the one of Linear Regression.
 
 First we need to calculate the derivative of the sigmoid function. The derivative of the sigmoid function is quite easy to calulcate using [the quotient rule](https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/ab-2-9/a/quotient-rule-review).
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/8892ac1f6b1e6ffec35850296b02ec60.svg?invert_in_darkmode&sanitize=true" align=middle width=752.70468735pt height=88.18257195pt/></p>
+<p align="center"><img src="tex/8892ac1f6b1e6ffec35850296b02ec60.svg?invert_in_darkmode" align=middle width=752.70468735pt height=88.18257195pt/></p>
 
 Now we are ready to find out the partial derivative:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/d866685970a1f6603602b10a76c5bf0e.svg?invert_in_darkmode&sanitize=true" align=middle width=773.4907191pt height=603.5844308999999pt/></p>
+<p align="center"><img src="tex/d866685970a1f6603602b10a76c5bf0e.svg?invert_in_darkmode" align=middle width=773.4907191pt height=603.5844308999999pt/></p>
 
 ## Multiclass Classification: One-vs-all
 
@@ -114,7 +114,7 @@ In this case, the problem is divided into n+1 subproblems (n+1=number of highest
 
 In each subproblem we predict the probability that y is a member of one of our classes.
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/068f41ab65ac2dc66989bc4b34ac6269.svg?invert_in_darkmode&sanitize=true" align=middle width=184.88707215pt height=165.98866844999998pt/></p>
+<p align="center"><img src="tex/068f41ab65ac2dc66989bc4b34ac6269.svg?invert_in_darkmode" align=middle width=184.88707215pt height=165.98866844999998pt/></p>
 
 We are basically choosing one class and putting all the others into a single class. We do this repeatedly until we went through each classes. Then we will find the result with the highest value and use this class as our prediction.
 
@@ -139,13 +139,13 @@ For more information on the difference between L1 and L2 Regularization check ou
 
 L1 Regularization for Logistic Regression:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/1426b496f93f9ac9c247d2c6b9feb304.svg?invert_in_darkmode&sanitize=true" align=middle width=555.2160207pt height=47.1348339pt/></p>
+<p align="center"><img src="tex/1426b496f93f9ac9c247d2c6b9feb304.svg?invert_in_darkmode" align=middle width=555.2160207pt height=47.1348339pt/></p>
 
 L2 Regularization for Logistic Regression:
 
-<p align="center"><img src="/Algorithms/logistic_regression/tex/95413250c774b015e5c7ae8f011b158c.svg?invert_in_darkmode&sanitize=true" align=middle width=546.1663514999999pt height=47.1348339pt/></p>
+<p align="center"><img src="tex/95413250c774b015e5c7ae8f011b158c.svg?invert_in_darkmode" align=middle width=546.1663514999999pt height=47.1348339pt/></p>
 
-As you can see above you not only can change from L1 to L2 Regularization but you can also increase or decrease the effect of regularization using lambda.
+As you can see above you not only can change from L1 to L2 Regularization but you can also increase or decrease the effect of regularization using <img src="tex/fd8be73b54f5436a5cd2e73ba9b6bfa9.svg?invert_in_darkmode" align=middle width=9.58908224999999pt height=22.831056599999986pt/>.
 
 ## Code
 

@@ -9,7 +9,6 @@ Gradient descent is an optimization algorithm. Optimization refers to the task o
 Picking a proper value for the learning rate <img src="tex/c745b9b57c145ec5577b82542b2df546.svg?invert_in_darkmode" align=middle width=10.57650494999999pt height=14.15524440000002pt/> is important as a too small learning rate can lead to slow convergence, while a too large learning rate can hinder convergence and cause the loss function to fluctuate around the minimum or even to diverge.
 
 ![Pick learning rate](doc/pick_learning_rate.png)
-
 *Source: [CS231n Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/neural-networks-3/)*
 
 ## Gradient descent variants
@@ -45,7 +44,6 @@ By performing the parameter update on a mini-batch, it **a)** reduces the varian
 The mini-batch size usually ranges between 16 and 256 depending on the application and the training hardware. Mini-batch gradient descent is typically the algorithm of choice from the three ones discussed above.
 
 ![Variations comparison](doc/variations_comparison.png)
-
 *Source: [Understanding Optimization Algorithms](https://laptrinhx.com/understanding-optimization-algorithms-3818430905/)*
 
 ## Challenges
@@ -61,24 +59,26 @@ All three of the above-mentioned types of Gradient descent have a few challenges
 
 Momentum is a method that helps accelerate SGD in the relevant direction and dampens oscillations by adding a fraction <img src="tex/11c596de17c342edeed29f489aa4b274.svg?invert_in_darkmode" align=middle width=9.423880949999988pt height=14.15524440000002pt/> of the last update vector <img src="tex/bec0f956437138a98cb909f5dae6b77f.svg?invert_in_darkmode" align=middle width=29.76042629999999pt height=14.15524440000002pt/> to the current update vector.
 
-<p align="center"><img src="tex/f6ba11db1e6b10797a9ebcc12aeda2dc.svg?invert_in_darkmode" align=middle width=246.86632079999998pt height=16.438356pt/></p>
+<p align="center"><img src="tex/62b65f92d15f5423073762ffe8477b86.svg?invert_in_darkmode" align=middle width=171.01036095pt height=16.438356pt/></p>
+
+<p align="center"><img src="tex/b9a39f2717502925e401654007e07bfd.svg?invert_in_darkmode" align=middle width=71.289735pt height=13.881256950000001pt/></p>
 
 The momentum term increases for dimensions where gradients continuously point in the same directions and reduces the updates for dimensions whose gradients change directions from one time step to another. As a result, convergence is faster, and oscillation is reduced. 
 
 ![Momentum](doc/momentum.png)
-
 *Source: [SGD with Momentum](https://paperswithcode.com/method/sgd-with-momentum)*
 
 ## Nesterov accelerated gradient
 
 Nesterov accelerated gradient (NAG), also called Nesterov Momentum is a variation of momentum that approximates the next values of the parameters by computing <img src="tex/666d1825fe38f52f9b0a01c2721dc4c8.svg?invert_in_darkmode" align=middle width=67.44900689999999pt height=22.831056599999986pt/> and then takes the gradient of the objective funtion not w.r.t the current parameters <img src="tex/27e556cf3caa0673ac49a8f0de3c73ca.svg?invert_in_darkmode" align=middle width=8.17352744999999pt height=22.831056599999986pt/> but w.r.t the approximate future parameters <img src="tex/666d1825fe38f52f9b0a01c2721dc4c8.svg?invert_in_darkmode" align=middle width=67.44900689999999pt height=22.831056599999986pt/>. 
 
-<p align="center"><img src="tex/19f7986adf26d94218ca0cb10277f8e4.svg?invert_in_darkmode" align=middle width=306.9636669pt height=16.438356pt/></p>
+<p align="center"><img src="tex/e45b3f899e65ddee5e073ecf63f17efb.svg?invert_in_darkmode" align=middle width=231.1077087pt height=16.438356pt/></p> 
+
+<p align="center"><img src="tex/9691e94c3d0d9932f20e8f32a7908dd0.svg?invert_in_darkmode" align=middle width=71.289735pt height=13.881256950000001pt/></p>
 
 Momentum first computes the current gradient (small blue vector) and then takes a big jump in the direction of the updated accumulated gradient (big blue vector). NAG, on the other hand, first makes a big jump in the direction of the previous accumulated gradient (brown vector), measures the gradient, and then makes a correction (red vector), which results in the green vector. The anticipation prevents the update from overshooting and results in increased responsiveness. 
 
 ![Nesterov accelerated gradient](doc/nesterov_accelerated_gradient.png)
-
 *Source: [G. Hinton's lecture 6c](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)*
 
 ## Code

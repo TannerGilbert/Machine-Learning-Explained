@@ -31,7 +31,9 @@ General Gradient Descent Formula:
 
 Gradient Descent Formulas for simple linear regression:
 
-<p align="center"><img src="tex/0822727d1cb885ac043eb8c23c6a8c06.svg?invert_in_darkmode" align=middle width=239.42691134999995pt height=47.806078649999996pt/></p><p align="center"><img src="tex/f28aee7ec74570ba081a608f7b5d88bb.svg?invert_in_darkmode" align=middle width=217.1808045pt height=47.806078649999996pt/></p>
+<p align="center"><img src="tex/0822727d1cb885ac043eb8c23c6a8c06.svg?invert_in_darkmode" align=middle width=239.42691134999995pt height=47.806078649999996pt/></p>
+
+<p align="center"><img src="tex/f28aee7ec74570ba081a608f7b5d88bb.svg?invert_in_darkmode" align=middle width=217.1808045pt height=47.806078649999996pt/></p>
 
 ## Multivariate Linear Regression
 
@@ -39,7 +41,7 @@ Linear Regression is called multivariate if you are working with at least two in
 
 <p align="center"><img src="tex/695de53e837a94510d8695f780f764d1.svg?invert_in_darkmode" align=middle width=452.9069325pt height=44.89738935pt/></p>
 
-Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (*w_1* to *w_i*) instead of only for m and b.
+Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (<img src="tex/4b4518f1b7f0fb1347fa21506ebafb19.svg?invert_in_darkmode" align=middle width=18.32105549999999pt height=14.15524440000002pt/> to <img src="tex/c2a29561d89e139b3c7bffe51570c3ce.svg?invert_in_darkmode" align=middle width=16.41940739999999pt height=14.15524440000002pt/>) instead of only for m and b.
 
 ## Regularization
 
