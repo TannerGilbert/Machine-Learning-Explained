@@ -4,7 +4,7 @@ import numpy as np
 
 
 class MultivariateLinearRegression:
-    """Simple Linear Regression
+    """Multivariate Linear Regression
     Parameters:
     -----------
     learning_rate: float
