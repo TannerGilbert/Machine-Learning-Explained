@@ -12,10 +12,16 @@ class PCA:
     """
     def __init__(self, n_components: int = 2):
         self.n_components = n_components
+        self.eigenvalues = None
         self.eigenvectors = None
-
+        self.mean = None
+        self.std = None
 
     def fit(self, X: Union[list, np.ndarray]) -> PCA:
+        # subtract off the mean to center the data
+        self.mean = X.mean(axis=0)
+        X = X - self.mean
+
         covariance_matrix = np.cov(X, rowvar=False)
 
         eigenvalues, eigenvectors = np.linalg.eig(covariance_matrix)
@@ -24,11 +30,16 @@ class PCA:
         eigenvalues = eigenvalues[idx][:self.n_components]
         eigenvectors = np.atleast_1d(eigenvectors[:, idx])[:, :self.n_components]
 
+        self.eigenvalues = eigenvalues
         self.eigenvectors = eigenvectors
 
         return self
 
     def fit_transform(self, X: Union[list, np.ndarray]) -> np.ndarray:
+        # subtract off the mean to center the data
+        self.mean = X.mean(axis=0)
+        X = X - self.mean
+
         covariance_matrix = np.cov(X, rowvar=False)
 
         eigenvalues, eigenvectors = np.linalg.eig(covariance_matrix)
@@ -37,6 +48,7 @@ class PCA:
         eigenvalues = eigenvalues[idx][:self.n_components]
         eigenvectors = np.atleast_1d(eigenvectors[:, idx])[:, :self.n_components]
 
+        self.eigenvalues = eigenvalues
         self.eigenvectors = eigenvectors
 
         # Project the data onto principal components
@@ -45,10 +57,16 @@ class PCA:
         return X_transformed
 
     def transform(self, X: Union[list, np.ndarray]) -> np.ndarray:
+        X = X - self.mean
+
         # Project the data onto principal components
         X_transformed = np.dot(X, self.eigenvectors)
 
         return X_transformed
+
+    @property
+    def explained_variance_ratio_(self):
+        return self.eigenvalues / np.sum(self.eigenvalues)
 
 
 if __name__ == '__main__':
