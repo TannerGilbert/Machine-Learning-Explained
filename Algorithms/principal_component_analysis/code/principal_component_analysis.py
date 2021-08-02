@@ -36,25 +36,8 @@ class PCA:
         return self
 
     def fit_transform(self, X: Union[list, np.ndarray]) -> np.ndarray:
-        # subtract off the mean to center the data
-        self.mean = X.mean(axis=0)
-        X = X - self.mean
-
-        covariance_matrix = np.cov(X, rowvar=False)
-
-        eigenvalues, eigenvectors = np.linalg.eig(covariance_matrix)
-
-        idx = eigenvalues.argsort()[::-1]
-        eigenvalues = eigenvalues[idx][:self.n_components]
-        eigenvectors = np.atleast_1d(eigenvectors[:, idx])[:, :self.n_components]
-
-        self.eigenvalues = eigenvalues
-        self.eigenvectors = eigenvectors
-
-        # Project the data onto principal components
-        X_transformed = np.dot(X, eigenvectors)
-
-        return X_transformed
+        self.fit(X)
+        return self.transform(X)
 
     def transform(self, X: Union[list, np.ndarray]) -> np.ndarray:
         X = X - self.mean
