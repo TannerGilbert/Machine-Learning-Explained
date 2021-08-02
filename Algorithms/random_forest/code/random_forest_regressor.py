@@ -6,19 +6,19 @@ from sklearn.tree import DecisionTreeRegressor
 
 class RandomForest:
     """Random Forest Regressor
-        Parameters:
-        -----------
-        n_estimators: int = 10
-            The number of trees in the forest.
-        n_features: Optional[Union[str, int]] = 'sqrt'
-            The number of features to consider when looking for the best split
-        sample_size: float = 0.8
-            Amount of data used (0-1)
-        max_depth: Optional[int] = 10
-            The maximum depth of the tree.
-        min_leaf: Union[int, float] = 5
-            The minimum number of samples required to be at a leaf node.
-        """
+    Parameters:
+    -----------
+    n_estimators: int = 10
+        The number of trees in the forest.
+    n_features: Optional[Union[str, int]] = 'sqrt'
+        The number of features to consider when looking for the best split
+    sample_size: float = 0.8
+        Amount of data used (0-1)
+    max_depth: Optional[int] = 10
+        The maximum depth of the tree.
+    min_leaf: Union[int, float] = 5
+        The minimum number of samples required to be at a leaf node.
+    """
     def __init__(self, n_estimators: int = 10, n_features: Optional[Union[str, int]] = 'sqrt', sample_size: float = 0.8,
                  max_depth: Optional[int] = 10, min_leaf: Union[int, float] = 5) -> None:
         self.n_estimators = n_estimators
