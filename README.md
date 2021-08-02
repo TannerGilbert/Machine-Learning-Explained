@@ -14,6 +14,7 @@ This repository contains explanations and implementations of machine learning al
 * [Random Forest](Algorithms/random_forest)
 * [Adaboost](Algorithms/adaboost)
 * [Gradient Boosting](Algorithms/gradient_boosting)
+* [Principal Component Analysis (PCA)](Algorithms/principal_component_analysis)
 
 ## Optimizers
 
@@ -25,6 +26,8 @@ This repository contains explanations and implementations of machine learning al
 * [AdaMax](Optimizers/adamax)
 * [Nadam](Optimizers/nadam)
 * [AMSGrad](Optimizers/amsgrad)
+* [AdamW](Optimizers/adamw)
+* [QHAdam](Optimizers/qhadam)
 
 ## Activation Functions
 

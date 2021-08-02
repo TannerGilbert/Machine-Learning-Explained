@@ -72,6 +72,7 @@ $$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\ri
 * [Lasso Regression](code/lasso_regression.py)
 * [Ridge Regression](code/ridge_regression.py)
 * [ElasticNet](code/elastic_net.py)
+* [Polynomial Regression](code/polynomial_regression.py)
 * [Linear Regression Explained](code/linear_regression_explained.ipynb)
 
 ## Credit / Other resources

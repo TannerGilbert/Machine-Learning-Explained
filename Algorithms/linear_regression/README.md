@@ -72,6 +72,7 @@ L2 regularization:
 * [Lasso Regression](code/lasso_regression.py)
 * [Ridge Regression](code/ridge_regression.py)
 * [ElasticNet](code/elastic_net.py)
+* [Polynomial Regression](code/polynomial_regression.py)
 * [Linear Regression Explained](code/linear_regression_explained.ipynb)
 
 ## Credit / Other resources
