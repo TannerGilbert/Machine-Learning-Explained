@@ -3,31 +3,33 @@ from typing import Tuple
 import numpy as np
 
 
-class MultivariateLinearRegression:
-    """Multivariate Linear Regression
+class ElasticNet:
+    """ElasticNet
     Parameters:
     -----------
     learning_rate: float
         The step length used when following the negative gradient during training.
     C: float, default=1
-       Regularization strength  
+       Regularization strength
     """
-    def __init__(self, learning_rate: float, C: float = 1) -> None:
+    def __init__(self, learning_rate: float, alpha: float = 1.0, l1_ratio: float = 0.5) -> None:
         self.learning_rate = learning_rate
-        self.C = C
+        self.alpha = alpha
+        self.l1_ratio = l1_ratio
         self.w = ""
 
     def cost_function(self, x: np.ndarray, y: np.ndarray) -> Tuple[np.ndarray, float]:
         dif = np.dot(x, self.w) - y
-        cost = np.sum(dif**2) / (2*np.shape(x)[0])
+        cost = (np.sum(dif**2) + self.alpha * (self.l1_ratio * np.sum(np.square(self.w)) +
+                (1 - self.l1_ratio) * np.sum(np.absolute(self.w)))) / (2*np.shape(x)[0])
 
         return dif, cost
 
-    def fit(self, x: np.ndarray, y: np.ndarray, num_iterations: int = 10000) -> MultivariateLinearRegression:
+    def fit(self, x: np.ndarray, y: np.ndarray, num_iterations: int = 10000) -> ElasticNet:
         if self.w == "":
             _, num_features = np.shape(x)
             self.w = np.random.uniform(-1, 1, num_features)
-        for i in range(num_iterations):
+        for _ in range(num_iterations):
             dif, cost = self.cost_function(x, y)
             gradient = np.dot(x.transpose(), dif) / np.shape(x)[0]
             self.w = self.w - self.learning_rate * gradient
@@ -52,7 +54,7 @@ if __name__ == '__main__':
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42)
 
-    model = MultivariateLinearRegression(0.0001)
+    model = ElasticNet(0.0001)
     model.fit(X_train, y_train, 10000)
     predictions = model.predict(X_test)
     mse = ((y_test - predictions)**2).mean(axis=0)

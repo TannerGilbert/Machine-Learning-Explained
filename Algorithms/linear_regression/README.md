@@ -69,6 +69,9 @@ L2 regularization:
 
 * [Simple Linear Regression](code/simple_linear_regression.py)
 * [Multivariate Linear Regression](code/multivariate_linear_regression.py)
+* [Lasso Regression](code/lasso_regression.py)
+* [Ridge Regression](code/ridge_regression.py)
+* [ElasticNet](code/elastic_net.py)
 * [Linear Regression Explained](code/linear_regression_explained.ipynb)
 
 ## Credit / Other resources

@@ -140,6 +140,7 @@ regressor = regressor.fit(X, y)
 
 * [Decision Tree Classifier](code/decision_tree_classification.py)
 * [Decision Tree Regressor](code/decision_tree_regression.py)
+* [Visualize Decision Trees with Graphviz](code/visualize_decision_trees_with_graphviz.py)
 
 ## Credit / Other resources
 
