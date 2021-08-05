@@ -4,7 +4,7 @@
 
 The motivation for AMSGrad lies with the observation that [Adam](https://ml-explained.com/blog/adam-explained) fails to converge to an optimal solution for some data-sets and is outperformed by SDG with momentum.
 
-Reddi et al. (2018) [1] show that one cause of the issue described above is the use of the exponential moving average of the past squared gradients.
+Reddi et al. (2018) <a href="#citation1">[1]</a> show that one cause of the issue described above is the use of the exponential moving average of the past squared gradients.
 
 To fix the above-described behavior, the authors propose a new algorithm called AMSGrad that keeps a running maximum of the squared gradients instead of an exponential moving average.
 
@@ -18,7 +18,7 @@ $$\begin{align} \begin{split} m_t &= \beta_1 m_{t-1} + (1 - \beta_1) g_t \\ v_t 
 
 For more information, check out the paper '[On the Convergence of Adam and Beyond](https://arxiv.org/abs/1904.09237v1)' and the [AMSGrad section](https://ruder.io/optimizing-gradient-descent/index.html#amsgrad) of the '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html)' article.
 
-[1] Reddi, Sashank J., Kale, Satyen, & Kumar, Sanjiv. [On the Convergence of Adam and Beyond](https://arxiv.org/abs/1904.09237v1).
+<p id="citation1">[1] Reddi, Sashank J., Kale, Satyen, & Kumar, Sanjiv. [On the Convergence of Adam and Beyond](https://arxiv.org/abs/1904.09237v1).</p>
 
 ## Code
 
