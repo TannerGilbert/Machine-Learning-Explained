@@ -44,8 +44,6 @@ class QHAdam:
         m_hat = self.m / (1 - self.beta_1**self.t)
         v_hat = self.v / (1 - self.beta_2**self.t)
 
-        w_update = self.learning_rate * m_hat / (np.sqrt(v_hat) + self.epsilon)
-
         w_update = self.learning_rate * ((1 - self.v_1) * grad_wrt_w + self.v_1 * m_hat) / (np.sqrt((1 - self.v_2) * np.power(grad_wrt_w, 2) + self.v_2 * v_hat) + self.epsilon)
 
         return w - w_update
