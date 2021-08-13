@@ -13,3 +13,7 @@ Essentially, it's a weighted average of the momentum and plain SGD, weighting th
 <p id="citation2">[2] <a href="https://paperswithcode.com/method/qhadam">QHAdam Papers With Code</a></p>
 
 <p id="citation3">[3] John Chen. <a href="https://johnchenresearch.github.io/demon/">An updated overview of recent gradient descent algorithms</a></p>
+
+## Code
+
+- [QHAdam Numpy Implementation](code/qhadam.py)
