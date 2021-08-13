@@ -16,9 +16,9 @@ class QHAdam:
     epsilon: float = 1e-07
         A small floating point value to avoid zero denominator.
     v_1: float = 0.7
-        Immediate discount facto
+        Immediate discount factor
     v_2: float = 1.0
-        Immediate discount facto
+        Immediate discount factor
     """
     def __init__(self, learning_rate: float = 0.001, beta_1: float = 0.9, beta_2: float = 0.999, epsilon: float = 1e-7, v_1: float = 0.7, v_2: float = 1.0) -> None:
         self.learning_rate = learning_rate
