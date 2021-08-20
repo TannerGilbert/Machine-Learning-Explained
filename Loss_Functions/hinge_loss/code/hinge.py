@@ -6,4 +6,4 @@ class Hinge:
         return self.loss(y, y_pred)
 
     def loss(self, y: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
-        return np.max(0, 1 - y * y_pred)
+        return np.sum(np.maximum(0, 1 - y * y_pred)) / len(y)
