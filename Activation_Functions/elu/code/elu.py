@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class LeakyReLU:
+class ELU:
     def __init__(self, alpha: float = 1.0) -> None:
         self.alpha = alpha
 
