@@ -27,11 +27,14 @@ This repository contains explanations and implementations of machine learning al
 * [Nadam](Optimizers/nadam)
 * [AMSGrad](Optimizers/amsgrad)
 * [AdamW](Optimizers/adamw)
+* [QHM](Optimizers/qhm)
 * [QHAdam](Optimizers/qhadam)
+* [RAdam](Optimizers/radam)
 
 ## Activation Functions
 
 * [ELU](Activation_Functions/elu)
+* [GELU](Activation_Functions/gelu)
 * [Leaky RELU](Activation_Functions/leaky_relu)
 * [RELU](Activation_Functions/relu)
 * [SELU](Activation_Functions/selu)
@@ -45,6 +48,7 @@ This repository contains explanations and implementations of machine learning al
 
 * [Cross Entropy](Loss_Functions/cross_entropy)
 * [Hinge Loss](Loss_Functions/hinge_loss)
+* [Huber Loss](Loss_Functions/huber)
 * [Mean absolute error](Loss_Functions/mean_absolute_error)
 * [Mean squared error](Loss_Functions/mean_squared_error)
 
