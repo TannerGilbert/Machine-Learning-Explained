@@ -1,8 +1,10 @@
 # Activation Functions
 
+![Activation_Functions](doc/Activation_Functions.png)
+
 ### Sigmoid Function
 
-![Sigmoid_Function.png](doc/Sigmoid_Function.png)
+![Sigmoid_Function](doc/Sigmoid_Function.png)
 
 Function:
 
@@ -26,7 +28,7 @@ $$f'\left(x\right) = 1-f(x)^{2}$$
 
 ### Rectified Linear Unit (ReLU)
 
-![Rectified_Linear_Unit_(ReLU).png](doc/Rectified_Linear_Unit_(ReLU).png)
+![Rectified_Linear_Unit_(ReLU)](doc/Rectified_Linear_Unit.png)
 
 Function:
 
@@ -38,7 +40,7 @@ $$f'\left(x\right) = \begin{cases} 0 ,& \text{if } x < 0 \\ 1,& \text{if } x > 0
 
 ### Leaky ReLU
 
-![Leaky_ReLU.png](doc/Leaky_ReLU.png)
+![Leaky_ReLU](doc/Leaky_ReLU.png)
 
 Function:
 
@@ -50,7 +52,7 @@ $$f'\left(x\right) = \begin{cases} 0.01 ,& \text{if } x < 0 \\ 1,& \text{if } x 
 
 ### Parametric ReLU
 
-![Parameteric_ReLU.png](doc/Parameteric_ReLU.png)
+![Parameteric_ReLU](doc/Parameteric_ReLU.png)
 
 Function:
 
@@ -62,7 +64,7 @@ $$f'\left(x\right) = \begin{cases} \alpha ,& \text{if } x < 0 \\ 1,& \text{if } 
 
 ### Exponential Linear Unit (ELU)
 
-![Exponential_Linear_Unit_(ELU).png](doc/Exponential_Linear_Unit_(ELU).png)
+![Exponential_Linear_Unit_(ELU)](doc/Exponential_Linear_Unit.png)
 
 Function:
 
@@ -74,7 +76,7 @@ $$f'\left(x\right) = \begin{cases} \alpha e^x,& \text{if } x < 0 \\ 1,& \text{if
 
 ### Scaled Exponential Linear Unit (SELU)
 
-![Scaled_Exponential_Linear_Unit_(SELU).png](doc/Scaled_Exponential_Linear_Unit_(SELU).png)
+![Scaled_Exponential_Linear_Unit_(SELU)](doc/Scaled_Exponential_Linear_Unit.png)
 
 Function:
 
@@ -86,7 +88,7 @@ $$f'\left(x\right) = \lambda \begin{cases} \alpha e^x,& \text{if } x < 0 \\ 1,& 
 
 ### Gaussian Error Linear Unit (GELU)
 
-![Gaussian_Error_Linear_Unit_(GELU).png](doc/Gaussian_Error_Linear_Unit_(GELU).png)
+![Gaussian_Error_Linear_Unit_(GELU)](doc/Gaussian_Error_Linear_Unit.png)
 
 Function:
 
@@ -98,7 +100,7 @@ $$f'\left(x\right) = \Phi \left(x\right) + x \phi \left(x\right)$$
 
 ### Sigmoid-Weighted Linear Unit (SiLU) / Swish
 
-![Sigmoid_Weighted_Linear_Unit_(SiLU)_Swish.png](doc/Sigmoid_Weighted_Linear_Unit_(SiLU)_Swish.png)
+![Sigmoid_Weighted_Linear_Unit_(SiLU)_Swish](doc/Sigmoid_Weighted_Linear_Unit_Swish.png)
 
 Function:
 
@@ -116,7 +118,7 @@ $$f\left(x\right) = \frac {e^{x_{i}}}{\sum _{j=1}^{J}e^{x_{j}}}$$
 
 ### Softplus
 
-![SoftPlus.png](doc/SoftPlus.png)
+![SoftPlus](doc/SoftPlus.png)
 
 Function:
 
@@ -128,7 +130,7 @@ $$f'\left(x\right) = \frac{1}{1+e^{-x}}$$
 
 ### Mish
 
-![Mish_Function.png](doc/Mish_Function.png)
+![Mish_Function](doc/Mish_Function.png)
 
 Function:
 

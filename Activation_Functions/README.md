@@ -1,8 +1,10 @@
 # Activation Functions
 
+![Activation_Functions](doc/Activation_Functions.png)
+
 ### Sigmoid Function
 
-![Sigmoid_Function.png](doc/Sigmoid_Function.png)
+![Sigmoid_Function](doc/Sigmoid_Function.png)
 
 Function:
 
@@ -26,7 +28,7 @@ Derivative:
 
 ### Rectified Linear Unit (ReLU)
 
-![Rectified_Linear_Unit_(ReLU).png](doc/Rectified_Linear_Unit_(ReLU).png)
+![Rectified_Linear_Unit_(ReLU)](doc/Rectified_Linear_Unit.png)
 
 Function:
 
@@ -38,7 +40,7 @@ Derivative:
 
 ### Leaky ReLU
 
-![Leaky_ReLU.png](doc/Leaky_ReLU.png)
+![Leaky_ReLU](doc/Leaky_ReLU.png)
 
 Function:
 
@@ -50,7 +52,7 @@ Derivative:
 
 ### Parametric ReLU
 
-![Parameteric_ReLU.png](doc/Parameteric_ReLU.png)
+![Parameteric_ReLU](doc/Parameteric_ReLU.png)
 
 Function:
 
@@ -62,11 +64,11 @@ Derivative:
 
 ### Exponential Linear Unit (ELU)
 
-![Exponential_Linear_Unit_(ELU).png](doc/Exponential_Linear_Unit_(ELU).png)
+![Exponential_Linear_Unit_(ELU)](doc/Exponential_Linear_Unit.png)
 
 Function:
 
-<p align="center"><img src="tex/61916d70fa806c731f6b8e12a081fdc2.svg?invert_in_darkmode" align=middle width=267.89914304999996pt height=49.315569599999996pt/></p>
+<p align="center"><img src="tex/22b919815535e3da79a74831f137d534.svg?invert_in_darkmode" align=middle width=267.89914304999996pt height=49.315569599999996pt/></p>
 
 Derivative:
 
@@ -74,11 +76,11 @@ Derivative:
 
 ### Scaled Exponential Linear Unit (SELU)
 
-![Scaled_Exponential_Linear_Unit_(SELU).png](doc/Scaled_Exponential_Linear_Unit_(SELU).png)
+![Scaled_Exponential_Linear_Unit_(SELU)](doc/Scaled_Exponential_Linear_Unit.png)
 
 Function:
 
-<p align="center"><img src="tex/b106834be35dfc293ba97ae8fbe93673.svg?invert_in_darkmode" align=middle width=663.27940635pt height=49.315569599999996pt/></p>
+<p align="center"><img src="tex/822646f49afad2437610e66ee730bef7.svg?invert_in_darkmode" align=middle width=663.27940635pt height=49.315569599999996pt/></p>
 
 Derivative:
 
@@ -86,11 +88,11 @@ Derivative:
 
 ### Gaussian Error Linear Unit (GELU)
 
-![Gaussian_Error_Linear_Unit_(GELU).png](doc/Gaussian_Error_Linear_Unit_(GELU).png)
+![Gaussian_Error_Linear_Unit_(GELU)](doc/Gaussian_Error_Linear_Unit.png)
 
 Function:
 
-<p align="center"><img src="tex/a44d2c33ac06d2b68df258ffa4e311c6.svg?invert_in_darkmode" align=middle width=344.55862485pt height=39.452455349999994pt/></p>
+<p align="center"><img src="tex/5e156666e8767505b7fdc17f061898f7.svg?invert_in_darkmode" align=middle width=344.55862485pt height=39.452455349999994pt/></p>
 
 Derivative:
 
@@ -98,7 +100,7 @@ Derivative:
 
 ### Sigmoid-Weighted Linear Unit (SiLU) / Swish
 
-![Sigmoid_Weighted_Linear_Unit_(SiLU)_Swish.png](doc/Sigmoid_Weighted_Linear_Unit_(SiLU)_Swish.png)
+![Sigmoid_Weighted_Linear_Unit_(SiLU)_Swish](doc/Sigmoid_Weighted_Linear_Unit_Swish.png)
 
 Function:
 
@@ -116,11 +118,11 @@ Function:
 
 ### Softplus
 
-![SoftPlus.png](doc/SoftPlus.png)
+![SoftPlus](doc/SoftPlus.png)
 
 Function:
 
-<p align="center"><img src="tex/400293c7745c1271a610177098dbe49c.svg?invert_in_darkmode" align=middle width=135.59910539999998pt height=16.438356pt/></p>
+<p align="center"><img src="tex/57007cfe55ba83df3eeedbdc9d6485b4.svg?invert_in_darkmode" align=middle width=135.59910539999998pt height=16.438356pt/></p>
 
 Derivative:
 
@@ -128,7 +130,7 @@ Derivative:
 
 ### Mish
 
-![Mish_Function.png](doc/Mish_Function.png)
+![Mish_Function](doc/Mish_Function.png)
 
 Function:
 
