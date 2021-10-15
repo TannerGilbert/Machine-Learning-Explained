@@ -1,4 +1,5 @@
 # Linear Regression
+
 ![](doc/linear_regression_example.png)
 
 ## What is Linear Regression?
@@ -43,6 +44,18 @@ $$Formula: f(x)=b+w_1x_1+w_2x_2+...+w_nx_n=b+\sum_{i=1}^{n}w_ix_i$$
 
 Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight ($w_1$ to $w_i$) instead of only for m and b.
 
+## Normal Equation
+
+Another way to find the optimal coefficients is to use the "Normal Equation". The "Normal Equation" is an analytical approach for finding the optimal coefficients without needing to iterate over the data.
+
+$$\theta = \left(X^T X\right)^{-1} X^T y$$
+
+Contrary to Gradient Descent, when using the Normal Equation, features don't need to be scaled. The Normal Equation works well for datasets with few features but can be slow as the number of features increases due to the high computational complexity of computing the inverse $\mathcal{O}(n^3)$.
+
+Further readings:
+* [Lecture 4.6 — Linear Regression With Multiple Variables | Normal Equation — [Andrew Ng]](https://www.youtube.com/watch?v=B-Ks01zR4HY)
+* [Derivation of the Normal Equation for linear regression](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression)
+
 ## Regularization
 
 Regularization are techniques used to reduce overfitting. This is really important to create models that generalize well on new data.
@@ -64,6 +77,25 @@ $$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\ri
 L2 regularization:
 
 $$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^2+\lambda\sum_{j=1}^{n}\theta_j^2\right]$$
+
+## ElasticNet
+
+ElasticNet is a regularization technique that linearly combines the L1 and L2 penalties. 
+
+$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^2+\text{l1\_ratio}*\sum_{j=1}^{n}\left|\theta_j\right| +\left(1-\text{l1\_ratio} \right) * \sum_{j=1}^{n}\theta_j^2 \right]$$
+
+Resources:
+* [Regularization Part 3: Elastic Net Regression](https://www.youtube.com/watch?v=1dKRdX9bfIo)
+
+## Polynomial Regression
+
+Polynomial Regression is a form of regression analysis that models the relationship between the independent variables $X$ and the dependent variable $y$ as an $nth$ degree polynomial in $X$.
+
+$$y_{i}\,=\,\beta _{0}+\beta _{1}x_{i}+\beta _{2}x_{i}^{2}+\cdots +\beta _{m}x_{i}^{m}+\varepsilon _{i}\ (i=1,2,\dots ,n)$$
+
+Resources:
+* [Polynomial regression Wikipedia](https://en.wikipedia.org/wiki/Polynomial_regression)
+* [Sklearn PolynomialFeatures](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
 
 ## Code
 

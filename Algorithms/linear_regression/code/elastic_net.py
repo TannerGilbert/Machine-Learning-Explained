@@ -20,8 +20,8 @@ class ElasticNet:
 
     def cost_function(self, x: np.ndarray, y: np.ndarray) -> Tuple[np.ndarray, float]:
         dif = np.dot(x, self.w) - y
-        cost = (np.sum(dif**2) + self.alpha * (self.l1_ratio * np.sum(np.square(self.w)) +
-                (1 - self.l1_ratio) * np.sum(np.absolute(self.w)))) / (2*np.shape(x)[0])
+        cost = (np.sum(dif**2) + self.alpha * (self.l1_ratio * np.sum(np.absolute(self.w)) +
+                (1 - self.l1_ratio) * np.sum(np.square(self.w)))) / (2*np.shape(x)[0])
 
         return dif, cost
 

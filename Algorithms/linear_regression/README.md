@@ -1,4 +1,5 @@
 # Linear Regression
+
 ![](doc/linear_regression_example.png)
 
 ## What is Linear Regression?
@@ -43,6 +44,18 @@ Linear Regression is called multivariate if you are working with at least two in
 
 Loss and optimizer are the same as for simple linear regression. The only difference is that the optimizer is now used for any weight (<img src="tex/4b4518f1b7f0fb1347fa21506ebafb19.svg?invert_in_darkmode" align=middle width=18.32105549999999pt height=14.15524440000002pt/> to <img src="tex/c2a29561d89e139b3c7bffe51570c3ce.svg?invert_in_darkmode" align=middle width=16.41940739999999pt height=14.15524440000002pt/>) instead of only for m and b.
 
+## Normal Equation
+
+Another way to find the optimal coefficients is to use the "Normal Equation". The "Normal Equation" is an analytical approach for finding the optimal coefficients without needing to iterate over the data.
+
+<p align="center"><img src="tex/4bf055a6a961b27706b75bc7e08a0f29.svg?invert_in_darkmode" align=middle width=139.6342233pt height=23.755462499999997pt/></p>
+
+Contrary to Gradient Descent, when using the Normal Equation, features don't need to be scaled. The Normal Equation works well for datasets with few features but can be slow as the number of features increases due to the high computational complexity of computing the inverse <img src="tex/c116dfb62bb6eadf90bac11393f97a66.svg?invert_in_darkmode" align=middle width=43.570210199999984pt height=26.76175259999998pt/>.
+
+Further readings:
+* [Lecture 4.6 — Linear Regression With Multiple Variables | Normal Equation — [Andrew Ng]](https://www.youtube.com/watch?v=B-Ks01zR4HY)
+* [Derivation of the Normal Equation for linear regression](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression)
+
 ## Regularization
 
 Regularization are techniques used to reduce overfitting. This is really important to create models that generalize well on new data.
@@ -64,6 +77,25 @@ L1 regularization:
 L2 regularization:
 
 <p align="center"><img src="tex/ac342f337b60a671151324a7a222d777.svg?invert_in_darkmode" align=middle width=332.09575739999997pt height=59.1786591pt/></p>
+
+## ElasticNet
+
+ElasticNet is a regularization technique that linearly combines the L1 and L2 penalties. 
+
+<p align="center"><img src="tex/eedb3ae6d88cd2296e4c9acfe5658b09.svg?invert_in_darkmode" align=middle width=567.3416066999999pt height=59.1786591pt/></p>
+
+Resources:
+* [Regularization Part 3: Elastic Net Regression](https://www.youtube.com/watch?v=1dKRdX9bfIo)
+
+## Polynomial Regression
+
+Polynomial Regression is a form of regression analysis that models the relationship between the independent variables <img src="tex/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode" align=middle width=14.908688849999992pt height=22.465723500000017pt/> and the dependent variable <img src="tex/deceeaf6940a8c7a5a02373728002b0f.svg?invert_in_darkmode" align=middle width=8.649225749999989pt height=14.15524440000002pt/> as an <img src="tex/87a75da6a417d9d9fd57f0b9b24473d2.svg?invert_in_darkmode" align=middle width=25.274089499999988pt height=22.831056599999986pt/> degree polynomial in <img src="tex/cbfb1b2a33b28eab8a3e59464768e810.svg?invert_in_darkmode" align=middle width=14.908688849999992pt height=22.465723500000017pt/>.
+
+<p align="center"><img src="tex/2d3d16f648bb613710e8ed0a19f2fe17.svg?invert_in_darkmode" align=middle width=415.0087359pt height=18.312383099999998pt/></p>
+
+Resources:
+* [Polynomial regression Wikipedia](https://en.wikipedia.org/wiki/Polynomial_regression)
+* [Sklearn PolynomialFeatures](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
 
 ## Code
 
