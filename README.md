@@ -46,11 +46,27 @@ This repository contains explanations and implementations of machine learning al
 
 ## Loss Functions
 
+* [Cosine Distance](Loss_Functions/cosine_distance)
 * [Cross Entropy](Loss_Functions/cross_entropy)
 * [Hinge Loss](Loss_Functions/hinge_loss)
 * [Huber Loss](Loss_Functions/huber)
+* [KL Divergence](Loss_Functions/kl_divergence/)
+* [LogCosh](Loss_Functions/logcosh)
 * [Mean absolute error](Loss_Functions/mean_absolute_error)
+* [Mean absolute percentage error](Loss_Functions/mean_absolute_percentage_error)
 * [Mean squared error](Loss_Functions/mean_squared_error)
+* [Mean squared log error](Loss_Functions/mean_squared_log_error)
+* [Poisson Loss](Loss_Functions/poisson_loss)
+
+## Ensemble Methods
+
+* [Averaging](Ensemble_Methods/code/averaging.py)
+* [Bagging](Ensemble_Methods/code/bagging.py)
+* [Blending](Ensemble_Methods/code/blending.py)
+* [Majority Vote](Ensemble_Methods/code/majority_vote.py)
+* [Stacking](Ensemble_Methods/code/stacking.py)
+* [Stacking retrained](Ensemble_Methods/code/stacking_retrained.py)
+* [Weighted Average](Ensemble_Methods/code/weighted_average.py)
 
 ## Contributing
 
