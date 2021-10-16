@@ -2,7 +2,7 @@ import numpy as np
 
 
 class MeanSquaredError:
-    def __call__(self, y: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    def __call__(self, y: np.ndarray, y_pred: np.ndarray) -> np.float64:
         return self.loss(y, y_pred)
 
     def loss(self, y: np.ndarray, y_pred: np.ndarray) -> np.float64:
