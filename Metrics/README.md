@@ -46,7 +46,7 @@
 
 where <img src="tex/d5d6a7178f9ca2be9eab3bf855709944.svg?invert_in_darkmode" align=middle width=100.29605354999998pt height=27.77565449999998pt/>
 
-## Tweedie deviance
+### Tweedie deviance
 
 <p align="center"><img src="tex/bfcf5229cb3b2eb7b6472152c5538e88.svg?invert_in_darkmode" align=middle width=604.5553041pt height=100.10823074999999pt/></p>
 
@@ -58,6 +58,6 @@ where <img src="tex/d5d6a7178f9ca2be9eab3bf855709944.svg?invert_in_darkmode" ali
 
 <p align="center"><img src="tex/1ff5c2fb18f358c5a53d9f38bb1538b8.svg?invert_in_darkmode" align=middle width=300.97297725pt height=49.2398742pt/></p>
 
-## KL Divergence
+### KL Divergence
 
 <p align="center"><img src="tex/2d53cab7cfb446342d0f16408338cde0.svg?invert_in_darkmode" align=middle width=240.76881674999996pt height=49.2398742pt/></p>

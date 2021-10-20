@@ -46,7 +46,7 @@ $$R^2(y, \hat{y}) = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}
 
 where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$
 
-## Tweedie deviance
+### Tweedie deviance
 
 $$\begin{align} \begin{split}\text{D}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} \begin{cases} (y_i-\hat{y}_i)^2, & \text{for }p=0\text{ (Normal)}\\ 2(y_i \log(y/\hat{y}_i) + \hat{y}_i - y_i),  & \text{for }p=1\text{ (Poisson)}\\ 2(\log(\hat{y}_i/y_i) + y_i/\hat{y}_i - 1),  & \text{for }p=2\text{ (Gamma)}\\ 2\left(\frac{\max(y_i,0)^{2-p}}{(1-p)(2-p)}-\frac{y\,\hat{y}^{1-p}_i}{1-p}+\frac{\hat{y}^{2-p}_i}{2-p}\right), & \text{otherwise} \end{cases}\end{split} \end{align}$$
 
@@ -58,6 +58,6 @@ $$L_{\delta }(y, \hat{y})={\begin{cases}{\frac {1}{2}}{(y - )^{2}}&{\text{for }}
 
 $$\text{log cosh} = \frac{1}{n_{\text{samples}}} \sum_{i=0}^{n_{\text{samples}}-1} \log{\left(\cosh{(x)}\right)} $$
 
-## KL Divergence
+### KL Divergence
 
 $$D_{\text{KL}}(y\parallel \hat{y})=\sum_{i=0}^{n_{\text{samples}}-1}y \log{ \left({\frac{y}{\hat{y}}}\right)}$$
