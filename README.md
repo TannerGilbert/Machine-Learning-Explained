@@ -44,19 +44,23 @@ This repository contains explanations and implementations of machine learning al
 * [Softplus](Activation_Functions/softplus)
 * [Tanh](Activation_Functions/tanh)
 
-## Loss Functions
+## Metrics
 
-* [Cosine Distance](Loss_Functions/cosine_distance)
-* [Cross Entropy](Loss_Functions/cross_entropy)
-* [Hinge Loss](Loss_Functions/hinge_loss)
-* [Huber Loss](Loss_Functions/huber)
-* [KL Divergence](Loss_Functions/kl_divergence/)
-* [LogCosh](Loss_Functions/logcosh)
-* [Mean absolute error](Loss_Functions/mean_absolute_error)
-* [Mean absolute percentage error](Loss_Functions/mean_absolute_percentage_error)
-* [Mean squared error](Loss_Functions/mean_squared_error)
-* [Mean squared log error](Loss_Functions/mean_squared_log_error)
-* [Poisson Loss](Loss_Functions/poisson_loss)
+* [Binary Cross Entropy](Metrics/README.md#binary-cross-entropy)
+* [Accuracy Score](Metrics/README.md#accuracy-score)
+* [Hinge Loss](Metrics/README.md#hinge-loss)
+* [Mean Squared Error](Metrics/README.md#mean-squared-error)
+* [Mean Squared Logaritmic Error](Metrics/README.md#mean-squared-logaritmic-error)
+* [Mean Absolute Error](Metrics/README.md#mean-absolute-error)
+* [Mean Absolute Percentage Error](Metrics/README.md#mean-absolute-percentage-error)
+* [Median Absolute Error](Metrics/README.md#median-absolute-error)
+* [Cosine Similartiy](Metrics/README.md#cosine-similarity)
+* [R2 Score](Metrics/README.md#r2-score)
+* [Tweedie Deviance](Metrics/README.md#tweedie-deviance)
+* [Huber loss](Metrics/README.md#huber-loss)
+* [Log Cosh Loss](Metrics/README.md#log-cosh-loss)
+* [KL Divergence](Metrics/README.md#kl-divergence)
+
 
 ## Ensemble Methods
 

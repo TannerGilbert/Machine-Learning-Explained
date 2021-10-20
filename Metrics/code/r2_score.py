@@ -1,9 +1,9 @@
 import numpy as np
 
 
-class Poisson:
+class R2Score:
     def __call__(self, y: np.ndarray, y_pred: np.ndarray) -> np.float64:
         return self.loss(y, y_pred)
 
     def loss(self, y: np.ndarray, y_pred: np.ndarray) -> np.float64:
-        return np.sum(y_pred - y * np.log(y_pred)) / y.shape[0]
+        return 1 - (np.sum(np.power(y-y_pred, 2))) / (np.sum(np.power(y-np.mean(y), 2)))
