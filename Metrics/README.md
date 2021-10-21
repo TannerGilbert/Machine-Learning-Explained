@@ -1,5 +1,7 @@
 # Metrics
 
+![Confusion Matrix Example](doc/confusion_matrix.png)
+
 ## Classification
 
 ### Binary cross entropy
