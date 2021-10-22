@@ -10,7 +10,24 @@
 
 ### Accuracy Score
 
+The fraction of predictions the model classified correctly.
+
+<p align="center"><img src="tex/e1a2df39f105072461870caf8fa0e344.svg?invert_in_darkmode" align=middle width=302.2927941pt height=37.0084374pt/></p>
+
+or
+
 <p align="center"><img src="tex/db850e0baa86d7832b5c75d7c4488d78.svg?invert_in_darkmode" align=middle width=320.50695269999994pt height=49.2398742pt/></p>
+
+For binary classification, accuracy can also be calculated in terms of positives and negatives as follows:
+
+<p align="center"><img src="tex/8a1f6bce1cca2d7cb34ee00ca6d18614.svg?invert_in_darkmode" align=middle width=239.00431994999997pt height=34.999293449999996pt/></p>
+
+Where <img src="tex/86bbcafb36f7dfddde972e1b47296b4c.svg?invert_in_darkmode" align=middle width=146.80377524999997pt height=22.465723500000017pt/>, <img src="tex/202a192d4715ffd00cf289c10c107b43.svg?invert_in_darkmode" align=middle width=154.0184217pt height=22.465723500000017pt/>, <img src="tex/c821543a0ee6e81d1a637188ab98345e.svg?invert_in_darkmode" align=middle width=148.21934654999998pt height=22.831056599999986pt/>, and <img src="tex/d821640e564d2c34dbc9ee887fb60ca1.svg?invert_in_darkmode" align=middle width=155.433993pt height=22.831056599999986pt/>.
+
+Resources:
+* ['Classification: Accuracy' Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/classification/accuracy)
+* [Accuracy Score Scikit Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score)
+* [Precision and recall](https://en.wikipedia.org/wiki/Precision_and_recall)
 
 ### Hinge Loss
 

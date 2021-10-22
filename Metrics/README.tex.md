@@ -10,7 +10,24 @@ $$\text{BinaryCrossentropy}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^
 
 ### Accuracy Score
 
+The fraction of predictions the model classified correctly.
+
+$$\text{accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}}$$
+
+or
+
 $$\text{accuracy}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples}-1} 1(\hat{y}_i = y_i)$$
+
+For binary classification, accuracy can also be calculated in terms of positives and negatives as follows:
+
+$$\text{accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}$$
+
+Where $\text{TP} = \text{True Positives}$, $\text{TN} = \text{True Negatives}$, $\text{FP} = \text{False Positives}$, and $\text{FN} = \text{False Negatives}$.
+
+Resources:
+* ['Classification: Accuracy' Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/classification/accuracy)
+* [Accuracy Score Scikit Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score)
+* [Precision and recall](https://en.wikipedia.org/wiki/Precision_and_recall)
 
 ### Hinge Loss
 
