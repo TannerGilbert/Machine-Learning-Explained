@@ -6,7 +6,25 @@
 
 ### Binary cross entropy
 
-$$\text{BinaryCrossentropy}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} y_i * \log{\hat{y}_i} + \left(1-y_i\right) * \log{(1-\hat{y}_i)}$$
+Binary cross entropy is a loss function used for binary classification tasks (tasks with only two outcomes/classes). It works by calculating the following average:
+
+$$\text{BinaryCrossentropy}(y, \hat{y}) = - \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} y_i * \log{\hat{y}_i} + \left(1-y_i\right) * \log{(1-\hat{y}_i)}$$
+
+The above equation can be split into two parts to make it easier to understand:
+$$\begin{align*}& \text{BinaryCrossentropy}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} \mathrm{Cost}(y_i, \hat{y}_i) \\ & \mathrm{Cost}(y, \hat{y}) = -\log(\hat{y}) \; & \text{if y = 1} \\ & \mathrm{Cost}(y, \hat{y}) = -\log(1-\hat{y}) \; & \text{if y = 0}\end{align*}$$
+
+![Binary Cross Entropy](doc/binary_cross_entropy.png)
+
+The above graph shows that the further away the prediction is from the actual y value the bigger the loss gets.
+
+That means that if the correct answer is 0, then the cost function will be 0 if the prediction is also 0. If the prediction approaches 1, then the cost function will approach infinity.
+
+If the correct answer is 1, then the cost function will be 0 if the prediction is 1. If the prediction approaches  0, then the cost function will approach infinity.
+
+Resources:
+* [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/#binary-cross-entropy-loss)
+* [Cross entropy](https://en.wikipedia.org/wiki/Cross_entropy)
+* [Understanding binary cross-entropy / log loss: a visual explanation](https://towardsdatascience.com/understanding-binary-cross-entropy-log-loss-a-visual-explanation-a3ac6025181a)
 
 ### Accuracy Score
 

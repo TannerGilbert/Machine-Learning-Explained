@@ -58,7 +58,7 @@ At first glance, the functions look complex but when visualized they are quite e
 
 ![Loss Functions Graph](doc/loss_functions.png)
 
-The above graph shows that the more of the prediction is from the actual y value the bigger the loss gets. 
+The above graph shows that the further away the prediction is from the actual y value the bigger the loss gets.
 
 That means that if the correct answer is 0, then the cost function will be 0 if the prediction is also 0. If the prediction approaches 1, then the cost function will approach infinity.
 

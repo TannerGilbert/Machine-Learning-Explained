@@ -6,7 +6,20 @@
 
 ### Binary cross entropy
 
-<p align="center"><img src="tex/4d11c68926ab6b030d5eddb9e04c79d2.svg?invert_in_darkmode" align=middle width=565.88156955pt height=49.2398742pt/></p>
+Binary cross entropy is a loss function used for binary classification tasks (tasks with only two outcomes/classes). It works by calculating the following average:
+
+<p align="center"><img src="tex/894224f3dc1a64562c781eff86cad001.svg?invert_in_darkmode" align=middle width=578.6670021pt height=49.2398742pt/></p>
+
+The above equation can be split into two parts to make it easier to understand:
+<p align="center"><img src="tex/a92f489b7bf58458ad9a831191712560.svg?invert_in_darkmode" align=middle width=482.74484444999996pt height=100.03433549999998pt/></p>
+
+![Binary Cross Entropy](doc/binary_cross_entropy.png)
+
+The above graph shows that the further away the prediction is from the actual y value the bigger the loss gets.
+
+That means that if the correct answer is 0, then the cost function will be 0 if the prediction is also 0. If the prediction approaches 1, then the cost function will approach infinity.
+
+If the correct answer is 1, then the cost function will be 0 if the prediction is 1. If the prediction approaches  0, then the cost function will approach infinity.
 
 ### Accuracy Score
 
