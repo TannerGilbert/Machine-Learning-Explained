@@ -33,7 +33,14 @@ Code:
 
 ### Categorical Crossentropy
 
+Categorical crossentropy is a loss function used for multi-class classification tasks. The outputed loss is the negative average of the sum of the true values $y$ multiplied by the log of the predicted values $\log{\hat{y}}$.
+
 $$\text{CCE}(y, \hat{y}) = - \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} y_i * \log{\hat{y}_i}$$
+
+Resources:
+
+- [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/#losses)
+  [Categorical crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy)
 
 Code:
 
@@ -67,7 +74,15 @@ Code:
 
 ### Hinge Loss
 
-$$L_\text{Hinge}(y_w, y_t) = \max\left\{1 + y_t - y_w, 0\right\}$$
+Hinge loss is a loss function usef for "maximum-margin" classification, most notably for Support Vector Machines (SVMs).
+
+$$L_\text{Hinge}(y, \hat{y}) = \max \left(0, 1 - y * \hat{y} \right)$$
+
+Resources:
+
+- [Hinge Loss Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#hinge-loss)
+- [Hinge loss Wikipedia](https://en.wikipedia.org/wiki/Hinge_loss)
+- [What is the definition of the hinge loss function?](https://ai.stackexchange.com/a/26336)
 
 Code:
 
@@ -75,7 +90,14 @@ Code:
 
 ### KL Divergence
 
-$$D_{\text{KL}}(y\parallel \hat{y})=\sum_{i=0}^{n_{\text{samples}}-1}y \log{ \left({\frac{y}{\hat{y}}}\right)}$$
+The **Kullback-Leibler divergence**, $D_{KL}$, often shortenend to just KL divergence, is a measure of how one probability distribution is different from a second, reference porbability distribution.
+
+$$D_{\text{KL}}(y \parallel \hat{y})=\sum_{i=0}^{n_{\text{samples}}-1}y \cdot \log{ \left({\frac{y}{\hat{y}}}\right)}$$
+
+Resources:
+
+- [Kullback–Leibler divergence Wikipedia](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)
+- [Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained)
 
 Code:
 
@@ -85,7 +107,15 @@ Code:
 
 ### Mean Squared Error
 
+The **mean squared error (MSE)** or **mean squared deviation (MSD)** measure the average of the squares of the errors - that is, the average squared differences between the estimated and actual values.
+
 $$\text{MSE}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} (y_i - \hat{y}_i)^2.$$
+
+Resources:
+
+- [Mean squared error Wikipedia](https://en.wikipedia.org/wiki/Mean_squared_error)
+- [Mean squared error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error)
+- [Machine learning: an introduction to mean squared error and regression lines](https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/)
 
 Code:
 

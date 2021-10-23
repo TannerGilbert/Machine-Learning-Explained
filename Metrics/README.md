@@ -33,7 +33,14 @@ Code:
 
 ### Categorical Crossentropy
 
+Categorical crossentropy is a loss function used for multi-class classification tasks. The outputed loss is the negative average of the sum of the true values <img src="tex/deceeaf6940a8c7a5a02373728002b0f.svg?invert_in_darkmode" align=middle width=8.649225749999989pt height=14.15524440000002pt/> multiplied by the log of the predicted values <img src="tex/0a5c2da8007e2edc6de9ca962be3f3ed.svg?invert_in_darkmode" align=middle width=33.32006039999999pt height=22.831056599999986pt/>.
+
 <p align="center"><img src="tex/c0f72f6ec2f0d5623ef75e15d1a9f197.svg?invert_in_darkmode" align=middle width=301.37445855pt height=49.2398742pt/></p>
+
+Resources:
+
+- [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/#losses)
+  [Categorical crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy)
 
 Code:
 
@@ -67,7 +74,15 @@ Code:
 
 ### Hinge Loss
 
-<p align="center"><img src="tex/a2f8c376f4edcf8033377b40424b287d.svg?invert_in_darkmode" align=middle width=265.89446730000003pt height=17.031940199999998pt/></p>
+Hinge loss is a loss function usef for "maximum-margin" classification, most notably for Support Vector Machines (SVMs).
+
+<p align="center"><img src="tex/e9999393d8d1b46365ba09586571c55d.svg?invert_in_darkmode" align=middle width=227.1765507pt height=17.031940199999998pt/></p>
+
+Resources:
+
+- [Hinge Loss Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#hinge-loss)
+- [Hinge loss Wikipedia](https://en.wikipedia.org/wiki/Hinge_loss)
+- [What is the definition of the hinge loss function?](https://ai.stackexchange.com/a/26336)
 
 Code:
 
@@ -75,7 +90,14 @@ Code:
 
 ### KL Divergence
 
-<p align="center"><img src="tex/2d53cab7cfb446342d0f16408338cde0.svg?invert_in_darkmode" align=middle width=240.76881674999996pt height=49.2398742pt/></p>
+The **Kullback-Leibler divergence**, <img src="tex/f1128d54a4a5ff0cc3a487dc3f920c62.svg?invert_in_darkmode" align=middle width=34.47958799999999pt height=22.465723500000017pt/>, often shortenend to just KL divergence, is a measure of how one probability distribution is different from a second, reference porbability distribution.
+
+<p align="center"><img src="tex/15a86bf084c2654dfd8c0ab4ddda5bb3.svg?invert_in_darkmode" align=middle width=249.9011394pt height=49.2398742pt/></p>
+
+Resources:
+
+- [Kullback–Leibler divergence Wikipedia](https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence)
+- [Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained)
 
 Code:
 
@@ -85,7 +107,15 @@ Code:
 
 ### Mean Squared Error
 
+The **mean squared error (MSE)** or **mean squared deviation (MSD)** measure the average of the squares of the errors - that is, the average squared differences between the estimated and actual values.
+
 <p align="center"><img src="tex/735371fbbd0b21c453edc23b25d47a60.svg?invert_in_darkmode" align=middle width=292.4476896pt height=49.2398742pt/></p>
+
+Resources:
+
+- [Mean squared error Wikipedia](https://en.wikipedia.org/wiki/Mean_squared_error)
+- [Mean squared error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error)
+- [Machine learning: an introduction to mean squared error and regression lines](https://www.freecodecamp.org/news/machine-learning-mean-squared-error-regression-line-c7dde9a26b93/)
 
 Code:
 
