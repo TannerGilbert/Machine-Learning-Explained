@@ -123,13 +123,25 @@ Code:
 
 ### Mean Squared Logarithmic Error
 
+**Mean Squared Logarithmic Error (MSLE)** is an extension of [**Mean Squared Error (MSE)**](#mean-squared-error) often used when the target <img src="tex/deceeaf6940a8c7a5a02373728002b0f.svg?invert_in_darkmode" align=middle width=8.649225749999989pt height=14.15524440000002pt/> has an exponential growth.
+
+> Note: This metrics penalizes under-predictions greater than over-predictions.
+
 <p align="center"><img src="tex/61e1a35fbe056f586e6a9dbc645eabb7.svg?invert_in_darkmode" align=middle width=441.49680795pt height=49.2398742pt/></p>
 
 Code:
 
 - [Mean Squared Logarithmic Error Numpy Implementation](code/mean_squared_log_error.py)
 
+Resources:
+
+- [Mean squared logarithmic error (MSLE)](<https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/mean-squared-logarithmic-error-(msle)>)
+- [Mean squared logaritmic error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-logarithmic-error)
+- [Understanding the metric: RMSLE](https://www.kaggle.com/carlolepelaars/understanding-the-metric-rmsle)
+
 ### Mean Absolute Error
+
+The **mean absolute error (MAE)** measure the average of the absolute values of the errors - that is, the average absolute differences between the estimated and actual values.
 
 <p align="center"><img src="tex/5cd6e6c44dcdc5d9134e7ff6c5b812fc.svg?invert_in_darkmode" align=middle width=290.09589345pt height=49.2398742pt/></p>
 
@@ -137,7 +149,14 @@ Code:
 
 - [Mean Absolute Error Numpy Implementation](code/mean_absolute_error.py)
 
+Resources:
+
+- [Mean absolute error Wikipedia](https://en.wikipedia.org/wiki/Mean_absolute_error)
+- [Mean absolute error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error)
+
 ### Mean Absolute Percentage Error
+
+**Mean absolute percentage error** is an extension of the **mean absolute error (MAE)** that divides the difference between the predicted value <img src="tex/282f38ecf82d8d7b9d2813044262d5f3.svg?invert_in_darkmode" align=middle width=9.347490899999991pt height=22.831056599999986pt/> and the actual value <img src="tex/deceeaf6940a8c7a5a02373728002b0f.svg?invert_in_darkmode" align=middle width=8.649225749999989pt height=14.15524440000002pt/> by the actual value. The main idea of MAPD is to be sensitive to relative errors. It's for example not changed by a global scaling of the target variable.
 
 <p align="center"><img src="tex/d8bc4fe1fed0596068b06f14dc5b6186.svg?invert_in_darkmode" align=middle width=321.60739545pt height=49.2398742pt/></p>
 
@@ -145,7 +164,14 @@ Code:
 
 - [Mean Absolute Percentage Error Numpy Implementation](code/mean_absolute_percentage_error.py)
 
+Resources:
+
+- [Mean absolute percentage error Wikipedia](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
+- [Mean absolute percentage error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-percentage-error)
+
 ### Median Absolute Error
+
+The **median absolute error** also often called **median absolute deviation (MAD)** is metric that is particularly robust to outliers. The loss is calculated by taking the median of all absolute differences between the target and the prediction.
 
 <p align="center"><img src="tex/ce9e403e07bb796a5a4aea8e9aea8727.svg?invert_in_darkmode" align=middle width=361.860477pt height=16.438356pt/></p>
 
@@ -153,13 +179,25 @@ Code:
 
 - [Median Absolute Error Numpy Implementation](code/median_absolute_error.py)
 
+Resources:
+
+- [Median absolute error Wikipedia](https://en.wikipedia.org/wiki/Median_absolute_deviation)
+- [Median absolute error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#median-absolute-error)
+
 ### Cosine Similarity
+
+Cosine similarity is a measure of similarity between two vectors. The cosine similarity is the cosine of the angle between two vectors.
 
 <p align="center"><img src="tex/0df67ef21a0ddee56433ca033cb933c1.svg?invert_in_darkmode" align=middle width=506.11591634999996pt height=91.2537549pt/></p>
 
 Code:
 
 - [Cosine Similarity Numpy Implementation](code/cosine_distance.py)
+
+Resources:
+
+- [Cosine Similarity Wikipedia](https://en.wikipedia.org/wiki/Cosine_similarity)
+- [Cosine Similarity – Understanding the math and how it works (with python codes)](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
 ### R2 Score
 

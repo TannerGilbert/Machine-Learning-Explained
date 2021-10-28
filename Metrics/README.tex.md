@@ -123,13 +123,25 @@ Code:
 
 ### Mean Squared Logarithmic Error
 
+**Mean Squared Logarithmic Error (MSLE)** is an extension of [**Mean Squared Error (MSE)**](#mean-squared-error) often used when the target $y$ has an exponential growth.
+
+> Note: This metrics penalizes under-predictions greater than over-predictions.
+
 $$\text{MSLE}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} (\log_e (1 + y_i) - \log_e (1 + \hat{y}_i) )^2.$$
 
 Code:
 
 - [Mean Squared Logarithmic Error Numpy Implementation](code/mean_squared_log_error.py)
 
+Resources:
+
+- [Mean squared logarithmic error (MSLE)](<https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/mean-squared-logarithmic-error-(msle)>)
+- [Mean squared logaritmic error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-logarithmic-error)
+- [Understanding the metric: RMSLE](https://www.kaggle.com/carlolepelaars/understanding-the-metric-rmsle)
+
 ### Mean Absolute Error
+
+The **mean absolute error (MAE)** measure the average of the absolute values of the errors - that is, the average absolute differences between the estimated and actual values.
 
 $$\text{MAE}(y, \hat{y}) = \frac{1}{n_{\text{samples}}} \sum_{i=0}^{n_{\text{samples}}-1} \left| y_i - \hat{y}_i \right|.$$
 
@@ -137,7 +149,14 @@ Code:
 
 - [Mean Absolute Error Numpy Implementation](code/mean_absolute_error.py)
 
+Resources:
+
+- [Mean absolute error Wikipedia](https://en.wikipedia.org/wiki/Mean_absolute_error)
+- [Mean absolute error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-error)
+
 ### Mean Absolute Percentage Error
+
+**Mean absolute percentage error** is an extension of the **mean absolute error (MAE)** that divides the difference between the predicted value $\hat{y}$ and the actual value $y$ by the actual value. The main idea of MAPD is to be sensitive to relative errors. It's for example not changed by a global scaling of the target variable.
 
 $$\text{MAPE}(y, \hat{y}) = \frac{1}{n_{\text{samples}}} \sum_{i=0}^{n_{\text{samples}}-1} \frac{{}\left| y_i - \hat{y}_i \right|}{max(\epsilon, \left| y_i \right|)}$$
 
@@ -145,7 +164,14 @@ Code:
 
 - [Mean Absolute Percentage Error Numpy Implementation](code/mean_absolute_percentage_error.py)
 
+Resources:
+
+- [Mean absolute percentage error Wikipedia](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
+- [Mean absolute percentage error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-absolute-percentage-error)
+
 ### Median Absolute Error
+
+The **median absolute error** also often called **median absolute deviation (MAD)** is metric that is particularly robust to outliers. The loss is calculated by taking the median of all absolute differences between the target and the prediction.
 
 $$\text{MedAE}(y, \hat{y}) = \text{median}(\mid y_1 - \hat{y}_1 \mid, \ldots, \mid y_n - \hat{y}_n \mid).$$
 
@@ -153,13 +179,25 @@ Code:
 
 - [Median Absolute Error Numpy Implementation](code/median_absolute_error.py)
 
+Resources:
+
+- [Median absolute error Wikipedia](https://en.wikipedia.org/wiki/Median_absolute_deviation)
+- [Median absolute error Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#median-absolute-error)
+
 ### Cosine Similarity
+
+Cosine similarity is a measure of similarity between two vectors. The cosine similarity is the cosine of the angle between two vectors.
 
 $$\text{cosine similarity}=S_{C}(A,B):=\cos(\theta )={\mathbf {A} \cdot \mathbf {B}  \over \|\mathbf {A} \|\|\mathbf {B} \|}={\frac {\sum \limits _{i=1}^{n}{A_{i}B_{i}}}{{\sqrt {\sum \limits _{i=1}^{n}{A_{i}^{2}}}}{\sqrt {\sum \limits _{i=1}^{n}{B_{i}^{2}}}}}}$$
 
 Code:
 
 - [Cosine Similarity Numpy Implementation](code/cosine_distance.py)
+
+Resources:
+
+- [Cosine Similarity Wikipedia](https://en.wikipedia.org/wiki/Cosine_similarity)
+- [Cosine Similarity – Understanding the math and how it works (with python codes)](https://www.machinelearningplus.com/nlp/cosine-similarity/)
 
 ### R2 Score
 
