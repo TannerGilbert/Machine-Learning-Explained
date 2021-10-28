@@ -40,7 +40,7 @@ $$\text{CCE}(y, \hat{y}) = - \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samp
 Resources:
 
 - [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/#losses)
-  [Categorical crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy)
+- [Categorical crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy)
 
 Code:
 
@@ -201,6 +201,8 @@ Resources:
 
 ### R2 Score
 
+The **coefficient of determination**, denoted as $R^2$ is the proportion of the variation in the dependent variable that has been explained by the independent variables in the model.
+
 $$R^2(y, \hat{y}) = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$
 
 where $\bar{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$
@@ -209,7 +211,16 @@ Code:
 
 - [R2 Score Numpy Implementation](code/r2_score.py)
 
+Resources:
+
+- [Coefficient of determination Wikipedia](https://en.wikipedia.org/wiki/Coefficient_of_determination)
+- [R² score, the coefficient of determination Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination)
+
 ### Tweedie deviance
+
+The Tweedie distributions are a family of probability distributions, which include he purely continuous normal, gamma and Inverse Gaussian distributions and more.
+
+The unit [deviance](<https://en.wikipedia.org/wiki/Deviance_(statistics)>) of a reproductive Tweedie distribution is given by:
 
 $$\begin{align} \begin{split}\text{D}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} \begin{cases} (y_i-\hat{y}_i)^2, & \text{for }p=0\text{ (Normal)}\\ 2(y_i \log(y/\hat{y}_i) + \hat{y}_i - y_i),  & \text{for }p=1\text{ (Poisson)}\\ 2(\log(\hat{y}_i/y_i) + y_i/\hat{y}_i - 1),  & \text{for }p=2\text{ (Gamma)}\\ 2\left(\frac{\max(y_i,0)^{2-p}}{(1-p)(2-p)}-\frac{y\,\hat{y}^{1-p}_i}{1-p}+\frac{\hat{y}^{2-p}_i}{2-p}\right), & \text{otherwise} \end{cases}\end{split} \end{align}$$
 
@@ -217,18 +228,38 @@ Code:
 
 - [Tweedie deviance Numpy Implementation](code/tweedie_deviance.py)
 
+Resources:
+
+- [Tweedie distribution Wikipedia](https://en.wikipedia.org/wiki/Tweedie_distribution#The_Tweedie_deviance)
+- [Mean Poisson, Gamma, and Tweedie deviances](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-poisson-gamma-and-tweedie-deviances)
+
 ### Huber Loss
 
-$$L_{\delta }(y, \hat{y})={\begin{cases}{\frac {1}{2}}{(y - )^{2}}&{\text{for }}|a|\leq \delta ,\\\delta (|a|-{\frac {1}{2}}\delta ),&{\text{otherwise.}}\end{cases}}$$
+Huber loss is a loss function that is often used in [robust regression](https://en.wikipedia.org/wiki/Robust_regression). The function is quadratich for small values of $a$ and linear for large values.
+
+$$L_{\delta }(y, \hat{y})={\begin{cases}{\frac {1}{2}}{a^{2}}&{\text{for }}|a|\leq \delta ,\\\delta (|a|-{\frac {1}{2}}\delta ),&{\text{otherwise.}}\end{cases}}$$
+
+where $a = y - \hat{y}$ and $\delta $ is the point where the loss changes from a quadratic to linear.
 
 Code:
 
 - [Huber Numpy Implementation](code/huber.py)
 
+Resources:
+
+- [Huber loss Wikipedia](https://en.wikipedia.org/wiki/Huber_loss)
+- [Huber loss Tensorflow](https://www.tensorflow.org/api_docs/python/tf/keras/losses/Huber)
+
 ### Log Cosh Loss
+
+Logarithm of the hyperbolic cosine of the prediction error.
 
 $$\text{log cosh} = \frac{1}{n_{\text{samples}}} \sum_{i=0}^{n_{\text{samples}}-1} \log{\left(\cosh{(x)}\right)} $$
 
 Code:
 
 - [Log Cosh Loss Numpy Implementation](code/logcosh.py)
+
+Resources:
+
+- [Log Cosh loss Tensorflow](https://www.tensorflow.org/api_docs/python/tf/keras/losses/log_cosh)

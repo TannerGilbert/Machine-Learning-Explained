@@ -40,7 +40,7 @@ Categorical crossentropy is a loss function used for multi-class classification 
 Resources:
 
 - [Understanding Categorical Cross-Entropy Loss, Binary Cross-Entropy Loss, Softmax Loss, Logistic Loss, Focal Loss and all those confusing names](https://gombru.github.io/2018/05/23/cross_entropy_loss/#losses)
-  [Categorical crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy)
+- [Categorical crossentropy](https://peltarion.com/knowledge-center/documentation/modeling-view/build-an-ai-model/loss-functions/categorical-crossentropy)
 
 Code:
 
@@ -201,6 +201,8 @@ Resources:
 
 ### R2 Score
 
+The **coefficient of determination**, denoted as <img src="tex/ee9dc84d168b211ff9f4b354e295af3c.svg?invert_in_darkmode" align=middle width=19.161017699999988pt height=26.76175259999998pt/> is the proportion of the variation in the dependent variable that has been explained by the independent variables in the model.
+
 <p align="center"><img src="tex/a1b798ffc158c4ee0b440f4114c4f1c0.svg?invert_in_darkmode" align=middle width=216.35715585pt height=41.065845149999994pt/></p>
 
 where <img src="tex/d5d6a7178f9ca2be9eab3bf855709944.svg?invert_in_darkmode" align=middle width=100.29605354999998pt height=27.77565449999998pt/>
@@ -209,7 +211,16 @@ Code:
 
 - [R2 Score Numpy Implementation](code/r2_score.py)
 
+Resources:
+
+- [Coefficient of determination Wikipedia](https://en.wikipedia.org/wiki/Coefficient_of_determination)
+- [R² score, the coefficient of determination Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#r2-score-the-coefficient-of-determination)
+
 ### Tweedie deviance
+
+The Tweedie distributions are a family of probability distributions, which include he purely continuous normal, gamma and Inverse Gaussian distributions and more.
+
+The unit [deviance](<https://en.wikipedia.org/wiki/Deviance_(statistics)>) of a reproductive Tweedie distribution is given by:
 
 <p align="center"><img src="tex/bfcf5229cb3b2eb7b6472152c5538e88.svg?invert_in_darkmode" align=middle width=604.5553041pt height=100.10823074999999pt/></p>
 
@@ -217,18 +228,38 @@ Code:
 
 - [Tweedie deviance Numpy Implementation](code/tweedie_deviance.py)
 
+Resources:
+
+- [Tweedie distribution Wikipedia](https://en.wikipedia.org/wiki/Tweedie_distribution#The_Tweedie_deviance)
+- [Mean Poisson, Gamma, and Tweedie deviances](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-poisson-gamma-and-tweedie-deviances)
+
 ### Huber Loss
 
-<p align="center"><img src="tex/9152eaad31adde13360d6613b5dcc757.svg?invert_in_darkmode" align=middle width=265.48753109999996pt height=49.315569599999996pt/></p>
+Huber loss is a loss function that is often used in [robust regression](https://en.wikipedia.org/wiki/Robust_regression). The function is quadratich for small values of <img src="tex/44bc9d542a92714cac84e01cbbb7fd61.svg?invert_in_darkmode" align=middle width=8.68915409999999pt height=14.15524440000002pt/> and linear for large values.
+
+<p align="center"><img src="tex/928194bd8bb89cb48374d0ab69a41c69.svg?invert_in_darkmode" align=middle width=265.48753109999996pt height=49.315569599999996pt/></p>
+
+where <img src="tex/8cdee07f9c86dc6c56f28b9f8fb8ae6d.svg?invert_in_darkmode" align=middle width=68.69467275pt height=22.831056599999986pt/> and <img src="tex/cf644cbd499c18ed6f22cee5950c0d75.svg?invert_in_darkmode" align=middle width=7.928075099999989pt height=22.831056599999986pt/> is the point where the loss changes from a quadratic to linear.
 
 Code:
 
 - [Huber Numpy Implementation](code/huber.py)
 
+Resources:
+
+- [Huber loss Wikipedia](https://en.wikipedia.org/wiki/Huber_loss)
+- [Huber loss Tensorflow](https://www.tensorflow.org/api_docs/python/tf/keras/losses/Huber)
+
 ### Log Cosh Loss
+
+Logarithm of the hyperbolic cosine of the prediction error.
 
 <p align="center"><img src="tex/1ff5c2fb18f358c5a53d9f38bb1538b8.svg?invert_in_darkmode" align=middle width=300.97297725pt height=49.2398742pt/></p>
 
 Code:
 
 - [Log Cosh Loss Numpy Implementation](code/logcosh.py)
+
+Resources:
+
+- [Log Cosh loss Tensorflow](https://www.tensorflow.org/api_docs/python/tf/keras/losses/log_cosh)
