@@ -84,6 +84,51 @@ Resources:
 - [What is a Confusion Matrix in Machine Learning](https://machinelearningmastery.com/confusion-matrix-machine-learning/)
 - [Simple guide to confusion matrix terminology](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/)
 
+### Precision
+
+Precision is a metric for classification models that identifies the frequency with which a model was correct when predicting the positive class. Precision is defined as the number of **true positives** over the number of **true positives** plus the number of **false positives**.
+
+<p align="center"><img src="tex/5ce5d6877b4b1485ff9b0a48a56e5f97.svg?invert_in_darkmode" align=middle width=521.8542351pt height=34.999293449999996pt/></p>
+
+Resources:
+
+- [Precision, recall and F-measures](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-and-f-measures)
+- [Precision-Recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+- [Precision Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall#Precision)
+- [Classification: Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)
+- [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
+
+### Recall
+
+Recall is a metric for classification models that identifies how many positive labels the model identified out of all the possible positive labels.
+
+<p align="center"><img src="tex/53446b529aaec55cc9c04abff12141f8.svg?invert_in_darkmode" align=middle width=485.9637321pt height=36.82577085pt/></p>
+
+Resources:
+
+- [Precision, recall and F-measures](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-and-f-measures)
+- [Precision-Recall](https://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+- [Precision Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall#Recall)
+- [Classification: Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)
+- [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
+
+### F1-Score
+
+The F1-Score is the [harmonic mean](https://en.wikipedia.org/wiki/Harmonic_mean) of precision and recall. A perfect model will have an F1-Score of 1.
+
+<p align="center"><img src="tex/e4f967b6c1927904b60f77385e187da6.svg?invert_in_darkmode" align=middle width=236.17341pt height=35.18196pt/></p>
+
+It's also possible to weight precision or recall differently using the <img src="tex/793b0453fad52e1901e19f8c4489cace.svg?invert_in_darkmode" align=middle width=18.615955049999993pt height=22.465723500000017pt/>-Score. Here a real factor <img src="tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode" align=middle width=10.16555099999999pt height=22.831056599999986pt/> is used to weight the recall <img src="tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode" align=middle width=10.16555099999999pt height=22.831056599999986pt/> times as much as the precision.
+
+<p align="center"><img src="tex/8c8cdc49efc1e1ac95c5baf72e69b4e8.svg?invert_in_darkmode" align=middle width=331.5585537pt height=37.9216761pt/></p>
+
+Resources:
+
+- [Precision, recall and F-measures](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-and-f-measures)
+- [What is the F-score?](https://deepai.org/machine-learning-glossary-and-terms/f-score)
+- [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
+- [F-score Wikipedia](https://en.wikipedia.org/wiki/F-score)
+
 ### Hinge Loss
 
 Hinge loss is a loss function usef for "maximum-margin" classification, most notably for Support Vector Machines (SVMs).
