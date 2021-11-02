@@ -72,6 +72,18 @@ Code:
 
 - [Accuracy Score Numpy Implementation](code/accuracy_score.py)
 
+### Confusion matrix
+
+A confusion matrix is a table that summarises the predictions of a classifier or classification model. By definition, entry <img src="tex/4fe48dde86ac2d37419f0b35d57ac460.svg?invert_in_darkmode" align=middle width=20.679527549999985pt height=21.68300969999999pt/> in a confusion matrix is the number of observations actually in group <img src="tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode" align=middle width=5.663225699999989pt height=21.68300969999999pt/>, but predicted to be in group <img src="tex/36b5afebdba34564d884d347484ac0c7.svg?invert_in_darkmode" align=middle width=7.710416999999989pt height=21.68300969999999pt/>.
+
+![Confusion matrix Example](https://cdn-images-1.medium.com/max/950/1*PPgItHcPSaskyjLMWFC-Kw.png)
+
+Resources:
+
+- [Confusion matrix Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#confusion-matrix)
+- [What is a Confusion Matrix in Machine Learning](https://machinelearningmastery.com/confusion-matrix-machine-learning/)
+- [Simple guide to confusion matrix terminology](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/)
+
 ### Hinge Loss
 
 Hinge loss is a loss function usef for "maximum-margin" classification, most notably for Support Vector Machines (SVMs).
