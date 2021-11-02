@@ -98,6 +98,10 @@ Resources:
 - [Classification: Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)
 - [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
 
+Code:
+
+- [Precision Numpy Implementation](code/precision.py)
+
 ### Recall
 
 Recall is a metric for classification models that identifies how many positive labels the model identified out of all the possible positive labels.
@@ -111,6 +115,10 @@ Resources:
 - [Precision Wikipedia](https://en.wikipedia.org/wiki/Precision_and_recall#Recall)
 - [Classification: Precision and Recall](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)
 - [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
+
+Code:
+
+- [Recall Numpy Implementation](code/recall.py)
 
 ### F1-Score
 
@@ -128,6 +136,11 @@ Resources:
 - [What is the F-score?](https://deepai.org/machine-learning-glossary-and-terms/f-score)
 - [Accuracy, Precision, Recall or F1?](https://towardsdatascience.com/accuracy-precision-recall-or-f1-331fb37c5cb9)
 - [F-score Wikipedia](https://en.wikipedia.org/wiki/F-score)
+
+Code:
+
+- [F1-Score Numpy Implementation](code/f1_score.py)
+- [$F_{\beta}$-Score Numpy Implementation](code/fbeta_score.py)
 
 ### Hinge Loss
 
