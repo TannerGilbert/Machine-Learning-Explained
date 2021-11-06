@@ -317,6 +317,22 @@ Resources:
 - [Tweedie distribution Wikipedia](https://en.wikipedia.org/wiki/Tweedie_distribution#The_Tweedie_deviance)
 - [Mean Poisson, Gamma, and Tweedie deviances](https://scikit-learn.org/stable/modules/model_evaluation.html#mean-poisson-gamma-and-tweedie-deviances)
 
+### D^2 score
+
+>The $D^2$-Score computes the percentage of deviance explained. It is a generalization of $R^2$, where the squared error is replaced by the Tweedie deviance. - [Scikit Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#d2-score-the-coefficient-of-determination)
+
+$D^2$, also known as McFadden’s likelihood ratio index, is calculated as
+
+$$D^2(y, \hat{y}) = 1 - \frac{\text{D}(y, \hat{y})}{\text{D}(y, \bar{y})} \,.$$
+
+Code:
+
+- [D^2 Score Numpy Implementation](code/d2_score.py)
+
+Resources:
+
+- [D² score, the coefficient of determination](https://scikit-learn.org/stable/modules/model_evaluation.html#d2-score-the-coefficient-of-determination)
+
 ### Huber Loss
 
 Huber loss is a loss function that is often used in [robust regression](https://en.wikipedia.org/wiki/Robust_regression). The function is quadratich for small values of $a$ and linear for large values.
