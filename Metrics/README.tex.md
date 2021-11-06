@@ -173,6 +173,20 @@ Code:
 
 - [KL Divergence Numpy Implementation](code/kl_divergence.py)
 
+### Brier Score
+
+> The Brier Score is a strictly proper score function or strictly proper scoring rule that measures the accuracy of probabilistic predictions. For unidimensional predictions, it is strictly equivalent to the mean squared error as applied to predicted probabilities. - [Wikipedia](https://en.wikipedia.org/wiki/Brier_score)
+
+Resources:
+
+- [Brier Score Wikipedia](https://en.wikipedia.org/wiki/Brier_score)
+- [Brier Score Loss Scikit-Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#brier-score-loss)
+- [Brier Score – How to measure accuracy of probablistic predictions](https://www.machinelearningplus.com/statistics/brier-score/)
+
+Code:
+
+- [Brier Score Numpy Implementation](code/brier_score.py)
+
 ## Regression
 
 ### Mean Squared Error
