@@ -58,6 +58,10 @@ class LDA:
     def transform(self, X):
         return np.dot(X, self.eigenvectors)
     
+    @property
+    def explained_variance_ratio_(self) -> np.ndarray:
+        return self.eigenvalues / np.sum(self.eigenvalues)
+    
 
 if __name__ == '__main__':
     # source: https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html
@@ -80,7 +84,6 @@ if __name__ == '__main__':
     pca = LDA(n_components=3)
     pca.fit(X, y)
     X = pca.transform(X)
-    print(X)
 
     for name, label in [('Setosa', 0), ('Versicolour', 1), ('Virginica', 2)]:
         ax.text3D(X[y == label, 0].mean(),

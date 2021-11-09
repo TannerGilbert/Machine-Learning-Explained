@@ -48,7 +48,7 @@ class PCA:
         return X_transformed
 
     @property
-    def explained_variance_ratio_(self):
+    def explained_variance_ratio_(self) -> np.ndarray:
         return self.eigenvalues / np.sum(self.eigenvalues)
 
 
