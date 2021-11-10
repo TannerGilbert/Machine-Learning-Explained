@@ -142,6 +142,40 @@ Code:
 - [F1-Score Numpy Implementation](code/f1_score.py)
 - [$F_{\beta}$-Score Numpy Implementation](code/fbeta_score.py)
 
+### Receiver operating characteristic (ROC)
+
+The ROC curve (receiver operating characteristic curve) is a graph that illustrates the performance of a classification model as its discrimination threshold is varied. The ROC curve is created by plotting the true positive rate (TPR) against the false positive rate (FPR) at various threshold settings.
+
+True Positive Rate (TPR):
+
+$$\text{TPR} = \text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}} = \frac{\text{True Positives}}{\text{Total Actual Positives}}$$
+
+False Positive Rate (FPR):
+
+$$\text{FPR} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}} = \frac{\text{False Positives}}{\text{Total Actual Negatives}}$$
+
+![ROC Example](https://scikit-learn.org/stable/_images/sphx_glr_plot_roc_001.png)
+
+Resources:
+
+- [Receiver operating characteristic Wikipedia](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+- [Receiver operating characteristic (ROC)](https://scikit-learn.org/stable/modules/model_evaluation.html#receiver-operating-characteristic-roc)
+- [Classification: ROC Curve and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
+- [Understanding AUC - ROC Curve](https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5)
+
+### Area under the ROC curve (AUC)
+
+> **AUC** stands for "Area under the ROC Curve". AUC provides an aggregate measure of performance across all possible classification thresholds. One way of interpreting AUC is as the probability that the model ranks a random positive example more highly than a random negative example. - [Google Developers Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
+
+![AUC Example](https://developers.google.com/machine-learning/crash-course/images/AUC.svg)
+
+Resources:
+
+- [Area under the curve Wikipedia](https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve)
+- [Receiver operating characteristic (ROC)](https://scikit-learn.org/stable/modules/model_evaluation.html#receiver-operating-characteristic-roc)
+- [Classification: ROC Curve and AUC](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc)
+- [Understanding AUC - ROC Curve](https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5)
+
 ### Hinge Loss
 
 Hinge loss is a loss function usef for "maximum-margin" classification, most notably for Support Vector Machines (SVMs).
