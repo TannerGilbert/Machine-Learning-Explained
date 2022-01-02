@@ -15,6 +15,7 @@ This repository contains explanations and implementations of machine learning al
 * [Adaboost](Algorithms/adaboost)
 * [Gradient Boosting](Algorithms/gradient_boosting)
 * [Principal Component Analysis (PCA)](Algorithms/principal_component_analysis)
+* [Kernel PCA](Algorithms/kernel_pca)
 * [Linear Discriminant Analysis (LDA)](Algorithms/linear_discriminant_analysis)
 
 ## Optimizers

@@ -77,3 +77,5 @@ if __name__ == '__main__':
     X = pca.transform(X)
 
     print(X)
+    plt.plot(X[0], X[1])
+    plt.show()
