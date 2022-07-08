@@ -7,6 +7,7 @@ Linear Discriminant Analysis (LDA) is a dimensionality reduction technique commo
 LDA is very similar to Principal Component Analysis (PCA), but there are some important differences. PCA is an unsupervised algorithm, meaning it doesn't need class labels $y$. PCA's goal is to find the principal components that maximize the variance in a dataset. LDA, on the other hand, is a supervised algorithm, which uses both the input data $X$ and the class labels $y$ to find linear discriminants that maximize the separation between multiple classes.
 
 LDA can be performed in 5 steps:
+
 1. Compute the mean vectors for the different classes from the dataset.
 2. Compute the scatter matrices (in-between-class and within-class scatter matrices).
 3. Compute the eigenvectors and corresponding eigenvalues for the scatter matrices.
@@ -53,7 +54,7 @@ Next, LDA solves the [generalized eigenvalue problem](https://arxiv.org/pdf/1903
 
 ## Select linear discriminants for the new feature subspace
 
-After calculating the eigenvectors and eigenvalues, we sort the eigenvectors from highest to lowest depending on their corresponding eigenvalue and then choose the top $k$ eigenvectors, where $k$ is the number of dimensions we want to keep. 
+After calculating the eigenvectors and eigenvalues, we sort the eigenvectors from highest to lowest depending on their corresponding eigenvalue and then choose the top $k$ eigenvectors, where $k$ is the number of dimensions we want to keep.
 
 ## Transform data onto the new subspace
 

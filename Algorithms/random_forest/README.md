@@ -59,6 +59,7 @@ Feature importance refers to techniques that assign an importance score to all t
 ![Feature importance](doc/feature_importance.png)
 
 Resources:
+
 - [Permutation Feature Importance](https://christophm.github.io/interpretable-ml-book/feature-importance.html)
 - [Random Forest Feature Importance Computed in 3 Ways with Python](https://mljar.com/blog/feature-importance-in-random-forest/)
 - [Feature importances with forests of trees](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)
@@ -78,11 +79,8 @@ Resources:
 - [https://www.youtube.com/watch?v=J4Wdy0Wc_xQ](https://www.youtube.com/watch?v=J4Wdy0Wc_xQ)
 - [https://towardsdatascience.com/understanding-random-forest-58381e0602d2](https://towardsdatascience.com/understanding-random-forest-58381e0602d2)
 - [https://builtin.com/data-science/random-forest-algorithm](https://builtin.com/data-science/random-forest-algorithm)
-- [https://en.wikipedia.org/wiki/Random_forest](https://en.wikipedia.org/wiki/Random_forest#:~:text=Random%20forests%20or%20random%20decision,prediction%20(regression)%20of%20the%20individual)
+- [https://en.wikipedia.org/wiki/Random_forest](<https://en.wikipedia.org/wiki/Random_forest#:~:text=Random%20forests%20or%20random%20decision,prediction%20(regression)%20of%20the%20individual>)
 - [https://williamkoehrsen.medium.com/random-forest-simple-explanation-377895a60d2d](https://williamkoehrsen.medium.com/random-forest-simple-explanation-377895a60d2d)
 - [https://towardsdatascience.com/random-forests-and-decision-trees-from-scratch-in-python-3e4fa5ae4249](https://towardsdatascience.com/random-forests-and-decision-trees-from-scratch-in-python-3e4fa5ae4249)
 
 <p id="reference1">[1] Random forest. (2021, March 14). In Wikipedia. https://en.wikipedia.org/wiki/Random_forest</p>
-
-
-

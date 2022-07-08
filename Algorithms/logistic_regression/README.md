@@ -2,11 +2,11 @@
 
 ![Logistic Regression Decision Boundary](doc/logistic_regression_decision_boundary.png)
 
-Logistic Regression is a classical statistical model, which has been widely used in academia and industry to solve binary classification problems. 
+Logistic Regression is a classical statistical model, which has been widely used in academia and industry to solve binary classification problems.
 
 ## Difference between Regression and Classification
 
-Supervised Machine Learning can be split into two subcategories – Regression and Classification. 
+Supervised Machine Learning can be split into two subcategories – Regression and Classification.
 
 The difference between the two is that in Regression we are predicting a continuous number like the price of a house or the temperature for the next day whilst in Classification, we are predicting discrete values like if a patient has or doesn't have a heart disease.
 
@@ -62,7 +62,7 @@ The above graph shows that the further away the prediction is from the actual y 
 
 That means that if the correct answer is 0, then the cost function will be 0 if the prediction is also 0. If the prediction approaches 1, then the cost function will approach infinity.
 
-If the correct answer is 1, then the cost function will be 0 if the prediction is 1. If the prediction approaches  0, then the cost function will approach infinity.
+If the correct answer is 1, then the cost function will be 0 if the prediction is 1. If the prediction approaches 0, then the cost function will approach infinity.
 
 ### Simplifying the Loss Function
 
@@ -70,7 +70,7 @@ To make it easier to work with the loss function we can compress the two conditi
 
 $$J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \; \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)}))\right]$$
 
-Notice that when y is equal to 1 the second term will be zero and therefore will not affect the loss. 
+Notice that when y is equal to 1 the second term will be zero and therefore will not affect the loss.
 
 One the other hand if y is equal to 0 the first term will be zero and therefore will not affect the loss.
 
@@ -114,7 +114,7 @@ In this case, the problem is divided into n+1 subproblems (n+1=number of highest
 
 In each subproblem we predict the probability that y is a member of one of our classes.
 
-$$\begin{align*}& y \in \lbrace0, 1 ... n\rbrace \\& h_\theta^{(0)}(x) = P(y = 0 | x ; \theta) \\& h_\theta^{(1)}(x) = P(y = 1 | x ; \theta) \\& \cdots \\& h_\theta^{(n)}(x) = P(y = n | x ; \theta) \\& \mathrm{prediction} = \max_i( h_\theta ^{(i)}(x) )\\\end{align*}$$
+$$\begin{align*}& y \in \lbrace0, 1 ... n\rbrace \\& h_\theta^{(0)}(x) = P(y = 0 | x ; \theta) \\& h_\theta^{(1)}(x) = P(y = 1 | x ; \theta) \\& \cdots \\& h_\theta^{(n)}(x) = P(y = n | x ; \theta) \\& \mathrm{prediction} = \max_i(h_\theta ^{(i)}(x))\end{align*}$$
 
 We are basically choosing one class and putting all the others into a single class. We do this repeatedly until we went through each classes. Then we will find the result with the highest value and use this class as our prediction.
 
@@ -125,8 +125,9 @@ As you might know, regularization is a set of techniques designed to combat over
 ![Overfitting vs. Underfitting](doc/overfitting_vs_underfitting.png)
 
 There are two main options to address overfitting:
-* Reducing the number of features
-* Regularization
+
+- Reducing the number of features
+- Regularization
 
 Manually reducing the number of features can be a tedious task because it often includes a lot of trial and error. Regularization, on the other hand, can happen automatically and has proven to be very reliable for lots of models over the years.
 
@@ -135,7 +136,8 @@ Logistic Regression can be regularized with the same techniques I explained when
 Both techniques work by reducing the weights of the model by increasing their cost/loss. L1 Regularization takes the absolute values of all the weights and adds their sum to the loss. L2 Regularization sums up the squares instead of the absolute values.
 
 For more information on the difference between L1 and L2 Regularization check out the following article:
-* http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/
+
+- http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/
 
 L1 Regularization for Logistic Regression:
 
@@ -149,12 +151,12 @@ As you can see above you not only can change from L1 to L2 Regularization but yo
 
 ## Code
 
-* [Logistic Regression](code/logistic_regression.py)
-* [One vs. All Logistic Regression](code/one_vs_all_logistic_regression.py)
-* [Custom Implementation vs. Scikit Learn](code/custom_implementation_vs_sklearn.ipynb)
+- [Logistic Regression](code/logistic_regression.py)
+- [One vs. All Logistic Regression](code/one_vs_all_logistic_regression.py)
+- [Custom Implementation vs. Scikit Learn](code/custom_implementation_vs_sklearn.ipynb)
 
 ## Credit / Other resources
 
-* https://www.coursera.org/learn/machine-learning/resources/Zi29t
-* https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
-* https://christophm.github.io/interpretable-ml-book/logistic.html
+- https://www.coursera.org/learn/machine-learning/resources/Zi29t
+- https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
+- https://christophm.github.io/interpretable-ml-book/logistic.html

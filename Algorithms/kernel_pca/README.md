@@ -2,7 +2,7 @@
 
 ![Kernel PCA Example](doc/kernel_pca.png)
 
-Kernel PCA is an extension of [PCA](https://ml-explained.com/blog/principal-component-analysis-explained) that allows for the separability of nonlinear data by making use of kernels. The basic idea behind it is to project the linearly inseparable data onto a higher dimensional space where it becomes linearly separable. 
+Kernel PCA is an extension of [PCA](https://ml-explained.com/blog/principal-component-analysis-explained) that allows for the separability of nonlinear data by making use of kernels. The basic idea behind it is to project the linearly inseparable data onto a higher dimensional space where it becomes linearly separable.
 
 Kernel PCA can be summarized as a 4 step process [<a href="#citation1">1</a>]:
 
@@ -10,7 +10,7 @@ Kernel PCA can be summarized as a 4 step process [<a href="#citation1">1</a>]:
 
 $$K_{i,j} = \kappa(\mathbf{x_i, x_j})$$
 
-2. If the projected dataset $\left\{\phi (\mathbf{x}_i) \right\}$ doesn’t have zero mean use the Gram matrix $\stackrel{\sim}{K}$ to substitute the kernel matrix $K$.
+2. If the projected dataset $\left\lbrace \phi (\mathbf{x}_i) \right\rbrace$ doesn’t have zero mean use the Gram matrix $\stackrel{\sim}{K}$ to substitute the kernel matrix $K$.
 
 $$\stackrel{\sim}{K} = K - \mathbf{1_N} K - K \mathbf{1_N} + \mathbf{1_N} K \mathbf{1_N}$$
 

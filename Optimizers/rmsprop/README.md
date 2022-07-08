@@ -14,4 +14,4 @@ The difference between Adadelta and RMSprop is that Adadelta removes the learnin
 
 ## Code
 
-* [RMSprop Numpy Implementation](code/rmsprop.py)
+- [RMSprop Numpy Implementation](code/rmsprop.py)

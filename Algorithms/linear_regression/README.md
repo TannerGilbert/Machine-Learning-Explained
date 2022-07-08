@@ -53,8 +53,9 @@ $$\theta = \left(X^T X\right)^{-1} X^T y$$
 Contrary to Gradient Descent, when using the Normal Equation, features don't need to be scaled. The Normal Equation works well for datasets with few features but can be slow as the number of features increases due to the high computational complexity of computing the inverse $\mathcal{O}(n^3)$.
 
 Further readings:
-* [Lecture 4.6 — Linear Regression With Multiple Variables | Normal Equation — [Andrew Ng]](https://www.youtube.com/watch?v=B-Ks01zR4HY)
-* [Derivation of the Normal Equation for linear regression](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression)
+
+- [Lecture 4.6 — Linear Regression With Multiple Variables | Normal Equation — [Andrew Ng]](https://www.youtube.com/watch?v=B-Ks01zR4HY)
+- [Derivation of the Normal Equation for linear regression](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression)
 
 ## Regularization
 
@@ -66,7 +67,7 @@ Mathematically speaking, it adds a regularization term in order to prevent the c
 
 For more information on the difference between L1 and L2 Regularization check out the following article:
 
-* http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/
+- http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/
 
 You can add regularization to Linear Regression by adding regularization term to either the loss function or to the weight update.
 
@@ -80,12 +81,13 @@ $$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\ri
 
 ## ElasticNet
 
-ElasticNet is a regularization technique that linearly combines the L1 and L2 penalties. 
+ElasticNet is a regularization technique that linearly combines the L1 and L2 penalties.
 
-$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^2+\text{l1\_ratio}*\sum_{j=1}^{n}\left|\theta_j\right| +\left(1-\text{l1\_ratio} \right) * \sum_{j=1}^{n}\theta_j^2 \right]$$
+$$J(\theta)=\frac{1}{2m}\left[\sum_{i=1}^{m}\left(h_{\theta}(x^{(i)})-y^{(i)}\right)^2+\text{l1 ratio}*\sum_{j=1}^{n}\left|\theta_j\right| +\left(1-\text{l1 ratio} \right) * \sum_{j=1}^{n}\theta_j^2 \right]$$
 
 Resources:
-* [Regularization Part 3: Elastic Net Regression](https://www.youtube.com/watch?v=1dKRdX9bfIo)
+
+- [Regularization Part 3: Elastic Net Regression](https://www.youtube.com/watch?v=1dKRdX9bfIo)
 
 ## Polynomial Regression
 
@@ -94,21 +96,22 @@ Polynomial Regression is a form of regression analysis that models the relations
 $$y_{i}\,=\,\beta _{0}+\beta _{1}x_{i}+\beta _{2}x_{i}^{2}+\cdots +\beta _{m}x_{i}^{m}+\varepsilon _{i}\ (i=1,2,\dots ,n)$$
 
 Resources:
-* [Polynomial regression Wikipedia](https://en.wikipedia.org/wiki/Polynomial_regression)
-* [Sklearn PolynomialFeatures](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
+
+- [Polynomial regression Wikipedia](https://en.wikipedia.org/wiki/Polynomial_regression)
+- [Sklearn PolynomialFeatures](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
 
 ## Code
 
-* [Simple Linear Regression](code/simple_linear_regression.py)
-* [Multivariate Linear Regression](code/multivariate_linear_regression.py)
-* [Lasso Regression](code/lasso_regression.py)
-* [Ridge Regression](code/ridge_regression.py)
-* [ElasticNet](code/elastic_net.py)
-* [Polynomial Regression](code/polynomial_regression.py)
-* [Linear Regression Explained](code/linear_regression_explained.ipynb)
+- [Simple Linear Regression](code/simple_linear_regression.py)
+- [Multivariate Linear Regression](code/multivariate_linear_regression.py)
+- [Lasso Regression](code/lasso_regression.py)
+- [Ridge Regression](code/ridge_regression.py)
+- [ElasticNet](code/elastic_net.py)
+- [Polynomial Regression](code/polynomial_regression.py)
+- [Linear Regression Explained](code/linear_regression_explained.ipynb)
 
 ## Credit / Other resources
 
-* [Linear Regression (Wikipedia)](https://en.wikipedia.org/wiki/Linear_regression)
-* [Simple and Multiple Linear Regression in Python (Adi Bronshtein on Medium)](https://towardsdatascience.com/simple-and-multiple-linear-regression-in-python-c928425168f9)
-* [Linear Regression (Scikit Learn Documentation)](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
+- [Linear Regression (Wikipedia)](https://en.wikipedia.org/wiki/Linear_regression)
+- [Simple and Multiple Linear Regression in Python (Adi Bronshtein on Medium)](https://towardsdatascience.com/simple-and-multiple-linear-regression-in-python-c928425168f9)
+- [Linear Regression (Scikit Learn Documentation)](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)

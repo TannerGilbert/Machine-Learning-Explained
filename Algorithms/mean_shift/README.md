@@ -48,13 +48,12 @@ It also fails to find the correct clusters for some data-sets, as shown on the [
 
 ## Code
 
-* [Mean Shift from Scratch in Python](code/mean_shift.py)
+- [Mean Shift from Scratch in Python](code/mean_shift.py)
 
 ## Credit / Other resources
 
-* https://scikit-learn.org/stable/modules/clustering.html#mean-shift
-* https://www.youtube.com/watch?v=3ERPpzrDkVg
-* https://iq.opengenus.org/mean-shift-clustering-algorithm/
-* https://spin.atomicobject.com/2015/05/26/mean-shift-clustering/
-* https://en.wikipedia.org/wiki/Mean_shift
-
+- https://scikit-learn.org/stable/modules/clustering.html#mean-shift
+- https://www.youtube.com/watch?v=3ERPpzrDkVg
+- https://iq.opengenus.org/mean-shift-clustering-algorithm/
+- https://spin.atomicobject.com/2015/05/26/mean-shift-clustering/
+- https://en.wikipedia.org/wiki/Mean_shift

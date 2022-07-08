@@ -11,6 +11,7 @@ Whilst this means that once you have your data the algorithm can immediately be 
 ## KNN Theory
 
 To run KNN the following steps are needed:
+
 1. Compute the distance between the item of interest and every item in the training-set.
 2. Pick the k closest data points
 3. Use the k closest points to make a prediction. For classification, a majority vote is used, which means that the class that occurs most often is used as the prediction. For regression, the average of the y values of the k points is used as the prediction
@@ -21,7 +22,7 @@ When working with KNN there are two important hyperparameters – The **k-value*
 
 The optimal K-value will vary depending on your data-set. It should be big enough that noise won't affect the prediction but it should also be low enough that one class won't dominate another only because it's sheer amount of data-points.
 
-There are many different ways the k-value can be determined. 
+There are many different ways the k-value can be determined.
 
 1. An arbitrary value can be chosen (not perfect but often good enough). The square root of n is a popular pick (n...Number of data-points in the training-set).
 2. The best value can also be estimated by running the model with lots of different K values and choosing the best one.
@@ -54,11 +55,11 @@ In general, choosing a distance/similarity metric is often tricky, and therefore
 
 ## Code
 
-* [K Nearest Neighbors](code/k_nearest_neighbors.py)
-* [K Nearest Neighbors Regression](code/k_nearest_neighbors_regression.py)
+- [K Nearest Neighbors](code/k_nearest_neighbors.py)
+- [K Nearest Neighbors Regression](code/k_nearest_neighbors_regression.py)
 
 ## Credit / Other resources
 
-* https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
-* https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
-* https://scikit-learn.org/stable/modules/neighbors.html
+- https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+- https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
+- https://scikit-learn.org/stable/modules/neighbors.html

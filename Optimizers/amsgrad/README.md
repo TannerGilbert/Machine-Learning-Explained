@@ -18,7 +18,7 @@ $$\begin{align} \begin{split} m_t &= \beta_1 m_{t-1} + (1 - \beta_1) g_t \\ v_t 
 
 For more information, check out the paper '[On the Convergence of Adam and Beyond](https://arxiv.org/abs/1904.09237v1)' and the [AMSGrad section](https://ruder.io/optimizing-gradient-descent/index.html#amsgrad) of the '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html)' article.
 
-<p id="citation1">[1] Reddi, Sashank J., Kale, Satyen, & Kumar, Sanjiv. [On the Convergence of Adam and Beyond](https://arxiv.org/abs/1904.09237v1).</p>
+<p id="citation1">[1] Reddi, Sashank J., Kale, Satyen, & Kumar, Sanjiv. <a href="https://arxiv.org/abs/1904.09237v1">On the Convergence of Adam and Beyond</a>.</p>
 
 ## Code
 

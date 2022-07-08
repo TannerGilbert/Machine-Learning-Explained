@@ -2,7 +2,7 @@
 
 ![Adaboost Decision Boundary](doc/adaboost.png)
 
-AdaBoost, short for **Ada**ptive [**Boost**ing](https://en.wikipedia.org/wiki/Boosting_(meta-algorithm)), of Freund and Schapire, was the first practical boosting algorithm and remains one of the most widely used and studied ones even today. Boosting is a general strategy for learning "strong models" by combining multiple simpler ones (weak models or weak learners).
+AdaBoost, short for **Ada**ptive [**Boost**ing](<https://en.wikipedia.org/wiki/Boosting_(meta-algorithm)>), of Freund and Schapire, was the first practical boosting algorithm and remains one of the most widely used and studied ones even today. Boosting is a general strategy for learning "strong models" by combining multiple simpler ones (weak models or weak learners).
 
 A "weak learner" is a model that will do at least slightly better than chance. AdaBoost can be applied to any classification algorithm, but most often, it's used with **Decision Stumps** - Decision Trees with only one node and two leaves.
 

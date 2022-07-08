@@ -33,7 +33,7 @@ Code:
 
 ### Categorical Crossentropy
 
-Categorical crossentropy is a loss function used for multi-class classification tasks. The outputed loss is the negative average of the sum of the true values $y$ multiplied by the log of the predicted values $\log{\hat{y}}$.
+Categorical crossentropy is a loss function used for multi-class classification tasks. The outputed loss is the negative average of the sum of the true values y multiplied by the log of the predicted values $\log{\hat{y}}$.
 
 $$\text{CCE}(y, \hat{y}) = - \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples} - 1} y_i * \log{\hat{y}_i}$$
 
@@ -353,7 +353,7 @@ Resources:
 
 ### D^2 score
 
->The $D^2$-Score computes the percentage of deviance explained. It is a generalization of $R^2$, where the squared error is replaced by the Tweedie deviance. - [Scikit Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#d2-score-the-coefficient-of-determination)
+> The $D^2$-Score computes the percentage of deviance explained. It is a generalization of $R^2$, where the squared error is replaced by the Tweedie deviance. - [Scikit Learn](https://scikit-learn.org/stable/modules/model_evaluation.html#d2-score-the-coefficient-of-determination)
 
 $D^2$, also known as McFadden’s likelihood ratio index, is calculated as
 

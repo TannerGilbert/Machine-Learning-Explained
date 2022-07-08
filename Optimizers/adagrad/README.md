@@ -1,4 +1,4 @@
-# Adagrad 
+# Adagrad
 
 ![Adagrad example gif](doc/adagrad_example.gif)
 

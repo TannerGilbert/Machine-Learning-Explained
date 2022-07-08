@@ -8,7 +8,7 @@ $$m_t = \beta_1 m_{t-1} + (1 - \beta_1) g_t$$
 
 $$v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$$
 
-$m_t$ is an estimate of the first [moment](https://en.wikipedia.org/wiki/Moment_(mathematics)) (the mean) and $v_t$ is the estimate of the second moment (the uncentered variance) of the gradients respectively. As $m_t$ and $v_t$ are initialized as vectors of 0's, the authors of Adam observe that they are biased towards zero, especially during the initial time steps, and especially when the decay rates are small (i.e. $\beta_1$ and $\beta_2$ are close to 1). <a href="#citation2">[2]</a>
+$m_t$ is an estimate of the first [moment](<https://en.wikipedia.org/wiki/Moment_(mathematics)>) (the mean) and $v_t$ is the estimate of the second moment (the uncentered variance) of the gradients respectively. As $m_t$ and $v_t$ are initialized as vectors of 0's, the authors of Adam observe that they are biased towards zero, especially during the initial time steps, and especially when the decay rates are small (i.e. $\beta_1$ and $\beta_2$ are close to 1). <a href="#citation2">[2]</a>
 
 To counteract the biases by calculating bias-corrected first and second moment esimates:
 

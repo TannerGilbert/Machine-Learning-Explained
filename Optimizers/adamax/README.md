@@ -15,8 +15,8 @@ Such variants generally become numerically unstable for large $p$, which is why 
 To avoid confusion with Adam, we use $u_t$ to denote the infinity norm-constrained $v_t$:
 
 $$
-u_t = \beta_2^\infty v_{t-1} + (1 - \beta_2^\infty) |g_t|^\infty 
-= \max(\beta_2 \cdot v_{t-1}, |g_t|) 
+u_t = \beta_2^\infty v_{t-1} + (1 - \beta_2^\infty) |g_t|^\infty
+= \max(\beta_2 \cdot v_{t-1}, |g_t|)
 $$
 
 We can now plug $u_t$ into the Adam update equation replacing $\sqrt{\hat{v}_t} + \epsilon$ to obtain the AdaMax update rule:

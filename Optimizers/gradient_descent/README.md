@@ -9,7 +9,7 @@ $$\theta := \theta - \alpha \cdot \nabla_\theta J( \theta)$$
 Picking a proper value for the learning rate $\alpha$ is important as a too small learning rate can lead to slow convergence, while a too large learning rate can hinder convergence and cause the loss function to fluctuate around the minimum or even to diverge.
 
 ![Pick learning rate](doc/pick_learning_rate.png)
-*Source: [CS231n Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/neural-networks-3/)*
+_Source: [CS231n Convolutional Neural Networks for Visual Recognition](https://cs231n.github.io/neural-networks-3/)_
 
 ## Gradient descent variants
 
@@ -21,7 +21,7 @@ Batch gradient descent computes the gradient of the objective function / cost fu
 
 $$\theta := \theta - \alpha \cdot \nabla_\theta J( \theta)$$
 
-As all the gradients for the whole data-set need to be calculated to perform one single update, batch gradient descent can be very slow. Furthermore it can be impracticable for larger data-sets that don't fit into working memory. 
+As all the gradients for the whole data-set need to be calculated to perform one single update, batch gradient descent can be very slow. Furthermore it can be impracticable for larger data-sets that don't fit into working memory.
 
 ### Stochastic gradient descent (SGD)
 
@@ -44,7 +44,7 @@ By performing the parameter update on a mini-batch, it **a)** reduces the varian
 The mini-batch size usually ranges between 16 and 256 depending on the application and the training hardware. Mini-batch gradient descent is typically the algorithm of choice from the three ones discussed above.
 
 ![Variations comparison](doc/variations_comparison.png)
-*Source: [Understanding Optimization Algorithms](https://laptrinhx.com/understanding-optimization-algorithms-3818430905/)*
+_Source: [Understanding Optimization Algorithms](https://laptrinhx.com/understanding-optimization-algorithms-3818430905/)_
 
 ## Challenges
 
@@ -63,23 +63,23 @@ $$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta)$$
 
 $$\theta = \theta - v_t $$
 
-The momentum term increases for dimensions where gradients continuously point in the same directions and reduces the updates for dimensions whose gradients change directions from one time step to another. As a result, convergence is faster, and oscillation is reduced. 
+The momentum term increases for dimensions where gradients continuously point in the same directions and reduces the updates for dimensions whose gradients change directions from one time step to another. As a result, convergence is faster, and oscillation is reduced.
 
 ![Momentum](doc/momentum.png)
-*Source: [SGD with Momentum](https://paperswithcode.com/method/sgd-with-momentum)*
+_Source: [SGD with Momentum](https://paperswithcode.com/method/sgd-with-momentum)_
 
 ## Nesterov accelerated gradient
 
-Nesterov accelerated gradient (NAG), also called Nesterov Momentum is a variation of momentum that approximates the next values of the parameters by computing $\theta - \gamma v_{t-1}$ and then takes the gradient of the objective funtion not w.r.t the current parameters $\theta$ but w.r.t the approximate future parameters $\theta - \gamma v_{t-1}$. 
+Nesterov accelerated gradient (NAG), also called Nesterov Momentum is a variation of momentum that approximates the next values of the parameters by computing $\theta - \gamma v_{t-1}$ and then takes the gradient of the objective funtion not w.r.t the current parameters $\theta$ but w.r.t the approximate future parameters $\theta - \gamma v_{t-1}$.
 
-$$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta - \gamma v_{t-1} )$$ 
+$$v_t = \gamma v_{t-1} + \alpha \cdot \nabla_\theta J( \theta - \gamma v_{t-1} )$$
 
 $$\theta = \theta - v_t$$
 
-Momentum first computes the current gradient (small blue vector) and then takes a big jump in the direction of the updated accumulated gradient (big blue vector). NAG, on the other hand, first makes a big jump in the direction of the previous accumulated gradient (brown vector), measures the gradient, and then makes a correction (red vector), which results in the green vector. The anticipation prevents the update from overshooting and results in increased responsiveness. 
+Momentum first computes the current gradient (small blue vector) and then takes a big jump in the direction of the updated accumulated gradient (big blue vector). NAG, on the other hand, first makes a big jump in the direction of the previous accumulated gradient (brown vector), measures the gradient, and then makes a correction (red vector), which results in the green vector. The anticipation prevents the update from overshooting and results in increased responsiveness.
 
 ![Nesterov accelerated gradient](doc/nesterov_accelerated_gradient.png)
-*Source: [G. Hinton's lecture 6c](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)*
+_Source: [G. Hinton's lecture 6c](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)_
 
 ## Code
 

@@ -18,7 +18,7 @@ AdaDelta takes the form:
 
 $$RMS[g]_{t}=\sqrt{E\left[g^{2}\right]_{t} + \epsilon}$$
 
-$$ \Delta\theta_{t} = -\frac{\eta}{RMS[g]_{t}}g_{t} $$
+$$ \Delta\theta*{t} = -\frac{\eta}{RMS[g]*{t}}g\_{t} $$
 
 The authors that the units in the weight update don't match, i.e., the update should have the same hypothetical units as the parameters/weights. To realize this, they use the root mean squared error of parameter updates.
 
@@ -26,14 +26,14 @@ $$E[\Delta \theta^2]_t = \gamma E[\Delta \theta^2]_{t-1} + (1 - \gamma) \Delta \
 
 $$RMS[\Delta \theta]_{t} = \sqrt{E[\Delta \theta^2]_t + \epsilon}$$
 
-Since $RMS[\Delta \theta]_{t}$  is unknown, it's approximated with the RMS of the parameter updates until the previous time step $RMS[\Delta \theta]_{t-1}$.
+Since $RMS[\Delta \theta]_{t}$ is unknown, it's approximated with the RMS of the parameter updates until the previous time step $RMS[\Delta \theta]_{t-1}$.
 
 $$\Delta \theta_t = - \dfrac{RMS[\Delta \theta]_{t-1}}{RMS[g]_{t}} g_{t}$$
 $$\theta_{t+1} = \theta_t + \Delta \theta_t$$
 
 For more information on how to derive this formula, take a look at '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html#adadelta)' by [Sebastian Ruder](https://twitter.com/seb_ruder) and the [original Adadelta paper](https://arxiv.org/abs/1212.5701) by [Matthew D. Zeiler](https://arxiv.org/search/cs?searchtype=author&query=Zeiler%2C+M+D).
 
-Adadelta's main advantages over Adagrad are that it doesn't need a default learning rate and that it doesn't decrease the learning rate as aggressively and monotonically as Adagrad. 
+Adadelta's main advantages over Adagrad are that it doesn't need a default learning rate and that it doesn't decrease the learning rate as aggressively and monotonically as Adagrad.
 
 <p id="citation1">[1] Sebastian Ruder (2016). An overview of gradient descent optimization algorithms. arXiv preprint arXiv:1609.04747.</p>
 
@@ -41,4 +41,4 @@ Adadelta's main advantages over Adagrad are that it doesn't need a default learn
 
 ## Code
 
-* [Adadelta Numpy Implementation](code/adadelta.py)
+- [Adadelta Numpy Implementation](code/adadelta.py)
