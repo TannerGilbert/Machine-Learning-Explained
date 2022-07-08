@@ -4,7 +4,7 @@
 
 RAdam or "Rectified Adam" is a variant of the Adam optimizer that seeks to tackle Adam's bad convergence problem by introducing a term to rectify the variance of the adaptive learning rate.
 
-The authors argue that the root cause of Adam's bad convergence is that the adaptive learning rate has an undesirable large variance in the early stage of model training due to the limited amount of training samples being used. 
+The authors argue that the root cause of Adam's bad convergence is that the adaptive learning rate has an undesirable large variance in the early stage of model training due to the limited amount of training samples being used.
 
 RAdam deals with the large variance of the adaptive learning rate by adding a rectifier term:
 

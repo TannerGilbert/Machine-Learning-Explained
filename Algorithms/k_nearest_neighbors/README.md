@@ -11,6 +11,7 @@ Whilst this means that once you have your data the algorithm can immediately be 
 ## KNN Theory
 
 To run KNN the following steps are needed:
+
 1. Compute the distance between the item of interest and every item in the training-set.
 2. Pick the k closest data points
 3. Use the k closest points to make a prediction. For classification, a majority vote is used, which means that the class that occurs most often is used as the prediction. For regression, the average of the y values of the k points is used as the prediction
@@ -21,7 +22,7 @@ When working with KNN there are two important hyperparameters – The **k-value*
 
 The optimal K-value will vary depending on your data-set. It should be big enough that noise won't affect the prediction but it should also be low enough that one class won't dominate another only because it's sheer amount of data-points.
 
-There are many different ways the k-value can be determined. 
+There are many different ways the k-value can be determined.
 
 1. An arbitrary value can be chosen (not perfect but often good enough). The square root of n is a popular pick (n...Number of data-points in the training-set).
 2. The best value can also be estimated by running the model with lots of different K values and choosing the best one.
@@ -40,13 +41,13 @@ Euclidean Distance is probably the one you're most familiar with. It describes w
 
 Above you can see the formula for two points in two dimensional space. Generally, the mathematical formula looks as follows:
 
-<p align="center"><img src="/Algorithms/k_nearest_neighbors/tex/a44a9e5e7f3ef9019ae9a21dbb98f40f.svg?invert_in_darkmode&sanitize=true" align=middle width=576.9491904pt height=59.17867724999999pt/></p>
+$$d\left(p, q\right)=d\left(q, p\right)=\sqrt{(q_1-p_1)^2+(q_2-p_2)^2+...+(q_n-p_n)^2}=\sqrt{\sum_{i=1}^n\left(q_i-p_i\right)^2}$$
 
 ### Cosine Similarity
 
 Another common metric is Cosine similarity. Rather than calculating a magnitude, Cosine similiarity calculates the cosine of the angle between the two featurevectors. If two vectors have a small angle between them the output will be close to 1 (very similar). On the other hand if the angles are far apart (near 180°) the similarity score will approach 0.
 
-<p align="center"><img src="/Algorithms/k_nearest_neighbors/tex/48e45a94b5215298962054c17e895faf.svg?invert_in_darkmode&sanitize=true" align=middle width=379.8690291pt height=91.2537549pt/></p>
+$$similarity=cos\left(\theta\right)=\frac{A*B}{\left|\left|A\right|\right| \left|\left|B\right|\right|}=\frac{\sum\limits_{i=1}^n A_iB_i}{\sqrt{\sum\limits_{i=1}^nA_i^2}\sqrt{\sum\limits_{i=1}^nB_i^2}}$$
 
 This metric is often used for data-sets where the similarity between the directions of two data-points is more important than the magnitude.
 
@@ -54,11 +55,11 @@ In general, choosing a distance/similarity metric is often tricky, and therefore
 
 ## Code
 
-* [K Nearest Neighbors](code/k_nearest_neighbors.py)
-* [K Nearest Neighbors Regression](code/k_nearest_neighbors_regression.py)
+- [K Nearest Neighbors](code/k_nearest_neighbors.py)
+- [K Nearest Neighbors Regression](code/k_nearest_neighbors_regression.py)
 
 ## Credit / Other resources
 
-* https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
-* https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
-* https://scikit-learn.org/stable/modules/neighbors.html
+- https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
+- https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761
+- https://scikit-learn.org/stable/modules/neighbors.html

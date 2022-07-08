@@ -26,7 +26,7 @@ So each decision tree in a random forest is not only trained on a different data
 
 ## Out-Of-Bag Error
 
-Out-of-bag (OOB) error, also sometimes called out-of-bag estimation, is a method of measuring the prediction error of algorithms that are using bootstrap aggregation (bagging), such as random forests. The out-of-bag error is the average error on each training sample <img src="tex/9fc20fb1d3825674c6a279cb0d5ca636.svg?invert_in_darkmode" align=middle width=14.045887349999989pt height=14.15524440000002pt/>, calculated using predictions from the trees that do not contain <img src="tex/9fc20fb1d3825674c6a279cb0d5ca636.svg?invert_in_darkmode" align=middle width=14.045887349999989pt height=14.15524440000002pt/> in their respective bootstrap samples.
+Out-of-bag (OOB) error, also sometimes called out-of-bag estimation, is a method of measuring the prediction error of algorithms that are using bootstrap aggregation (bagging), such as random forests. The out-of-bag error is the average error on each training sample $x_i$, calculated using predictions from the trees that do not contain $x_i$ in their respective bootstrap samples.
 
 Out-of-Bag error is handy because, contrary to a validation set, no data must be set aside. Below you can see an example of how the bootstrap sets and out-of-bag sets are created.
 
@@ -59,6 +59,7 @@ Feature importance refers to techniques that assign an importance score to all t
 ![Feature importance](doc/feature_importance.png)
 
 Resources:
+
 - [Permutation Feature Importance](https://christophm.github.io/interpretable-ml-book/feature-importance.html)
 - [Random Forest Feature Importance Computed in 3 Ways with Python](https://mljar.com/blog/feature-importance-in-random-forest/)
 - [Feature importances with forests of trees](https://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html)
@@ -78,11 +79,8 @@ Resources:
 - [https://www.youtube.com/watch?v=J4Wdy0Wc_xQ](https://www.youtube.com/watch?v=J4Wdy0Wc_xQ)
 - [https://towardsdatascience.com/understanding-random-forest-58381e0602d2](https://towardsdatascience.com/understanding-random-forest-58381e0602d2)
 - [https://builtin.com/data-science/random-forest-algorithm](https://builtin.com/data-science/random-forest-algorithm)
-- [https://en.wikipedia.org/wiki/Random_forest](https://en.wikipedia.org/wiki/Random_forest#:~:text=Random%20forests%20or%20random%20decision,prediction%20(regression)%20of%20the%20individual)
+- [https://en.wikipedia.org/wiki/Random_forest](<https://en.wikipedia.org/wiki/Random_forest#:~:text=Random%20forests%20or%20random%20decision,prediction%20(regression)%20of%20the%20individual>)
 - [https://williamkoehrsen.medium.com/random-forest-simple-explanation-377895a60d2d](https://williamkoehrsen.medium.com/random-forest-simple-explanation-377895a60d2d)
 - [https://towardsdatascience.com/random-forests-and-decision-trees-from-scratch-in-python-3e4fa5ae4249](https://towardsdatascience.com/random-forests-and-decision-trees-from-scratch-in-python-3e4fa5ae4249)
 
 <p id="reference1">[1] Random forest. (2021, March 14). In Wikipedia. https://en.wikipedia.org/wiki/Random_forest</p>
-
-
-
