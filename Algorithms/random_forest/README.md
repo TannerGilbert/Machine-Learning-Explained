@@ -26,7 +26,7 @@ So each decision tree in a random forest is not only trained on a different data
 
 ## Out-Of-Bag Error
 
-Out-of-bag (OOB) error, also sometimes called out-of-bag estimation, is a method of measuring the prediction error of algorithms that are using bootstrap aggregation (bagging), such as random forests. The out-of-bag error is the average error on each training sample <img src="tex/9fc20fb1d3825674c6a279cb0d5ca636.svg?invert_in_darkmode" align=middle width=14.045887349999989pt height=14.15524440000002pt/>, calculated using predictions from the trees that do not contain <img src="tex/9fc20fb1d3825674c6a279cb0d5ca636.svg?invert_in_darkmode" align=middle width=14.045887349999989pt height=14.15524440000002pt/> in their respective bootstrap samples.
+Out-of-bag (OOB) error, also sometimes called out-of-bag estimation, is a method of measuring the prediction error of algorithms that are using bootstrap aggregation (bagging), such as random forests. The out-of-bag error is the average error on each training sample $x_i$, calculated using predictions from the trees that do not contain $x_i$ in their respective bootstrap samples.
 
 Out-of-Bag error is handy because, contrary to a validation set, no data must be set aside. Below you can see an example of how the bootstrap sets and out-of-bag sets are created.
 

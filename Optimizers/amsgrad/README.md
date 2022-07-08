@@ -8,13 +8,13 @@ Reddi et al. (2018) <a href="#citation1">[1]</a> show that one cause of the issu
 
 To fix the above-described behavior, the authors propose a new algorithm called AMSGrad that keeps a running maximum of the squared gradients instead of an exponential moving average.
 
-<p align="center"><img src="tex/824123b152beebd863c67856d33ed802.svg?invert_in_darkmode" align=middle width=175.77045585pt height=18.312383099999998pt/></p>
+$$v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$$
 
-<p align="center"><img src="tex/44e392b0bc182e02eec7fbcb32745a0a.svg?invert_in_darkmode" align=middle width=130.69642574999997pt height=16.438356pt/></p>
+$$\hat{v}_t = \text{max}(\hat{v}_{t-1}, v_t)$$
 
 For simplicity, the authors also removed the debiasing step, which leads to the following update rule:
 
-<p align="center"><img src="tex/d3f0f052c885b9de14f9b3438d1ba9f0.svg?invert_in_darkmode" align=middle width=196.45169775pt height=109.66126875pt/></p>
+$$\begin{align} \begin{split} m_t &= \beta_1 m_{t-1} + (1 - \beta_1) g_t \\ v_t &= \beta_2 v_{t-1} + (1 - \beta_2) g_t^2\\ \hat{v}_t &= \text{max}(\hat{v}_{t-1}, v_t) \\ \theta_{t+1} &= \theta_{t} - \dfrac{\eta}{\sqrt{\hat{v}_t} + \epsilon} m_t \end{split} \end{align}$$
 
 For more information, check out the paper '[On the Convergence of Adam and Beyond](https://arxiv.org/abs/1904.09237v1)' and the [AMSGrad section](https://ruder.io/optimizing-gradient-descent/index.html#amsgrad) of the '[An overview of gradient descent optimization algorithms](https://ruder.io/optimizing-gradient-descent/index.html)' article.
 

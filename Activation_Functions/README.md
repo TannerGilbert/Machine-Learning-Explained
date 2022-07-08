@@ -8,11 +8,11 @@
 
 Function:
 
-<p align="center"><img src="tex/9b171bd87aa286bf84d6621ea1204017.svg?invert_in_darkmode" align=middle width=113.14248pt height=34.3600389pt/></p>
+$$f\left(x\right)=\frac{1}{1+e^{-x}}$$
 
 Derivative:
 
-<p align="center"><img src="tex/1a3902d66dffcc33134633eb13a56e4a.svg?invert_in_darkmode" align=middle width=187.36269915pt height=17.2895712pt/></p>
+$$f'\left(x\right) = f\left(x\right) * \left(1 - f\left(x\right)\right)$$
 
 ### Tanh Function
 
@@ -20,11 +20,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/7eb4be07a0429a57780410969ed58d1a.svg?invert_in_darkmode" align=middle width=197.82854354999998pt height=36.8550864pt/></p>
+$$f\left(x\right)=\tanh(x)={\frac {e^{x}-e^{-x}}{e^{x}+e^{-x}}}$$
 
 Derivative:
 
-<p align="center"><img src="tex/2d95939262cdc426890def2845d69e00.svg?invert_in_darkmode" align=middle width=128.12775195pt height=18.312383099999998pt/></p>
+$$f'\left(x\right) = 1-f(x)^{2}$$
 
 ### Rectified Linear Unit (ReLU)
 
@@ -32,11 +32,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/83803c6cf357e7afb8cdabf1e530ea97.svg?invert_in_darkmode" align=middle width=154.89708299999998pt height=49.315569599999996pt/></p>
+$$f\left(x\right) = \begin{cases} 0,& \text{if } x \leq 0 \\ x,& \text{if } x > 0 \end{cases}$$
 
 Derivative:
 
-<p align="center"><img src="tex/2172629849e5868eaf600934f256c186.svg?invert_in_darkmode" align=middle width=220.89037574999998pt height=69.0417981pt/></p>
+$$f'\left(x\right) = \begin{cases} 0 ,& \text{if } x < 0 \\ 1,& \text{if } x > 0 \\ \text{undefined},& \text{if } x = 0 \end{cases}$$
 
 ### Leaky ReLU
 
@@ -44,11 +44,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/a4bbb3b4859a057a266b6c31e636abc7.svg?invert_in_darkmode" align=middle width=184.12091775pt height=49.315569599999996pt/></p>
+$$f\left(x\right) = \begin{cases} 0.01x,& \text{if } x < 0 \\ x,& \text{if } x \geq 0 \end{cases}$$
 
 Derivative:
 
-<p align="center"><img src="tex/a5d8a53e48a44e595830cd70188848a5.svg?invert_in_darkmode" align=middle width=179.3378268pt height=49.315569599999996pt/></p>
+$$f'\left(x\right) = \begin{cases} 0.01 ,& \text{if } x < 0 \\ 1,& \text{if } x \geq 0 \end{cases}$$
 
 ### Parametric ReLU
 
@@ -56,11 +56,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/290ecca72cd3c083c37a6bdff5f8d689.svg?invert_in_darkmode" align=middle width=165.47358135pt height=49.315569599999996pt/></p>
+$$f\left(x\right) = \begin{cases} \alpha x,& \text{if } x < 0 \\ x,& \text{if } x \geq 0 \end{cases}$$
 
 Derivative:
 
-<p align="center"><img src="tex/754c5b79c77621fd1c89885a39b8d291.svg?invert_in_darkmode" align=middle width=160.6904904pt height=49.315569599999996pt/></p>
+$$f'\left(x\right) = \begin{cases} \alpha ,& \text{if } x < 0 \\ 1,& \text{if } x \geq 0 \end{cases}$$
 
 ### Exponential Linear Unit (ELU)
 
@@ -68,11 +68,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/22b919815535e3da79a74831f137d534.svg?invert_in_darkmode" align=middle width=267.89914304999996pt height=49.315569599999996pt/></p>
+$$f\left(x\right) = \begin{cases} \alpha \left(e^x - 1 \right),& \text{if } x \leq 0 \\ x,& \text{if } x > 0 \end{cases}$$
 
 Derivative:
 
-<p align="center"><img src="tex/e859654ddf616a4d426f9a15ef699144.svg?invert_in_darkmode" align=middle width=256.1470461pt height=69.0417981pt/></p>
+$$f'\left(x\right) = \begin{cases} \alpha e^x,& \text{if } x < 0 \\ 1,& \text{if } x > 0 \\ 1,& \text{if } x = 0 \text{ and } \alpha=1 \end{cases}$$
 
 ### Scaled Exponential Linear Unit (SELU)
 
@@ -80,11 +80,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/822646f49afad2437610e66ee730bef7.svg?invert_in_darkmode" align=middle width=663.27940635pt height=49.315569599999996pt/></p>
+$$f\left(x\right) = \lambda \begin{cases} \alpha \left(e^x - 1 \right),& \text{if } x < 0 \\ x,& \text{if } x \geq 0 \end{cases} \\ \text{with parameters } \lambda = 1.0507 \text{ and } \alpha = 1.67326$$
 
 Derivative:
 
-<p align="center"><img src="tex/3e743f8c72715fac3f04a831660936ed.svg?invert_in_darkmode" align=middle width=188.9496345pt height=49.315569599999996pt/></p>
+$$f'\left(x\right) = \lambda \begin{cases} \alpha e^x,& \text{if } x < 0 \\ 1,& \text{if } x \geq 0 \end{cases}$$
 
 ### Gaussian Error Linear Unit (GELU)
 
@@ -92,11 +92,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/5e156666e8767505b7fdc17f061898f7.svg?invert_in_darkmode" align=middle width=344.55862485pt height=39.452455349999994pt/></p>
+$$f\left(x\right) = \frac{1}{2} x \left(1 + erf\left(\frac{x}{\sqrt{2}}\right)\right) = x * \Phi \left(x\right)$$
 
 Derivative:
 
-<p align="center"><img src="tex/7e28db664ad627340f7fda25a290ac36.svg?invert_in_darkmode" align=middle width=162.26000175pt height=17.2895712pt/></p>
+$$f'\left(x\right) = \Phi \left(x\right) + x \phi \left(x\right)$$
 
 ### Sigmoid-Weighted Linear Unit (SiLU) / Swish
 
@@ -104,17 +104,17 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/a7441e8a4f2fdb45cfc82da527cbafed.svg?invert_in_darkmode" align=middle width=113.14248pt height=30.8440539pt/></p>
+$$f\left(x\right) = \frac{x}{1+e^{-x}}$$
 
 Derivative:
 
-<p align="center"><img src="tex/d0f701c20d414f274f5a81ef8eb6be5c.svg?invert_in_darkmode" align=middle width=188.96986679999998pt height=42.190962pt/></p>
+$$f'\left(x\right) = \frac{1 + e^{-x} + x * e^{-x}}{\left(1 + e^{-x}\right)^2}$$
 
 ### Softmax Function
 
 Function:
 
-<p align="center"><img src="tex/789a1f0365c3e83c7d1dc4a8b10d0acf.svg?invert_in_darkmode" align=middle width=124.36085145pt height=43.5290361pt/></p>
+$$f\left(x\right) = \frac {e^{x_{i}}}{\sum _{j=1}^{J}e^{x_{j}}}$$
 
 ### Softplus
 
@@ -122,11 +122,11 @@ Function:
 
 Function:
 
-<p align="center"><img src="tex/57007cfe55ba83df3eeedbdc9d6485b4.svg?invert_in_darkmode" align=middle width=135.59910539999998pt height=16.438356pt/></p>
+$$f\left(x\right) = \ln \left(1+e^{x}\right)$$
 
 Derivative:
 
-<p align="center"><img src="tex/b5f56261f1d93afbbe17f2cba27d68d9.svg?invert_in_darkmode" align=middle width=117.7543554pt height=34.3600389pt/></p>
+$$f'\left(x\right) = \frac{1}{1+e^{-x}}$$
 
 ### Mish
 
@@ -134,11 +134,11 @@ Derivative:
 
 Function:
 
-<p align="center"><img src="tex/80c7c3a438606431b27cc86bce2f0135.svg?invert_in_darkmode" align=middle width=190.6561932pt height=16.438356pt/></p>
+$$f\left(x\right) = x\tanh\left(\ln\left(1+e^{x}\right)\right)$$
 
 Derivative:
 
-<p align="center"><img src="tex/b12dfd5e9d8bfe92d02c115de29172d4.svg?invert_in_darkmode" align=middle width=364.33511895pt height=44.11870485pt/></p>
+$$f'\left(x\right) = \frac{\left(e^{x}\left(4e^{2x}+e^{3x}+4\left(1+x\right)+e^{x}\left(6+4x\right)\right)\right)}{\left(2+2e^{x}+e^{2x}\right)^{2}}$$
 
 ## Resources
 

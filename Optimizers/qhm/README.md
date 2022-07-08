@@ -2,13 +2,13 @@
 
 ![QHM Update rule](doc/qhm_update_rule.PNG)
 
-Quasi-Hyperbolic Momentum Algorithm (QHM) is a simple alteration of SGD with momentum, averaging a plain SGD step with a momentum step, thereby decoupling the momentum term <img src="tex/8217ed3c32a785f0b5aad4055f432ad8.svg?invert_in_darkmode" align=middle width=10.16555099999999pt height=22.831056599999986pt/> from the current gradient <img src="tex/f9acdf2e58c905cd2502b16cd0f720c9.svg?invert_in_darkmode" align=middle width=18.66446339999999pt height=22.465723500000017pt/> when updating the weights.
+Quasi-Hyperbolic Momentum Algorithm (QHM) is a simple alteration of SGD with momentum, averaging a plain SGD step with a momentum step, thereby decoupling the momentum term $\beta$ from the current gradient $\nabla_t$ when updating the weights.
 
-<p align="center"><img src="tex/693bbf447e9497167127d798d1d144cc.svg?invert_in_darkmode" align=middle width=193.39757085pt height=16.438356pt/></p>
+$$g_{t + 1} \leftarrow \beta \cdot g_t + (1 - \beta) \cdot \nabla_t$$
 
-<p align="center"><img src="tex/e59e9e7497e95821f127a65a4f975e55.svg?invert_in_darkmode" align=middle width=264.7863636pt height=16.438356pt/></p>
+$$\theta_{t + 1} \leftarrow \theta_t + \alpha \left[ (1 - \nu) \cdot \nabla_t + \nu \cdot g_{t + 1} \right]$$
 
-The authors recommend <img src="tex/ba749f44b6808f949e9a35e0236f98c8.svg?invert_in_darkmode" align=middle width=52.088957249999986pt height=21.18721440000001pt/> and <img src="tex/4d5efe3f0b61407442322e122c778e4b.svg?invert_in_darkmode" align=middle width=69.52622489999999pt height=22.831056599999986pt/> as a good starting point. For more information about QHM, check out the resources below.
+The authors recommend $\nu=0.7$ and $\beta=0.999$ as a good starting point. For more information about QHM, check out the resources below.
 
 ## Code
 

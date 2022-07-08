@@ -28,13 +28,13 @@ Next, compute the [Eigenvalues and eigenvectors](https://en.wikipedia.org/wiki/E
 
 ## 4. Sort Eigenvectors by corresponding Eigenvalues in descending order and select a subset from the rearranged Eigenvalue matrix
 
-By ranking the eigenvectors in order of their eigenvalues, highest to lowest, you get the principal components in order of significance and then choose the top <img src="tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.075367949999992pt height=22.831056599999986pt/> eigenvectors, where <img src="tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.075367949999992pt height=22.831056599999986pt/> is the number of dimensions we want to keep.
+By ranking the eigenvectors in order of their eigenvalues, highest to lowest, you get the principal components in order of significance and then choose the top $k$ eigenvectors, where $k$ is the number of dimensions we want to keep.
 
 ## 5. Recast data along the principal components
 
-After selecting the <img src="tex/63bb9849783d01d91403bc9a5fea12a2.svg?invert_in_darkmode" align=middle width=9.075367949999992pt height=22.831056599999986pt/> eigenvectors, we can use the resulting <img src="tex/0aa7f58b7e561001f5301aa03507f552.svg?invert_in_darkmode" align=middle width=37.72252274999999pt height=22.831056599999986pt/>-dimensional eigenvector matrix <img src="tex/84c95f91a742c9ceb460a83f9b5090bf.svg?invert_in_darkmode" align=middle width=17.80826024999999pt height=22.465723500000017pt/> to transform data onto the new subspace via the following equation:
+After selecting the $k$ eigenvectors, we can use the resulting $d \times k$-dimensional eigenvector matrix $W$ to transform data onto the new subspace via the following equation:
 
-<p align="center"><img src="tex/a9ba65368f9892beab04bf21d7e17b4f.svg?invert_in_darkmode" align=middle width=87.92212934999999pt height=12.6027363pt/></p>
+$$Y = X \times W$$
 
 ## Resources
 

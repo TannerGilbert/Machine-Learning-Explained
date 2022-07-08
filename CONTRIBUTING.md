@@ -14,7 +14,7 @@ Thank you for wanting to contribute to Machine-Learning Explained. Machine-Learn
    ```bash
    git remote add upstream https://github.com/TannerGilbert/Machine-Learning-Explained.git
    git fetch upstream
-   ``` 
+   ```
 
 ## Changing/Adding source code
 
@@ -31,14 +31,3 @@ Thank you for wanting to contribute to Machine-Learning Explained. Machine-Learn
    git checkout -b <new branch name>
    ```
 2. Make changes / add new documentation.
-   > Note: Make sure to only work inside the `README.tex.md` files and not inside the `README.md` files.
-3. Generate `README.md` file from `README.tex.md`
-
-   1. Install [`readme2tex`](https://github.com/leegao/readme2tex)
-      ```bash
-      pip install readme2tex
-      ```
-   2. Convert `README.tex.md` to `README.md`
-      ```bash
-      python3 -m readme2tex --output README.md README.tex.md --svgdir tex --nocdn
-      ```
